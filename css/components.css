@@ -139,7 +139,7 @@
 .modal[data-open="true"] { display: grid; }
 .modal__box { width: min(100%, 420px); aspect-ratio: 9 / 16; max-height: 92vh; background: #000; border-radius: var(--r-card); overflow: hidden; position: relative; }
 .modal__box video { width: 100%; height: 100%; object-fit: contain; }
-.modal__close { position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, .9); color: var(--c-ink); font-size: 22px; line-height: 1; }
+.modal__close { position: absolute; top: 10px; right: 10px; min-height: 40px; padding: 0 16px; border-radius: 999px; background: rgba(255, 255, 255, .92); color: var(--c-ink); font-size: 14px; font-weight: 500; }
 
 /* Отзывы */
 .reviews { display: grid; gap: 1px; background: var(--c-line); border: 1px solid var(--c-line); }
@@ -152,7 +152,7 @@
 /* Подвал */
 .footer { background: var(--c-bg-alt); border-top: 1px solid var(--c-line); padding-block: var(--sp-5) var(--sp-3); font-size: var(--fs-small); color: var(--c-muted); }
 .footer__in { display: grid; gap: var(--sp-3); }
-.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; align-content: start; }
 .footer a { color: var(--c-ink); display: inline-block; padding-block: 4px; }
 .footer__bottom { margin-top: var(--sp-4); padding-top: var(--sp-2); border-top: 1px solid var(--c-line); display: grid; gap: 8px; font-size: 12px; }
 @media (min-width: 768px) { .footer__in { grid-template-columns: 2fr 1fr 1fr; } .footer__bottom { grid-template-columns: 1fr auto; } }

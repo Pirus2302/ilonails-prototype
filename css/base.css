@@ -4,7 +4,7 @@ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-t
 body {
   margin: 0; background: var(--c-bg); color: var(--c-ink);
   font-family: var(--f-body); font-size: var(--fs-body); line-height: var(--lh-body);
-  padding-bottom: var(--sticky-h);
+  padding-bottom: calc(var(--sticky-h) + env(safe-area-inset-bottom));
 }
 img, video { max-width: 100%; height: auto; display: block; }
 a { color: var(--c-accent); text-decoration: none; }

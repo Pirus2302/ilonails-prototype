@@ -65,7 +65,7 @@
   <div class="container dynamics">
     <div class="section__head" style="margin:0"><h2>Так выглядит динамика одного случая</h2><p class="hint">Один клиент, один ноготь, четыре визита. Фотографии публикуем открыто, без размытия. Даты визитов предоставляет заказчик.</p></div>
     <div class="ba ba--grid">
-      <figure><img src="img/ba-ingrown-grid.jpg" alt="Серия из четырёх фотографий: вросший ноготь до и после курса"><figcaption>Визиты 1–4, даты предоставляет заказчик</figcaption></figure>
+      <figure><img src="img/ba-ingrown-grid.jpg" alt="Серия из четырёх фотографий: вросший ноготь до и после курса" width="1000" height="1333" loading="lazy"><figcaption>Визиты 1–4, даты предоставляет заказчик</figcaption></figure>
     </div>
   </div>
 </section>
@@ -79,7 +79,7 @@
   </div>
   <div class="grid grid--2" style="margin-top:var(--sp-3)">
     <img src="img/autoclave.jpg" alt="Автоклав в стерилизационной студии" loading="lazy" style="border-radius:var(--r-card);aspect-ratio:4/3;object-fit:cover;width:100%">
-    <img src="img/cabinet-800.jpg" srcset="img/cabinet-800.jpg 800w, img/cabinet-1600.jpg 1600w" sizes="(min-width:768px) 50vw, 100vw" alt="Подологический кабинет с тремя креслами" loading="lazy" style="border-radius:var(--r-card);aspect-ratio:4/3;object-fit:cover;width:100%">
+    <img src="img/cabinet-800.jpg" srcset="img/cabinet-800.jpg 800w, img/cabinet-1600.jpg 1600w" sizes="(min-width:1312px) 584px, (min-width:1200px) calc(50vw - 72px), (min-width:768px) calc(50vw - 48px), calc(100vw - 40px)" alt="Подологический кабинет с тремя креслами" loading="lazy" style="border-radius:var(--r-card);aspect-ratio:4/3;object-fit:cover;width:100%">
   </div>
 </section>
 <section class="section section--alt" id="team">
@@ -105,11 +105,67 @@
   <div style="margin-top:var(--sp-3);display:grid;gap:12px">
     <p class="prose muted small">Фото нужно, чтобы увидеть объём работы: сколько ногтей, есть ли воспаление, нужна ли корректирующая система. Отвечаем в рабочие часы, переписка остаётся в мессенджере.</p>
     <div class="messengers">
-      <a class="btn btn--ghost btn--sm" href="https://t.me/ilonails_studio?text=Здравствуйте!%20Хочу%20узнать%20стоимость,%20прикрепляю%20фото">Telegram</a>
+      <a class="btn btn--ghost btn--sm" href="https://t.me/ilonails_studio">Telegram</a>
       <a class="btn btn--ghost btn--sm" href="viber://chat?number=%2B375290000000">Viber</a>
       <a class="btn btn--ghost btn--sm" href="https://wa.me/375290000000?text=Здравствуйте!%20Хочу%20узнать%20стоимость,%20прикрепляю%20фото">WhatsApp</a>
-      <a class="btn btn--ghost btn--sm" href="#">Полный прайс, 46 позиций →</a>
+      <a class="btn btn--ghost btn--sm" href="#">Полный прайс, 46 позиций <span aria-hidden="true">→</span></a>
+    </div>
+    <!-- аккаунты мессенджеров и номер уточнить у заказчика -->
+  </div>
+</section>
+<section class="section section--alt" id="ilona">
+  <div class="container about-ilona">
+    <img src="img/ilona.jpg" alt="Илона Жданович в студии" loading="lazy" width="1000" height="1000">
+    <div>
+      <span class="eyebrow">Кто за этим стоит</span>
+      <h2 style="margin-top:8px">Десять лет назад у меня был маленький стол на съёмной квартире и большое желание помогать людям</h2>
+      <p class="prose muted" style="margin-top:16px">Сегодня Ilonails – подологический центр в центре Минска, команда специалистов и оборудование, в которое вложено больше, чем в собственное жильё. Мы не обещаем невозможного. Зато честно говорим, что можем сделать, сколько это стоит и как ухаживать за стопами дома.</p>
+      <a class="btn btn--ghost" href="#" style="margin-top:20px">Об Илоне и курсах <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
-</main><script src="js/site.js"></script></body></html>
+<section class="section container" id="reviews">
+  <div class="section__head"><h2>Что говорят те, кто уже был</h2><p class="hint">Отзывы подтягиваются с Яндекс.Карт и из YCLIENTS. Ничего не редактируем и не придумываем.</p></div>
+  <div class="reviews">
+    <div class="review"><blockquote>«Прекрасный мастер и идеальный маникюр. Спасибо огромное!»</blockquote><span class="src">Яндекс.Карты · клиентка студии</span></div>
+    <div class="review review--stub"><blockquote>Отзыв подгрузится автоматически после подключения Яндекс.Карт</blockquote><span class="src">Яндекс.Карты</span></div>
+    <div class="review review--stub"><blockquote>Отзыв подгрузится автоматически после подключения YCLIENTS</blockquote><span class="src">YCLIENTS</span></div>
+  </div>
+</section>
+<section class="section section--alt" id="courses">
+  <div class="container book__in">
+    <div class="book__info"><span class="eyebrow">Обучение</span><h2>Курс «Педикюр с элементами подологии»</h2><p class="muted prose">Практика в студии на реальных клиентах, малые группы до четырёх человек. Разрешение на обучение получено одними из первых в городе.</p></div>
+    <a class="btn btn--ghost" href="#">О курсе <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+<section class="section container" id="contacts">
+  <div class="contacts">
+    <div>
+      <div class="section__head"><h2>Как добраться и записаться</h2></div>
+      <div class="book__info">
+        <p><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</p>
+        <p class="muted">Ежедневно до 20:00 <!-- часы уточнить у заказчика --></p>
+        <p class="muted">Напишите нам: <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375290000000">Viber</a> · <a href="https://wa.me/375290000000">WhatsApp</a></p>
+        <p><a class="tnum" href="tel:+375290000000">+375 (29) 000-00-00</a> · <a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></p>
+      </div>
+      <div id="book" style="margin-top:var(--sp-3);display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn--dark" href="#">Записаться онлайн</a><span class="muted small" style="align-self:center">откроется виджет YCLIENTS</span></div>
+    </div>
+    <div class="contacts__map"><img src="img/map.jpg" alt="Карта: улица Максима Танка, 20, Минск" loading="lazy" width="1200" height="600"></div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container footer__in">
+    <div><a class="logo" href="index.html">ilonails.studio</a><p style="margin-top:8px">Подологический центр, педикюр и маникюр<br>Минск, ул. Максима Танка, 20</p></div>
+    <ul><li><a href="#problems">Проблемы</a></li><li><a href="#prices">Цены</a></li><li><a href="#safety">О центре</a></li><li><a href="#team">Специалисты</a></li><li><a href="#courses">Курсы</a></li><li><a href="#contacts">Контакты</a></li></ul>
+    <ul><li><a href="tel:+375290000000">+375 (29) 000-00-00</a></li><li><a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></li><li><a href="#book">Запись онлайн</a></li></ul>
+  </div>
+  <div class="container footer__bottom"><span>ИП Жданович И. · УНП 000000000 · Минск, ул. Максима Танка, 20</span><a href="#">Политика обработки персональных данных</a></div>
+</footer>
+<div class="sticky-cta"><a class="btn btn--dark" href="#book">Записаться</a><a class="btn btn--ghost" href="#prices">Расчёт по фото</a></div>
+<div class="modal" data-open="false" role="dialog" aria-modal="true" aria-label="Ролик Илоны о студии">
+  <div class="modal__box"><video src="video/full.mp4" poster="img/poster-loop.jpg" controls playsinline preload="none"></video><button class="modal__close" type="button" aria-label="Закрыть">×</button></div>
+</div>
+<script src="js/site.js"></script>
+</body>
+</html>

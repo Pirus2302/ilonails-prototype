@@ -33,7 +33,7 @@
 
 /* Блок динамики */
 .dynamics { display: grid; gap: var(--sp-3); }
-@media (min-width: 1200px) { .dynamics { grid-template-columns: 1fr 2fr; align-items: start; } }
+@media (min-width: 1200px) { .dynamics { grid-template-columns: 1fr 2fr; align-items: start; } .dynamics .ba--grid figure { max-width: 560px; } }
 
 /* Об Илоне */
 .about-ilona { display: grid; gap: var(--sp-3); }
@@ -43,6 +43,7 @@
 /* Контакты */
 .contacts { display: grid; gap: var(--sp-3); }
 .contacts__map img { border-radius: var(--r-card); aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
+.book__info a { display: inline-block; padding-block: 4px; }
 @media (min-width: 768px) { .contacts { grid-template-columns: 1fr 1fr; align-items: center; } }
 
 /* Страница проблемы */

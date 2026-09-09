@@ -74,6 +74,7 @@
 .person img { aspect-ratio: 4 / 5; object-fit: cover; width: 100%; border-radius: var(--r-card); }
 .person h3 { margin-top: 12px; }
 .person p { font-size: var(--fs-small); color: var(--c-muted); margin-top: 4px; }
+.person p + p { margin-top: 10px; }
 @media (min-width: 768px) { .people { grid-template-columns: repeat(3, 1fr); } }
 
 /* Галерея до/после */

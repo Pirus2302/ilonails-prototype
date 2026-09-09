@@ -5,7 +5,7 @@
 .hero-e h1 { font-size: 34px; }
 .hero-e__who { font-size: var(--fs-small); color: var(--c-muted); }
 .hero-e__who b { color: var(--c-ink); font-weight: 600; }
-.hero-e__cta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.hero-e__cta { display: flex; flex-wrap: wrap; gap: 8px; }
 @media (min-width: 768px) {
   .hero-e { grid-template-columns: 1fr 200px; column-gap: var(--sp-4); }
   .hero-e h1 { font-size: 44px; }
@@ -13,7 +13,7 @@
 }
 @media (min-width: 1200px) {
   .hero-e { grid-template-columns: 1fr 380px; column-gap: var(--sp-6); align-items: center; padding-block: var(--sp-6) var(--sp-5); }
-  .hero-e h1 { font-size: var(--fs-h1); max-width: 12ch; }
+  .hero-e h1 { font-size: var(--fs-h1); max-width: 20ch; }
   .hero-e__left { gap: 22px; max-width: 720px; }
   .hero-e__right { display: grid; gap: 16px; justify-items: center; text-align: center; }
 }

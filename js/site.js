@@ -1,43 +1,62 @@
 (function () {
   var burger = document.querySelector(".burger");
   var menu = document.querySelector(".menu");
+  function menuOpen() { return !!menu && menu.getAttribute("data-open") === "true"; }
+  function closeMenu() {
+    if (!menu) return;
+    menu.setAttribute("data-open", "false");
+    if (burger) burger.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+  function openMenu() {
+    if (!menu) return;
+    menu.setAttribute("data-open", "true");
+    if (burger) burger.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
   if (burger && menu) {
-    burger.addEventListener("click", function () {
-      var open = menu.getAttribute("data-open") === "true";
-      menu.setAttribute("data-open", open ? "false" : "true");
-      burger.setAttribute("aria-expanded", open ? "false" : "true");
-      document.body.style.overflow = open ? "" : "hidden";
-    });
-    menu.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        menu.setAttribute("data-open", "false");
-        burger.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
-      });
-    });
+    burger.addEventListener("click", function () { menuOpen() ? closeMenu() : openMenu(); });
+    menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeMenu); });
   }
 
   var modal = document.querySelector(".modal");
   var modalVideo = modal ? modal.querySelector("video") : null;
-  function openModal() {
+  var modalClose = modal ? modal.querySelector(".modal__close") : null;
+  var lastTrigger = null;
+  function modalIsOpen() { return !!modal && modal.getAttribute("data-open") === "true"; }
+  function openModal(e) {
     if (!modal) return;
+    lastTrigger = e && e.currentTarget ? e.currentTarget : null;
     modal.setAttribute("data-open", "true");
     document.body.style.overflow = "hidden";
     if (modalVideo) { modalVideo.currentTime = 0; modalVideo.play().catch(function () {}); }
-    var close = modal.querySelector(".modal__close"); if (close) close.focus();
+    if (modalClose) modalClose.focus();
   }
   function closeModal() {
     if (!modal) return;
     modal.setAttribute("data-open", "false");
-    document.body.style.overflow = "";
+    document.body.style.overflow = menuOpen() ? "hidden" : "";
     if (modalVideo) modalVideo.pause();
+    if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
   }
   document.querySelectorAll("[data-open-video]").forEach(function (b) { b.addEventListener("click", openModal); });
   if (modal) {
-    modal.querySelector(".modal__close").addEventListener("click", closeModal);
+    if (modalClose) modalClose.addEventListener("click", closeModal);
     modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+    modal.addEventListener("keydown", function (e) {
+      if (e.key !== "Tab") return;
+      var f = modal.querySelectorAll("button, [href], video[controls]");
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
   }
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    if (modalIsOpen()) { closeModal(); return; }
+    if (menuOpen()) closeMenu();
+  });
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll("video[data-autoplay]").forEach(function (v) {

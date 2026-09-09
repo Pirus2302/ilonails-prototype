@@ -1,24 +1,21 @@
 /* Первый экран E */
-.hero-e { padding-block: var(--sp-2) var(--sp-4); display: grid; gap: 14px; }
-.hero-e__left { display: grid; gap: 14px; }
-.hero-e__row { display: grid; grid-template-columns: 1fr 132px; gap: 14px; align-items: start; }
+.hero-e { padding-block: var(--sp-2) var(--sp-4); display: grid; grid-template-columns: 1fr 132px; gap: 14px; align-items: start; }
+.hero-e__left { grid-column: 1; display: grid; gap: 14px; }
+.hero-e__right { grid-column: 2; grid-row: 1; }
 .hero-e h1 { font-size: 34px; }
 .hero-e__who { font-size: var(--fs-small); color: var(--c-muted); }
 .hero-e__who b { color: var(--c-ink); font-weight: 600; }
 .hero-e__cta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 @media (min-width: 768px) {
+  .hero-e { grid-template-columns: 1fr 200px; column-gap: var(--sp-4); }
   .hero-e h1 { font-size: 44px; }
-  .hero-e__row { grid-template-columns: 1fr 200px; gap: var(--sp-4); }
-  .bubble { width: 200px; height: 200px; }
   .hero-e__cta { display: flex; }
 }
 @media (min-width: 1200px) {
   .hero-e { grid-template-columns: 1fr 380px; column-gap: var(--sp-6); align-items: center; padding-block: var(--sp-6) var(--sp-5); }
-  .hero-e__row { display: contents; }
   .hero-e h1 { font-size: var(--fs-h1); max-width: 12ch; }
   .hero-e__left { gap: 22px; max-width: 720px; }
-  .hero-e__right { grid-row: 1; grid-column: 2; display: grid; gap: 16px; justify-items: center; text-align: center; }
-  .bubble { width: 320px; height: 320px; }
+  .hero-e__right { display: grid; gap: 16px; justify-items: center; text-align: center; }
 }
 
 /* Первый экран A */
@@ -36,18 +33,18 @@
 
 /* Об Илоне */
 .about-ilona { display: grid; gap: var(--sp-3); }
-.about-ilona img { aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-card); }
+.about-ilona img { aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-card); width: 100%; }
 @media (min-width: 768px) { .about-ilona { grid-template-columns: 1fr 2fr; align-items: center; } }
 
 /* Контакты */
 .contacts { display: grid; gap: var(--sp-3); }
-.contacts__map img { border-radius: var(--r-card); aspect-ratio: 16 / 10; object-fit: cover; }
+.contacts__map img { border-radius: var(--r-card); aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
 @media (min-width: 768px) { .contacts { grid-template-columns: 1fr 1fr; align-items: center; } }
 
 /* Страница проблемы */
 .problem-hero { padding-block: var(--sp-3) var(--sp-4); display: grid; gap: 14px; }
 .problem-hero__cta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-@media (min-width: 1200px) { .problem-hero { grid-template-columns: 1fr 1fr; align-items: center; column-gap: var(--sp-6); padding-block: var(--sp-6); } .problem-hero img { border-radius: var(--r-card); aspect-ratio: 4 / 3; object-fit: cover; } }
+@media (min-width: 1200px) { .problem-hero { grid-template-columns: 1fr 1fr; align-items: center; column-gap: var(--sp-6); padding-block: var(--sp-6); } .problem-hero img { border-radius: var(--r-card); aspect-ratio: 4 / 3; object-fit: cover; width: 100%; } }
 .pain { border-left: 2px solid var(--c-accent); padding: 4px 0 4px 16px; margin-top: var(--sp-3); }
 .pending { border: 1px dashed var(--c-line); border-radius: 10px; padding: 14px 16px; font-size: var(--fs-small); color: var(--c-muted); }
 .related { display: grid; gap: var(--sp-2); }
@@ -55,4 +52,4 @@
 .related a:hover { border-color: var(--c-ink); text-decoration: none; }
 @media (min-width: 768px) { .related { grid-template-columns: repeat(3, 1fr); } }
 .breadcrumbs { font-size: 12px; color: var(--c-muted); padding-top: var(--sp-2); }
-.breadcrumbs a { color: var(--c-muted); }
+.breadcrumbs a { color: var(--c-muted); display: inline-block; padding-block: 4px; }

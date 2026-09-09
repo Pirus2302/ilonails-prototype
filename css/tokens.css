@@ -26,7 +26,7 @@
   --shadow-float: 0 12px 32px -16px rgba(25, 27, 30, .35);
   --dur: 200ms;
   --ease: cubic-bezier(.2, .7, .2, 1);
-  --sticky-h: 68px;
+  --sticky-h: 72px;
 }
 @media (min-width: 768px) {
   :root { --fs-h1: 52px; --fs-h2: 34px; --fs-body: 16px; --gutter: 40px; }

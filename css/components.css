@@ -13,7 +13,7 @@
 .btn--block { width: 100%; }
 
 /* Шапка */
-.header { position: sticky; top: 0; z-index: 20; background: rgba(252, 252, 251, .92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--c-line); }
+.header { position: sticky; top: 0; z-index: 20; background: rgba(252, 252, 251, .92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--c-line); }
 .header__in { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-2); min-height: 64px; }
 .logo { font-family: var(--f-display); font-style: italic; font-size: 22px; color: var(--c-ink); }
 .logo:hover { text-decoration: none; }
@@ -25,10 +25,11 @@
 .burger span::before, .burger span::after, .burger i { content: ""; position: absolute; left: 0; right: 0; height: 1.5px; background: var(--c-ink); }
 .burger span::before { top: 0; } .burger i { top: 6px; } .burger span::after { bottom: 0; }
 .menu { display: none; position: fixed; inset: 64px 0 0 0; background: var(--c-bg); z-index: 19; padding: var(--sp-3) var(--gutter); }
-.menu[data-open="true"] { display: grid; align-content: start; gap: 4px; }
+.menu[data-open="true"] { display: grid; align-content: start; gap: 4px; overflow-y: auto; overscroll-behavior: contain; }
 .menu a { display: block; padding: 14px 0; border-bottom: 1px solid var(--c-line); font-family: var(--f-display); font-size: 28px; color: var(--c-ink); }
 .menu a:hover { text-decoration: none; }
 .menu__contacts { margin-top: var(--sp-3); display: grid; gap: 8px; color: var(--c-muted); }
+.menu__contacts a { display: inline-block; padding-block: 4px; }
 @media (min-width: 1200px) {
   .header__in { min-height: 76px; }
   .nav { display: flex; gap: 28px; }
@@ -56,7 +57,7 @@
   .problems a { grid-template-columns: 1fr; align-content: space-between; min-height: 130px; padding: 18px 16px; border: 0; height: 100%; }
   .problems .arr { justify-self: end; }
 }
-@media (min-width: 1200px) { .problems { grid-template-columns: repeat(8, 1fr); } .problems .t { font-size: 21px; } }
+@media (min-width: 1200px) { .problems { grid-template-columns: repeat(8, minmax(0, 1fr)); } .problems .t { font-size: 21px; overflow-wrap: anywhere; } }
 
 /* Карточки цен */
 .prices { display: grid; gap: 1px; background: var(--c-line); border: 1px solid var(--c-line); }
@@ -109,8 +110,8 @@
 @media (min-width: 768px) { .book__in { grid-template-columns: 1fr auto; align-items: center; } }
 
 /* Липкая панель */
-.sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; display: flex; gap: 8px; padding: 10px var(--gutter);
-  background: rgba(252, 252, 251, .92); backdrop-filter: blur(10px); border-top: 1px solid var(--c-line); }
+.sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; display: flex; gap: 8px; padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
+  background: rgba(252, 252, 251, .92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-top: 1px solid var(--c-line); }
 .sticky-cta .btn { flex: 1; }
 @media (min-width: 1200px) { .sticky-cta { display: none; } }
 
@@ -120,6 +121,7 @@
 .bubble video, .bubble img { width: 100%; height: 100%; object-fit: cover; }
 .bubble__label { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); background: rgba(25, 27, 30, .78); color: #fff;
   font-size: 11px; letter-spacing: .04em; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+@media (min-width: 768px) { .bubble { width: 200px; height: 200px; } }
 @media (min-width: 1200px) { .bubble { width: 320px; height: 320px; box-shadow: 0 0 0 6px var(--c-bg), 0 0 0 7px var(--c-line); } .bubble__label { font-size: 13px; padding: 7px 14px; bottom: 18px; } }
 
 /* Модальное окно видео */
@@ -141,6 +143,6 @@
 .footer { background: var(--c-bg-alt); border-top: 1px solid var(--c-line); padding-block: var(--sp-5) var(--sp-3); font-size: var(--fs-small); color: var(--c-muted); }
 .footer__in { display: grid; gap: var(--sp-3); }
 .footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.footer a { color: var(--c-ink); }
+.footer a { color: var(--c-ink); display: inline-block; padding-block: 4px; }
 .footer__bottom { margin-top: var(--sp-4); padding-top: var(--sp-2); border-top: 1px solid var(--c-line); display: grid; gap: 8px; font-size: 12px; }
 @media (min-width: 768px) { .footer__in { grid-template-columns: 2fr 1fr 1fr; } .footer__bottom { grid-template-columns: 1fr auto; } }

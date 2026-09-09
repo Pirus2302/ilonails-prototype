@@ -12,6 +12,6 @@ with sync_playwright() as pw:
         for w in (390, 1440):
             pg = b.new_page(viewport={"width": w, "height": 900})
             pg.goto((ROOT / name).as_uri()); pg.wait_for_timeout(1200)
-            pg.screenshot(path=str(OUT / f"{name[:-5]}-{w}.png"), full_page=True)
+            pg.screenshot(path=str(OUT / f"{pathlib.Path(name).stem}-{w}.png"), full_page=True)
             print("saved", name, w)
     b.close()

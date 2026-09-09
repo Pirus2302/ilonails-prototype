@@ -1,0 +1,36 @@
+:root {
+  --c-bg: #fcfcfb;
+  --c-bg-alt: #f5f3ee;
+  --c-line: #eceae4;
+  --c-ink: #191b1e;
+  --c-muted: #5b5a58;
+  --c-accent: #1e6fa8;
+  --c-accent-ink: #ffffff;
+
+  --f-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --f-body: "Golos Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --fs-h1: 40px;   --lh-h1: 1.05;
+  --fs-h2: 28px;   --lh-h2: 1.1;
+  --fs-h3: 22px;   --lh-h3: 1.1;
+  --fs-body: 15px; --lh-body: 1.5;
+  --fs-small: 13px;
+  --fs-eyebrow: 11px;
+
+  --sp-1: 8px; --sp-2: 16px; --sp-3: 24px; --sp-4: 32px; --sp-5: 48px; --sp-6: 64px; --sp-7: 96px;
+  --gutter: 20px;
+  --container: 1312px;
+
+  --r-pill: 999px;
+  --r-card: 18px;
+  --shadow-float: 0 12px 32px -16px rgba(25, 27, 30, .35);
+  --dur: 200ms;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --sticky-h: 68px;
+}
+@media (min-width: 768px) {
+  :root { --fs-h1: 52px; --fs-h2: 34px; --fs-body: 16px; --gutter: 40px; }
+}
+@media (min-width: 1200px) {
+  :root { --fs-h1: 64px; --fs-h2: 40px; --fs-h3: 24px; --gutter: 64px; --sticky-h: 0px; }
+}

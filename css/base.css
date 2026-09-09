@@ -1,0 +1,42 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--c-bg); color: var(--c-ink);
+  font-family: var(--f-body); font-size: var(--fs-body); line-height: var(--lh-body);
+  padding-bottom: var(--sticky-h);
+}
+img, video { max-width: 100%; height: auto; display: block; }
+a { color: var(--c-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 3px; }
+
+h1, h2, h3 { font-family: var(--f-display); font-weight: 500; margin: 0; text-wrap: balance; }
+h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); }
+h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); }
+h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); }
+p { margin: 0; }
+p + p { margin-top: var(--sp-2); }
+.prose { max-width: 62ch; }
+.muted { color: var(--c-muted); }
+.small { font-size: var(--fs-small); }
+.eyebrow { font-size: var(--fs-eyebrow); letter-spacing: .1em; text-transform: uppercase; color: var(--c-muted); }
+.italic { font-style: italic; }
+.tnum { font-variant-numeric: tabular-nums; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--sp-5); }
+.section--alt { background: var(--c-bg-alt); }
+.section__head { display: grid; gap: 6px; margin-bottom: var(--sp-3); }
+.section__head .hint { color: var(--c-muted); font-size: var(--fs-small); max-width: 60ch; }
+@media (min-width: 768px) { .section { padding-block: var(--sp-6); } .section__head { margin-bottom: var(--sp-4); } }
+@media (min-width: 1200px) { .section { padding-block: var(--sp-7); } }
+
+.grid { display: grid; gap: var(--sp-2); }
+@media (min-width: 768px) { .grid--2 { grid-template-columns: 1fr 1fr; } .grid--3 { grid-template-columns: repeat(3, 1fr); } .grid--4 { grid-template-columns: repeat(4, 1fr); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}

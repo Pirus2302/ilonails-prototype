@@ -11,7 +11,11 @@ with sync_playwright() as pw:
     for name in PAGES:
         for w in (390, 1440):
             pg = b.new_page(viewport={"width": w, "height": 900})
-            pg.goto((ROOT / name).as_uri()); pg.wait_for_timeout(1200)
+            pg.goto((ROOT / name).as_uri()); pg.wait_for_timeout(600)
+            pg.evaluate("[...document.images].forEach(i=>i.loading='eager')")
+            pg.evaluate("()=>{const h=document.body.scrollHeight;for(let y=0;y<h;y+=400)window.scrollTo(0,y);window.scrollTo(0,0);}")
+            pg.wait_for_function("[...document.images].every(i=>i.complete && i.naturalWidth>0)", timeout=30000)
+            pg.wait_for_timeout(600)
             pg.screenshot(path=str(OUT / f"{pathlib.Path(name).stem}-{w}.png"), full_page=True)
             print("saved", name, w)
     b.close()

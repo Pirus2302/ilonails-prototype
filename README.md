@@ -7,6 +7,8 @@
 Спека: docs/superpowers/specs/2026-09-09-ilonails-design-stage1-design.md
 
 ## Проверки
+Нужны Python 3.11, `pip install playwright pillow pypdfium2`, `playwright install chromium`.
+
 python tools/check.py            # чек-лист §10 по всем страницам
 python tools/check.py --tokens   # только контраст токенов
 python tools/render.py           # скриншоты 390 и 1440 в docs/screens/

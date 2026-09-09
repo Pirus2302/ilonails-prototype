@@ -23,16 +23,22 @@
     <div class="header__right">
       <a class="header__phone tnum" href="tel:+375290000000">+375 (29) 000-00-00</a><!-- публичный номер студии уточнить у заказчика -->
       <a class="btn btn--dark btn--sm" href="#book">Записаться</a>
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false"><span><i></i></span></button>
+      <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="menu"><span><i></i></span></button>
     </div>
   </div>
 </header>
-<div class="menu" data-open="false">
+<nav class="menu" id="menu" aria-label="Меню" data-open="false">
   <a href="#problems">Проблемы</a><a href="#prices">Цены</a><a href="#safety">О центре</a><a href="#team">Специалисты</a><a href="#courses">Курсы</a><a href="#contacts">Контакты</a>
   <div class="menu__contacts"><span>Минск, ул. Максима Танка, 20</span><a href="tel:+375290000000">+375 (29) 000-00-00</a></div>
-</div>
+</nav>
 <main>
 <section class="container hero-e">
+  <div class="hero-e__right">
+    <button class="bubble" type="button" data-open-video aria-label="Смотреть ролик Илоны со звуком">
+      <video data-autoplay autoplay muted loop playsinline poster="img/poster-bubble.jpg" src="video/bubble.mp4"></video>
+      <span class="bubble__label">включить звук</span>
+    </button>
+  </div>
   <div class="hero-e__left">
     <span class="eyebrow">Подологический центр · Минск, Центральный район</span>
     <h1>Больно ходить и&nbsp;стыдно разуться? Разберёмся, что с&nbsp;ногтем, и&nbsp;обработаем</h1>
@@ -41,24 +47,18 @@
     <ul class="proofs"><li>Заключение санстанции без замечаний</li><li>Автоклав</li><li>Немецкое оборудование</li><li>Кресла на 5 моторах</li></ul>
     <div class="hero-e__cta"><a class="btn btn--dark" href="#book">Записаться</a><a class="btn btn--ghost" href="#prices">Расчёт по фото</a></div>
   </div>
-  <div class="hero-e__right">
-    <button class="bubble" type="button" data-open-video aria-label="Смотреть ролик Илоны со звуком">
-      <video data-autoplay autoplay muted loop playsinline poster="img/poster-bubble.jpg" src="video/bubble.mp4"></video>
-      <span class="bubble__label">▶ включить звук</span>
-    </button>
-  </div>
 </section>
 <section class="section container" id="problems" style="padding-top:0">
   <div class="section__head"><h2>Найдите свою проблему</h2><p class="hint">Каждая ведёт на страницу: как проходит приём, сколько визитов, цены</p></div>
   <ul class="problems">
-    <li><a href="vrosshiy-nogot.html"><span><span class="t">Вросший ноготь</span><span class="d">уголок давит, больно в обуви</span></span><span class="arr">→</span></a></li>
-    <li><a href="#"><span><span class="t">Грибок ногтей и стоп</span><span class="d">обработка и сбор материала на анализ</span></span><span class="arr">→</span></a></li>
-    <li><a href="#"><span><span class="t">Мозоли и натоптыши</span><span class="d">в том числе стержневые</span></span><span class="arr">→</span></a></li>
-    <li><a href="#"><span><span class="t">Трещины и сухость стоп</span><span class="d">пятки, огрубевшая кожа</span></span><span class="arr">→</span></a></li>
-    <li><a href="#"><span><span class="t">Деформация и травмы ногтя</span><span class="d">утолщение, гематома, отслоение</span></span><span class="arr">→</span></a></li>
-    <li><a href="#"><span><span class="t">Индивидуальные стельки</span><span class="d">консультация и изготовление</span></span><span class="arr">→</span></a></li>
-    <li><a href="#"><span><span class="t">Гигиенический педикюр</span><span class="d">плановый уход, покрытия</span></span><span class="arr">→</span></a></li>
-    <li><a href="#"><span><span class="t">Маникюр</span><span class="d">аппаратный, долговременное покрытие</span></span><span class="arr">→</span></a></li>
+    <li><a href="vrosshiy-nogot.html"><span><span class="t">Вросший ноготь</span><span class="d">уголок давит, больно в обуви</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+    <li><a href="#"><span><span class="t">Грибок ногтей и стоп</span><span class="d">обработка и сбор материала на анализ</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+    <li><a href="#"><span><span class="t">Мозоли и натоптыши</span><span class="d">в том числе стержневые</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+    <li><a href="#"><span><span class="t">Трещины и сухость стоп</span><span class="d">пятки, огрубевшая кожа</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+    <li><a href="#"><span><span class="t">Дефор&shy;мация и травмы ногтя</span><span class="d">утолщение, гематома, отслоение</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+    <li><a href="#"><span><span class="t">Индивиду&shy;альные стельки</span><span class="d">консультация и изготовление</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+    <li><a href="#"><span><span class="t">Гигиени&shy;ческий педикюр</span><span class="d">плановый уход, покрытия</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+    <li><a href="#"><span><span class="t">Маникюр</span><span class="d">аппаратный, долго&shy;временное покрытие</span></span><span class="arr" aria-hidden="true">→</span></a></li>
   </ul>
 </section>
 </main><script src="js/site.js"></script></body></html>

@@ -57,7 +57,7 @@
   .problems a { grid-template-columns: 1fr; align-content: space-between; min-height: 130px; padding: 18px 16px; border: 0; height: 100%; }
   .problems .arr { justify-self: end; }
 }
-@media (min-width: 1200px) { .problems { grid-template-columns: repeat(8, minmax(0, 1fr)); } .problems .t { font-size: 21px; overflow-wrap: anywhere; } }
+@media (min-width: 1200px) { .problems { grid-template-columns: repeat(8, minmax(0, 1fr)); } .problems .t { font-size: 21px; hyphens: manual; } }
 
 /* Карточки цен */
 .prices { display: grid; gap: 1px; background: var(--c-line); border: 1px solid var(--c-line); }
@@ -119,10 +119,17 @@
 .bubble { position: relative; width: 132px; height: 132px; border-radius: 50%; overflow: hidden; background: var(--c-bg-alt);
   box-shadow: 0 0 0 4px var(--c-bg), 0 0 0 5px var(--c-line); padding: 0; }
 .bubble video, .bubble img { width: 100%; height: 100%; object-fit: cover; }
-.bubble__label { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); background: rgba(25, 27, 30, .78); color: #fff;
-  font-size: 11px; letter-spacing: .04em; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
-@media (min-width: 768px) { .bubble { width: 200px; height: 200px; } }
-@media (min-width: 1200px) { .bubble { width: 320px; height: 320px; box-shadow: 0 0 0 6px var(--c-bg), 0 0 0 7px var(--c-line); } .bubble__label { font-size: 13px; padding: 7px 14px; bottom: 18px; } }
+.bubble__label { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); background: rgba(25, 27, 30, .78); color: #fff;
+  font-size: 0; width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center; white-space: nowrap; }
+.bubble__label::before { content: "▶"; font-size: 11px; line-height: 1; }
+@media (min-width: 768px) {
+  .bubble { width: 200px; height: 200px; }
+  .bubble__label { font-size: 12px; letter-spacing: .04em; width: auto; height: auto; padding: 6px 12px; bottom: 14px; display: inline-flex; align-items: center; gap: 6px; }
+}
+@media (min-width: 1200px) {
+  .bubble { width: 320px; height: 320px; box-shadow: 0 0 0 6px var(--c-bg), 0 0 0 7px var(--c-line); }
+  .bubble__label { font-size: 13px; padding: 7px 14px; bottom: 18px; }
+}
 
 /* Модальное окно видео */
 .modal { position: fixed; inset: 0; z-index: 50; display: none; place-items: center; background: rgba(25, 27, 30, .82); padding: var(--sp-2); }

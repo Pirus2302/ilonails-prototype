@@ -25,15 +25,17 @@
 /* Первый экран A */
 .hero-a { position: relative; height: 560px; color: #fff; isolation: isolate; }
 .hero-a picture img, .hero-a video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; z-index: -2; }
-.hero-a::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(20, 22, 26, .05) 0%, rgba(20, 22, 26, .35) 45%, rgba(20, 22, 26, .78) 100%); }
+.hero-a::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(20, 22, 26, .45) 0%, rgba(20, 22, 26, 0) 55%), linear-gradient(180deg, rgba(20, 22, 26, .30) 0%, rgba(20, 22, 26, .55) 45%, rgba(20, 22, 26, .85) 100%); }
 .hero-a__in { position: absolute; left: 0; right: 0; bottom: 28px; display: grid; gap: 14px; }
-.hero-a p { color: rgba(255, 255, 255, .9); max-width: 48ch; }
+.hero-a p { color: #fff; max-width: 48ch; }
+.hero-a h1, .hero-a p { text-shadow: 0 1px 2px rgba(0, 0, 0, .25); }
 @media (min-width: 768px) { .hero-a { height: 640px; } }
 @media (min-width: 1200px) { .hero-a { height: 720px; } .hero-a__in { bottom: 64px; } .hero-a h1 { max-width: 14ch; } }
 
 /* Блок динамики */
 .dynamics { display: grid; gap: var(--sp-3); }
-@media (min-width: 1200px) { .dynamics { grid-template-columns: 1fr 2fr; align-items: start; } .dynamics .ba--grid figure { max-width: 560px; } }
+.ba--grid figure { max-width: 560px; }
+@media (min-width: 1200px) { .dynamics { grid-template-columns: 1fr 2fr; align-items: start; } }
 
 /* Об Илоне */
 .about-ilona { display: grid; gap: var(--sp-3); }

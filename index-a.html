@@ -35,15 +35,15 @@
 <section class="hero-a">
   <picture>
     <source srcset="img/cabinet-1600.jpg" media="(min-width: 768px)">
-    <img src="img/cabinet-800.jpg" width="800" height="570" alt="Подологический кабинет студии Ilonails" fetchpriority="high">
+    <img src="img/cabinet-800.jpg" srcset="img/cabinet-800.jpg 1x, img/cabinet-1600.jpg 2x" width="800" height="570" alt="Подологический кабинет студии Ilonails" fetchpriority="high">
   </picture>
   <div class="container hero-a__in">
     <h1>Подология в&nbsp;Минске: обрабатываем вросшие ногти, грибок, мозоли</h1>
     <p>Студия Ilonails, Центральный район, ул. Максима Танка, 20. Немецкое оборудование, автоклав, заключение санстанции без замечаний.</p>
-    <div><a class="btn btn--light" href="#book">Записаться</a></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn--light" href="#book">Записаться</a><button class="btn btn--outline-light" type="button" data-open-video>Ролик о студии, 1 минута</button></div>
   </div>
 </section>
-<section class="section container" id="problems" style="padding-top:0">
+<section class="section container" id="problems">
   <div class="section__head"><h2>Найдите свою проблему</h2><p class="hint">Каждая ведёт на страницу: как проходит приём, сколько визитов, цены</p></div>
   <ul class="problems">
     <li><a href="vrosshiy-nogot.html"><span><span class="t">Вросший ноготь</span><span class="d">уголок давит, больно в обуви</span></span><span class="arr" aria-hidden="true">→</span></a></li>

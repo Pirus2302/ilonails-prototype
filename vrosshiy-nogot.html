@@ -18,7 +18,7 @@
   <div class="container header__in">
     <a class="logo" href="index.html">ilonails.studio</a>
     <nav class="nav" aria-label="Основное меню">
-      <a href="index.html#problems" aria-current="page">Проблемы</a><a href="index.html#prices">Цены</a><a href="index.html#safety">О центре</a><a href="index.html#team">Специалисты</a><a href="index.html#courses">Курсы</a><a href="index.html#contacts">Контакты</a>
+      <a href="index.html#problems" aria-current="location">Проблемы</a><a href="index.html#prices">Цены</a><a href="index.html#safety">О центре</a><a href="index.html#team">Специалисты</a><a href="index.html#courses">Курсы</a><a href="index.html#contacts">Контакты</a>
     </nav>
     <div class="header__right">
       <a class="header__phone tnum" href="tel:+375290000000">+375 (29) 000-00-00</a><!-- публичный номер студии уточнить у заказчика -->
@@ -28,18 +28,18 @@
   </div>
 </header>
 <nav class="menu" id="menu" aria-label="Меню" data-open="false">
-  <a href="index.html#problems" aria-current="page">Проблемы</a><a href="index.html#prices">Цены</a><a href="index.html#safety">О центре</a><a href="index.html#team">Специалисты</a><a href="index.html#courses">Курсы</a><a href="index.html#contacts">Контакты</a>
+  <a href="index.html#problems" aria-current="location">Проблемы</a><a href="index.html#prices">Цены</a><a href="index.html#safety">О центре</a><a href="index.html#team">Специалисты</a><a href="index.html#courses">Курсы</a><a href="index.html#contacts">Контакты</a>
   <div class="menu__contacts"><span>Минск, ул. Максима Танка, 20</span><a href="tel:+375290000000">+375 (29) 000-00-00</a></div>
 </nav>
 <main>
-<div class="container breadcrumbs"><a href="index.html">Главная</a> → <a href="index.html#problems">Проблемы</a> → Вросший ноготь</div>
+<nav class="container breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a> <span aria-hidden="true">→</span> <a href="index.html#problems">Проблемы</a> <span aria-hidden="true">→</span> Вросший ноготь</nav>
 <section class="container problem-hero">
   <div style="display:grid;gap:14px">
     <h1>Вросший ноготь</h1>
     <p class="prose muted">Уголок ногтя врезается в кожу валика. Больно в обуви, при ходьбе, иногда появляется покраснение и воспаление. Обрабатываем аппаратом, без боли, и подбираем систему, чтобы ноготь рос правильно.</p>
     <div class="problem-hero__cta"><a class="btn btn--dark" href="#book">Записаться</a><a class="btn btn--ghost" href="#prices">Расчёт по фото</a></div>
   </div>
-  <img src="img/ba-ingrown-grid.jpg" width="1000" height="1333" alt="Вросший ноготь: серия фотографий до и после обработки" fetchpriority="high">
+  <img src="img/device.jpg" width="1200" height="799" alt="Аппарат подолога рядом с креслом в кабинете студии" fetchpriority="high">
 </section>
 
 <section class="section section--alt">
@@ -52,7 +52,7 @@
 
 <section class="section container">
   <div class="section__head"><h2>Как проходит приём</h2><p class="hint">От входа до выхода около часа. Первый визит длиннее: смотрим, объясняем, обрабатываем.</p></div>
-  <ol class="steps">
+  <ol class="steps" role="list">
     <li><h3>Смотрим стопу</h3><p>Оцениваем ноготь, валик, есть ли воспаление. Задаём вопросы про обувь и привычки.</p></li>
     <li><h3>Называем цену</h3><p>До начала работы говорим, что будем делать и сколько это стоит. Без сюрпризов после.</p></li>
     <li><h3>Обрабатываем</h3><p>Освобождаем уголок ногтя аппаратом, убираем давление на кожу. При необходимости ставим тампонаду или корректирующую систему.</p></li>
@@ -83,13 +83,13 @@
   <div class="container">
     <div class="section__head"><h2>Цены</h2><p class="hint">Цена «от» зависит от того, сколько углов затронуто и есть ли воспаление. Пришлите фото, назовём точную стоимость до визита.</p></div>
     <div class="prices"><!-- цены из концепта, сверить с YCLIENTS -->
-      <div class="price"><h3>Обработка вросшего ногтя, 1 угол</h3><p>Аккуратно обрабатываем уголок ногтя и защищаем кожу вокруг, чтобы ходить было комфортно. Рассказываем, как ухаживать дома.</p><div class="price__foot"><span class="price__sum">25 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться</a></div></div>
-      <div class="price"><h3>Тампонада, 1 угол</h3><p>Устанавливаем тампонаду в область ногтевого валика, чтобы уменьшить давление ногтя на ткани. Снижает дискомфорт, защищает кожу и помогает ногтю расти правильно.</p><div class="price__foot"><span class="price__sum">20 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться</a></div></div>
-      <div class="price"><h3>Жидкая тампонада, 1 угол</h3><p>Защищает и разгружает проблемный участок валика. Держится дольше обычной тампонады и не мешает в обуви.</p><div class="price__foot"><span class="price__sum">30 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться</a></div></div>
-      <div class="price"><h3>Тейпирование боковых валиков</h3><p>Специальный тейп отводит кожу от ногтя и снижает давление боковых валиков на пластину. Простая процедура на один визит.</p><div class="price__foot"><span class="price__sum">15 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться</a></div></div>
-      <div class="price"><h3>Корректирующая система «Титановая нить»</h3><p>Бережно меняет форму ногтя и снижает давление на боковые валики. Носится незаметно, помогает ногтю расти правильно и предотвращает врастание.</p><div class="price__foot"><span class="price__sum">60 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться</a></div></div>
-      <div class="price"><h3>Корректирующая скоба ЗТО</h3><p>Выравнивает форму вросшего или деформированного ногтя, снижает давление на валики и помогает правильному росту пластины.</p><div class="price__foot"><span class="price__sum">65 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться</a></div></div>
-      <div class="price"><h3>Перевязка при вросшем ногте</h3><p>Обрабатываем и перевязываем проблемную зону, чтобы защитить ткани и создать условия для заживления. Даём рекомендации по уходу.</p><div class="price__foot"><span class="price__sum">цена уточняется</span><a class="btn btn--ghost btn--sm" href="#book">Записаться</a></div></div>
+      <div class="price"><h3>Обработка вросшего ногтя, 1 угол</h3><p>Аккуратно обрабатываем уголок ногтя и защищаем кожу вокруг, чтобы ходить было комфортно. Рассказываем, как ухаживать дома.</p><div class="price__foot"><span class="price__sum">25 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: обработка вросшего ногтя</span></a></div></div>
+      <div class="price"><h3>Тампонада, 1 угол</h3><p>Устанавливаем тампонаду в область ногтевого валика, чтобы уменьшить давление ногтя на ткани. Снижает дискомфорт, защищает кожу и помогает ногтю расти правильно.</p><div class="price__foot"><span class="price__sum">20 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: тампонада, 1 угол</span></a></div></div>
+      <div class="price"><h3>Жидкая тампонада, 1 угол</h3><p>Защищает и разгружает проблемный участок валика. Держится дольше обычной тампонады и не мешает в обуви.</p><div class="price__foot"><span class="price__sum">30 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: жидкая тампонада, 1 угол</span></a></div></div>
+      <div class="price"><h3>Тейпирование боковых валиков</h3><p>Специальный тейп отводит кожу от ногтя и снижает давление боковых валиков на пластину. Простая процедура на один визит.</p><div class="price__foot"><span class="price__sum">15 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: тейпирование боковых валиков</span></a></div></div>
+      <div class="price"><h3>Корректирующая система «Титановая нить»</h3><p>Бережно меняет форму ногтя и снижает давление на боковые валики. Носится незаметно, помогает ногтю расти правильно и предотвращает врастание.</p><div class="price__foot"><span class="price__sum">60 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: титановая нить</span></a></div></div>
+      <div class="price"><h3>Корректирующая скоба ЗТО</h3><p>Выравнивает форму вросшего или деформированного ногтя, снижает давление на валики и помогает правильному росту пластины.</p><div class="price__foot"><span class="price__sum">65 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: скоба ЗТО</span></a></div></div>
+      <div class="price"><h3>Перевязка при вросшем ногте</h3><p>Обрабатываем и перевязываем проблемную зону, чтобы защитить ткани и создать условия для заживления. Даём рекомендации по уходу.</p><div class="price__foot"><span class="price__sum">цена уточняется</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: перевязка при вросшем ногте</span></a></div></div>
     </div>
     <div class="messengers" style="margin-top:var(--sp-3)">
       <a class="btn btn--ghost btn--sm" href="https://t.me/ilonails_studio">Telegram</a>

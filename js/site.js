@@ -99,6 +99,7 @@
   setupSwitcher(document.getElementById("what"), { param: "what", storageKey: "whatVariant", itemSelector: ".wv", known: ["cards", "scheme", "pull"] });
   setupSwitcher(document.getElementById("how"), { param: "how", storageKey: "howVariant", itemSelector: ".hov", known: ["cases", "prep"] });
   setupSwitcher(document.getElementById("prices"), { param: "prices", storageKey: "pricesVariant", itemSelector: ".prv", known: ["menu", "factors", "table"] });
+  setupSwitcher(document.querySelector("#team .ptv") ? document.getElementById("team") : null, { param: "pteam", storageKey: "pteamVariant", itemSelector: ".ptv", known: ["cards", "rows"] });
   setupSwitcher(document.getElementById("contacts"), { param: "contacts", storageKey: "contactsVariant", itemSelector: ".cv", known: ["map", "table", "form"] });
   setupSwitcher(document.getElementById("safety"), { param: "safety", storageKey: "safetyVariant", itemSelector: ".sv", known: ["steps", "photos", "qa"] });
 
@@ -182,7 +183,7 @@
 
   // Блок команды: переключатель, вариант «Выбор» (смена фото по имени) и вариант «Слайдер» (стрелки)
   var teamSection = document.getElementById("team");
-  if (teamSection) {
+  if (teamSection && teamSection.querySelector(".tv")) {
     setupSwitcher(teamSection, { param: "team", storageKey: "teamVariant", itemSelector: ".tv", known: ["pick", "slider"] });
 
     var pickPh = teamSection.querySelector(".pick__ph img");

@@ -289,10 +289,27 @@
 </section>
 
 <section class="section container" id="team">
-  <div class="section__head"><h2>Кто выполняет</h2></div>
-  <div class="people">
-    <div class="person"><img src="img/ilona.jpg" width="1000" height="1000" alt="Илона Жданович, подолог" loading="lazy"><h3>Илона</h3><p>Руководитель центра, подолог. Корректирующие системы, сложные случаи.</p></div>
-    <div class="person"><img src="img/tatiana.jpg" width="1000" height="774" alt="Татьяна, подолог" loading="lazy"><h3>Татьяна</h3><p>Подолог. Тампонады, титановая нить, скобы.</p></div>
+  <div class="proto-switch" role="group" aria-label="Вариант блока специалистов (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="cards" aria-pressed="true">Кто за что</button>
+    <button type="button" class="proto-switch__btn" data-variant="rows" aria-pressed="false">Строки</button>
+  </div>
+
+  <div class="ptv" data-variant="cards"><!-- кто из подологов что делает, уточнить у заказчика; ссылки записи к мастеру из YCLIENTS -->
+    <div class="section__head"><h2>Кто выполняет</h2><p class="hint">С вросшими ногтями в студии работают два подолога. Можно записаться к конкретному.</p></div>
+    <div class="tw">
+      <div class="tw__card"><img src="img/ilona.jpg" width="1000" height="1000" alt="Илона Жданович, подолог" loading="lazy"><div><h3>Илона Жданович</h3><p class="role">Руководитель центра, подолог</p><ul><li>Коррекция формы: нить, скоба</li><li>Повторное врастание</li><li>Воспалённый валик</li></ul><a class="btn btn--ghost btn--sm" href="#book">Записаться к Илоне</a></div></div>
+      <div class="tw__card"><img src="img/tatiana.jpg" width="1000" height="774" alt="Татьяна, подолог" loading="lazy"><div><h3>Татьяна</h3><p class="role">Подолог</p><ul><li>Обработка уголка</li><li>Тампонада, тейп</li><li>Титановая нить, скоба</li></ul><a class="btn btn--ghost btn--sm" href="#book">Записаться к Татьяне</a></div></div>
+    </div>
+    <p class="tw__note">Если сложно выбрать, администратор подскажет при записи.</p>
+  </div>
+
+  <div class="ptv" data-variant="rows" hidden><!-- год начала работы с вросшими ногтями от заказчика -->
+    <div class="section__head"><h2>Кто выполняет</h2><p class="hint">Два подолога. При записи можно выбрать специалиста.</p></div>
+    <ul class="tl">
+      <li><img src="img/ilona.jpg" width="1000" height="1000" alt="Илона Жданович, подолог" loading="lazy"><span><b>Илона Жданович</b><span class="role">Руководитель центра, подолог. Корректирующие системы, сложные случаи</span></span><span class="exp">С вросшими ногтями с <span class="ph">год</span></span><a class="btn btn--ghost btn--sm" href="#book">Записаться</a></li>
+      <li><img src="img/tatiana.jpg" width="1000" height="774" alt="Татьяна, подолог" loading="lazy"><span><b>Татьяна</b><span class="role">Подолог. Обработка, тампонады, титановая нить, скобы</span></span><span class="exp">С вросшими ногтями с <span class="ph">год</span></span><a class="btn btn--ghost btn--sm" href="#book">Записаться</a></li>
+    </ul>
   </div>
 </section>
 

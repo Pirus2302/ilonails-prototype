@@ -33,16 +33,51 @@
 </nav>
 <main>
 <nav class="container breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a> <span aria-hidden="true">→</span> <a href="index.html#problems">Проблемы</a> <span aria-hidden="true">→</span> Вросший ноготь</nav>
-<section class="container problem-hero">
-  <div style="display:grid;gap:14px">
-    <h1>Вросший ноготь</h1>
-    <p class="prose muted">Уголок ногтя врезается в кожу валика. Больно в обуви, при ходьбе, иногда появляется покраснение и воспаление. Обрабатываем аппаратом, без боли, и подбираем систему, чтобы ноготь рос правильно.</p>
-    <div class="problem-hero__cta"><a class="btn btn--dark" href="#book">Записаться</a><a class="btn btn--ghost" href="#prices">Расчёт по фото</a></div>
+<div class="container" id="phero">
+  <div class="proto-switch" role="group" aria-label="Вариант первого экрана (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="symptoms" aria-pressed="true">Симптомы</button>
+    <button type="button" class="proto-switch__btn" data-variant="answer" aria-pressed="false">Вопрос и ответ</button>
   </div>
-  <img src="img/device.jpg" width="1200" height="799" alt="Аппарат подолога рядом с креслом в кабинете студии" fetchpriority="high">
-</section>
+  <div class="hv" data-variant="symptoms">
+    <section class="ph1">
+      <div class="ph1__t">
+        <span class="eyebrow">Проблема · ногти</span>
+        <h1>Вросший ноготь</h1>
+        <div>
+          <ul class="sym3">
+            <li>Уголок ногтя врезается в кожу, валик покраснел или припух</li>
+            <li>Больно в закрытой обуви и при ходьбе</li>
+            <li>Уже подстригали «уголком», а становится хуже</li>
+          </ul>
+          <p class="sym3__cap">Узнали? Это к нам. Обрабатываем аппаратом, без боли, и подбираем систему, чтобы ноготь рос правильно.</p>
+        </div>
+        <div class="problem-hero__cta"><a class="btn btn--dark" href="#book">Записаться</a><a class="btn btn--ghost" href="#prices">Расчёт по фото</a></div>
+      </div>
+      <div class="ph1__pic"><img src="img/device.jpg" width="1200" height="799" alt="Аппарат подолога рядом с креслом в кабинете студии" fetchpriority="high"><div class="ph1__cap"><b>Работаем аппаратом,</b> не режущим инструментом</div></div>
+    </section>
+  </div>
+  <div class="hv" data-variant="answer" hidden>
+    <section class="ph2">
+      <div class="ph2__t">
+        <h1>Уголок ногтя врезается в кожу и больно в обуви? <em class="hero__em">Обработаем без боли</em></h1>
+        <p class="ph2__lead">Вросший ноготь сам не проходит: край давит на валик, кожа воспаляется. Освобождаем уголок аппаратом и подбираем систему, чтобы ноготь рос правильно.</p>
+        <div class="problem-hero__cta"><a class="btn btn--dark" href="#book">Записаться</a><a class="btn btn--ghost" href="#prices">Расчёт по фото</a></div>
+      </div>
+      <div class="ph2__side">
+        <div class="ph2__pic"><img src="img/master.jpg" width="1000" height="1250" alt="Подолог студии в рабочей форме" loading="lazy"></div>
+        <ul class="pfacts"><!-- «около часа» и «от 25 BYN» из текущей страницы и концепта, сверить с YCLIENTS -->
+          <li><b>≈ 1 час</b><span>первый визит, со всеми объяснениями</span></li>
+          <li><b>от 25 BYN</b><span>обработка одного угла</span></li>
+          <li><b>Аппарат</b><span>без режущего инструмента</span></li>
+        </ul>
+      </div>
+      <nav class="pnav" aria-label="По странице"><a href="#how">Как проходит приём</a><a href="#visits">Сколько визитов</a><a href="#ba">До и после</a><a href="#prices">Цены</a><a href="#team">Кто выполняет</a></nav>
+    </section>
+  </div>
+</div>
 
-<section class="section section--alt">
+<section class="section section--alt" id="what">
   <div class="container">
     <div class="section__head"><h2>Что это и отчего возникает</h2></div>
     <p class="prose">Ноготь врастает, когда его край начинает давить на кожу сбоку. Чаще всего причина в тесной обуви, слишком коротком или закруглённом подстригании, травме или наследственной форме ногтя. Кожа отвечает воспалением, и с каждым днём наступать на палец всё больнее.</p>
@@ -50,7 +85,7 @@
   </div>
 </section>
 
-<section class="section container">
+<section class="section container" id="how">
   <div class="section__head"><h2>Как проходит приём</h2><p class="hint">От входа до выхода около часа. Первый визит длиннее: смотрим, объясняем, обрабатываем.</p></div>
   <ol class="steps" role="list">
     <li><h3>Смотрим стопу</h3><p>Оцениваем ноготь, валик, есть ли воспаление. Задаём вопросы про обувь и привычки.</p></li>
@@ -61,7 +96,7 @@
   <div class="pain"><p><b>Будет ли больно?</b> Работаем аппаратом, а не режущим инструментом, поэтому обработка проходит без боли. При сильном воспалении возможен дискомфорт в первые минуты, предупреждаем заранее.</p></div>
 </section>
 
-<section class="section section--alt">
+<section class="section section--alt" id="visits">
   <div class="container">
     <div class="section__head"><h2>Сколько визитов и когда виден результат</h2></div>
     <div class="grid grid--3">
@@ -72,7 +107,7 @@
   </div>
 </section>
 
-<section class="section container">
+<section class="section container" id="ba">
   <div class="section__head"><h2>До и после</h2><p class="hint">Один случай, фотографии публикуем открыто. Верхний ряд до, нижний после курса.</p></div>
   <div class="ba ba--grid">
     <figure><img src="img/ba-ingrown-grid.jpg" width="1000" height="1333" alt="Серия из четырёх фотографий: вросший ноготь до и после курса" loading="lazy"><figcaption>До и после, даты предоставляет заказчик</figcaption></figure>

@@ -357,6 +357,48 @@
 .breadcrumbs { font-size: 12px; color: var(--c-muted); padding-top: var(--sp-2); }
 .breadcrumbs a { color: var(--c-muted); display: inline-block; padding-block: 4px; }
 
+/* Первый экран страницы проблемы: варианты «Симптомы» и «Вопрос и ответ» (переключатель только для прототипа) */
+#phero .proto-switch { margin: var(--sp-2) 0 0; }
+.ph1 { display: grid; gap: var(--sp-3); padding-block: var(--sp-3) var(--sp-4); }
+.ph1__t { display: grid; gap: 16px; align-content: center; }
+.ph1 h1 { font-size: 40px; line-height: 1.02; }
+.sym3 { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.sym3 li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: start; font-size: 15px; }
+.sym3 li::before { content: "\2713"; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--c-accent); color: #fff; font-size: 12px; margin-top: 1px; }
+.sym3__cap { font-size: 12px; color: var(--c-muted); margin-top: 10px; max-width: 52ch; }
+.ph1__pic { position: relative; border-radius: var(--r-card); overflow: hidden; aspect-ratio: 4 / 3; background: #e7e5df; }
+.ph1__pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ph1__cap { position: absolute; left: 12px; bottom: 12px; right: 12px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, .92); font-size: 13px; color: var(--c-ink); box-shadow: var(--shadow-float); }
+.ph1__cap b { font-weight: 500; }
+.ph2 { display: grid; gap: var(--sp-3); padding-block: var(--sp-3) var(--sp-4); }
+.ph2__t { display: grid; gap: 18px; align-content: center; justify-items: start; }
+.ph2 h1 { font-size: 38px; line-height: 1.04; max-width: 20ch; }
+.ph2__lead { color: var(--c-muted); max-width: 52ch; }
+.ph2__side { display: grid; gap: 16px; }
+.ph2__pic { border-radius: var(--r-card); overflow: hidden; aspect-ratio: 16 / 10; background: #e7e5df; }
+.ph2__pic img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; }
+.pfacts { list-style: none; margin: 0; padding: 16px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; border-top: 1px solid var(--c-line); }
+.pfacts b { display: block; font-family: var(--f-display); font-weight: 500; font-size: 26px; line-height: 1; }
+.pfacts span { display: block; font-size: 12px; color: var(--c-muted); margin-top: 4px; }
+.pnav { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.pnav a { flex: 0 0 auto; min-height: 36px; display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid var(--c-line); border-radius: var(--r-pill); font-size: 13px; color: var(--c-ink); }
+.pnav a:hover { border-color: var(--c-ink); text-decoration: none; }
+@media (min-width: 768px) {
+  .ph1 { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); column-gap: var(--sp-5); align-items: center; }
+  .ph2 h1 { font-size: 52px; }
+  .pfacts b { font-size: 32px; }
+}
+@media (min-width: 1200px) {
+  .ph1 { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--sp-7); padding-block: var(--sp-5) var(--sp-6); }
+  .ph1 h1 { font-size: 56px; }
+  .ph1__pic { aspect-ratio: 5 / 4; }
+  .ph1__cap { left: 16px; bottom: 16px; right: auto; }
+  .ph2 { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--sp-7); padding-block: var(--sp-5) var(--sp-6); align-items: center; }
+  .ph2 h1 { font-size: 64px; }
+  .ph2__pic { aspect-ratio: 4 / 5; }
+  .pnav { grid-column: 1 / -1; }
+}
+
 /* Блок проблем: три варианта */
 .pv[hidden] { display: none; }
 

@@ -182,16 +182,55 @@
   </div>
 </section>
 <section class="section container" id="safety">
-  <div class="section__head"><h2>Меня здесь не заразят?</h2><p class="hint">Отвечаем документами и оборудованием, а не обещаниями.</p></div>
-  <div class="facts">
-    <div class="fact"><h3>Заключение санстанции без замечаний</h3><p>Собственный документ центра. <a href="#">Открыть скан</a></p></div>
-    <div class="fact"><h3>Автоклав</h3><p>Каждый инструмент проходит дезинфекцию, очистку, стерилизацию в автоклаве, упаковку и хранение до визита.</p></div>
-    <div class="fact"><h3>Немецкое оборудование</h3><p>Аппаратная обработка с пылесосом: без пыли и без боли.</p></div>
-    <div class="fact"><h3>Кресла на 5 моторах</h3><p>Положение стопы подстраивается под вас, а не вы под кресло.</p></div>
+  <div class="proto-switch" role="group" aria-label="Вариант блока (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="steps" aria-pressed="true">Путь инструмента</button>
+    <button type="button" class="proto-switch__btn" data-variant="photos" aria-pressed="false">Три фото</button>
+    <button type="button" class="proto-switch__btn" data-variant="qa" aria-pressed="false">Вопрос-ответ</button>
   </div>
-  <div class="grid grid--2" style="margin-top:var(--sp-3)">
-    <img src="img/autoclave.jpg" alt="Автоклав в стерилизационной студии" loading="lazy" style="border-radius:var(--r-card);aspect-ratio:4/3;object-fit:cover;width:100%">
-    <img src="img/cabinet-800.jpg" srcset="img/cabinet-800.jpg 800w, img/cabinet-1600.jpg 1600w" sizes="(min-width:1312px) 584px, (min-width:1200px) calc(50vw - 72px), (min-width:768px) calc(50vw - 48px), calc(100vw - 40px)" alt="Подологический кабинет с тремя креслами" loading="lazy" style="border-radius:var(--r-card);aspect-ratio:4/3;object-fit:cover;width:100%">
+  <div class="sv" data-variant="steps">
+    <div class="section__head"><h2>Чистота, которую можно проверить</h2><p class="hint">Отвечаем документами и оборудованием, а не обещаниями.</p></div>
+    <div class="s1">
+      <figure class="s1__ph"><img src="img/autoclave.jpg" alt="Автоклав в стерилизационной студии" width="960" height="1280" loading="lazy"><figcaption>Автоклав, стерилизационная центра</figcaption></figure>
+      <div>
+        <p class="eyebrow s1__eyebrow">Путь каждого инструмента</p>
+        <ol class="chain"><!-- расшифровки шагов подтвердить у заказчика -->
+          <li><div><b>Дезинфекция</b><span>Сразу после работы инструмент уходит в раствор</span></div></li>
+          <li><div><b>Очистка</b><span>Убираем всё, что могло остаться после дезинфекции</span></div></li>
+          <li><div><b>Стерилизация в автоклаве</b><span>Паром под давлением, в стерилизационной центра</span></div></li>
+          <li><div><b>Упаковка</b><span>Каждый набор в отдельном пакете</span></div></li>
+          <li><div><b>Хранение до визита</b><span>Пакет закрыт, пока вы не сядете в кресло</span></div></li>
+        </ol>
+        <div class="s1__more">
+          <div class="fact"><h3>Немецкое оборудование</h3><p>Аппаратная обработка с пылесосом: без пыли и без боли.</p></div>
+          <div class="fact"><h3>Кресла на 5 моторах</h3><p>Положение стопы подстраивается под вас, а не вы под кресло.</p></div>
+        </div>
+        <div class="s1__doc"><p class="doc"><span><b>Заключение санстанции без замечаний.</b> Собственный документ центра</span><a href="#">Открыть скан</a></p><!-- скан заключения запросить у заказчика --></div>
+      </div>
+    </div>
+  </div>
+  <div class="sv" data-variant="photos" hidden>
+    <div class="section__head"><h2>Чистота, которую можно проверить</h2><p class="hint">Отвечаем документами и оборудованием, а не обещаниями.</p></div>
+    <div class="s2">
+      <div class="s2__doc"><div><b>Заключение санстанции без замечаний</b><span>Собственный документ центра, можно посмотреть целиком</span></div><a class="btn btn--ghost" href="#">Открыть скан</a></div><!-- скан заключения запросить у заказчика -->
+      <div class="pcards">
+        <div class="pcard"><img src="img/autoclave.jpg" alt="Автоклав в стерилизационной студии" width="960" height="1280" loading="lazy"><div><h3>Автоклав</h3><p>Каждый инструмент проходит дезинфекцию, очистку, стерилизацию, упаковку и хранение до визита.</p></div></div>
+        <div class="pcard"><img src="img/device.jpg" alt="Аппарат для педикюра с пылесосом" width="1200" height="799" loading="lazy"><div><h3>Немецкое оборудование</h3><p>Аппаратная обработка с пылесосом: без пыли и без боли.</p></div></div>
+        <div class="pcard"><img src="img/cabinet-800.jpg" srcset="img/cabinet-800.jpg 800w, img/cabinet-1600.jpg 1600w" sizes="(min-width:1200px) 400px, (min-width:768px) 33vw, 100vw" alt="Подологический кабинет с тремя креслами" width="1600" height="1139" loading="lazy"><div><h3>Кресла на 5 моторах</h3><p>Положение стопы подстраивается под вас, а не вы под кресло.</p></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="sv" data-variant="qa" hidden>
+    <div class="section__head"><h2>Чистота, которую можно проверить</h2><p class="hint">Отвечаем документами и оборудованием, а не обещаниями.</p></div>
+    <div class="s3">
+      <ul class="qa">
+        <li><span class="q">А инструменты точно чистые?</span><span class="a"><b>Автоклав.</b> Каждый инструмент проходит дезинфекцию, очистку, стерилизацию в автоклаве, упаковку и хранение до визита.</span></li>
+        <li><span class="q">А это не больно и не пыльно?</span><span class="a"><b>Немецкое оборудование.</b> Аппаратная обработка с пылесосом: без пыли и без боли.</span></li>
+        <li><span class="q">А сидеть удобно?</span><span class="a"><b>Кресла на 5 моторах.</b> Положение стопы подстраивается под вас, а не вы под кресло.</span></li>
+        <li><span class="q">А документы есть?</span><span class="a"><b>Заключение санстанции без замечаний.</b> Собственный документ центра. <a href="#">Открыть скан</a></span></li><!-- скан заключения запросить у заказчика -->
+      </ul>
+      <div class="mosaic"><img class="m1" src="img/autoclave.jpg" alt="Автоклав в стерилизационной студии" width="960" height="1280" loading="lazy"><img class="m2" src="img/device.jpg" alt="Аппарат для педикюра с пылесосом" width="1200" height="799" loading="lazy"><img class="m3" src="img/cabinet-800.jpg" srcset="img/cabinet-800.jpg 800w, img/cabinet-1600.jpg 1600w" sizes="(min-width:1200px) 400px, (min-width:768px) 33vw, 100vw" alt="Подологический кабинет с тремя креслами" width="1600" height="1139" loading="lazy"></div>
+    </div>
   </div>
 </section>
 <section class="section section--alt" id="team">

@@ -66,42 +66,39 @@
     v.muted = true; v.play().catch(function () {});
   });
 
+  // Переключатели вариантов блоков (только для прототипа): ?param=variant + localStorage
+  function setupSwitcher(section, opts) {
+    if (!section) return;
+    var switcher = section.querySelector(".proto-switch");
+    var variants = section.querySelectorAll(opts.itemSelector);
+    var btns = switcher ? switcher.querySelectorAll(".proto-switch__btn") : [];
+    function readStored() { try { return localStorage.getItem(opts.storageKey); } catch (e) { return null; } }
+    function writeStored(v) { try { localStorage.setItem(opts.storageKey, v); } catch (e) {} }
+    function apply(name) {
+      variants.forEach(function (el) { el.hidden = el.getAttribute("data-variant") !== name; });
+      btns.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-variant") === name ? "true" : "false"); });
+    }
+    if (variants.length) {
+      var requested = new URLSearchParams(location.search).get(opts.param) || readStored() || opts.known[0];
+      if (opts.known.indexOf(requested) === -1) requested = opts.known[0];
+      apply(requested);
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var v = btn.getAttribute("data-variant");
+        apply(v); writeStored(v);
+        var params = new URLSearchParams(location.search);
+        params.set(opts.param, v);
+        history.replaceState(null, "", location.pathname + "?" + params.toString() + location.hash);
+      });
+    });
+  }
+  setupSwitcher(document.getElementById("safety"), { param: "safety", storageKey: "safetyVariant", itemSelector: ".sv", known: ["steps", "photos", "qa"] });
+
   // Блок «Найдите свою проблему»: переключатель вариантов (только для прототипа)
   var problemsSection = document.getElementById("problems");
   if (problemsSection) {
-    var switcher = problemsSection.querySelector(".proto-switch");
-    var variants = problemsSection.querySelectorAll(".pv");
-    var switchBtns = switcher ? switcher.querySelectorAll(".proto-switch__btn") : [];
-    var KNOWN_VARIANTS = ["map", "ask", "tiles"];
-
-    function readStoredVariant() {
-      try { return localStorage.getItem("problemsVariant"); } catch (e) { return null; }
-    }
-    function writeStoredVariant(v) {
-      try { localStorage.setItem("problemsVariant", v); } catch (e) {}
-    }
-    function applyVariant(name) {
-      variants.forEach(function (el) { el.hidden = el.getAttribute("data-variant") !== name; });
-      switchBtns.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-variant") === name ? "true" : "false"); });
-    }
-
-    if (variants.length) {
-      var requested = new URLSearchParams(location.search).get("problems") || readStoredVariant() || "map";
-      if (KNOWN_VARIANTS.indexOf(requested) === -1) requested = "map";
-      applyVariant(requested);
-    }
-
-    switchBtns.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var v = btn.getAttribute("data-variant");
-        applyVariant(v);
-        writeStoredVariant(v);
-        var params = new URLSearchParams(location.search);
-        params.set("problems", v);
-        var newUrl = location.pathname + "?" + params.toString() + location.hash;
-        history.replaceState(null, "", newUrl);
-      });
-    });
+    setupSwitcher(problemsSection, { param: "problems", storageKey: "problemsVariant", itemSelector: ".pv", known: ["map", "ask", "tiles"] });
 
     // Вариант «Карта стопы»: подсветка зоны при наведении/фокусе на строку
     var mapVariant = problemsSection.querySelector('.pv[data-variant="map"]');
@@ -151,30 +148,7 @@
   // Блок «до и после»: переключатель вариантов (только для прототипа) и ползунок сравнения
   var dynSection = document.getElementById("dynamics");
   if (dynSection) {
-    var dynSwitcher = dynSection.querySelector(".proto-switch");
-    var dynVariants = dynSection.querySelectorAll(".dv");
-    var dynBtns = dynSwitcher ? dynSwitcher.querySelectorAll(".proto-switch__btn") : [];
-    var DYN_KNOWN = ["compare", "strip"];
-    function readDyn() { try { return localStorage.getItem("dynamicsVariant"); } catch (e) { return null; } }
-    function writeDyn(v) { try { localStorage.setItem("dynamicsVariant", v); } catch (e) {} }
-    function applyDyn(name) {
-      dynVariants.forEach(function (el) { el.hidden = el.getAttribute("data-variant") !== name; });
-      dynBtns.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-variant") === name ? "true" : "false"); });
-    }
-    if (dynVariants.length) {
-      var dynRequested = new URLSearchParams(location.search).get("dynamics") || readDyn() || "compare";
-      if (DYN_KNOWN.indexOf(dynRequested) === -1) dynRequested = "compare";
-      applyDyn(dynRequested);
-    }
-    dynBtns.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var v = btn.getAttribute("data-variant");
-        applyDyn(v); writeDyn(v);
-        var params = new URLSearchParams(location.search);
-        params.set("dynamics", v);
-        history.replaceState(null, "", location.pathname + "?" + params.toString() + location.hash);
-      });
-    });
+    setupSwitcher(dynSection, { param: "dynamics", storageKey: "dynamicsVariant", itemSelector: ".dv", known: ["compare", "strip"] });
 
     var cmp = dynSection.querySelector(".cmp");
     if (cmp) {

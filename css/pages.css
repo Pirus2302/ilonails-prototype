@@ -399,6 +399,41 @@
   .pnav { grid-column: 1 / -1; }
 }
 
+/* Страница проблемы, блок «Что это»: варианты «Причины плитками», «Схема», «Текст с выносом» (переключатель только для прототипа) */
+.wc { display: grid; gap: var(--sp-3); }
+.wc__lead { max-width: 60ch; }
+.causes { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.causes li { padding: 16px 18px; border: 1px solid var(--c-line); border-radius: var(--r-card); background: var(--c-bg); }
+.causes b { display: block; font-family: var(--f-display); font-weight: 500; font-size: 22px; line-height: 1.1; }
+.causes span { display: block; margin-top: 6px; font-size: var(--fs-small); color: var(--c-muted); }
+.wc__note { padding: 14px 16px; border-left: 2px solid var(--c-accent); background: var(--c-bg); border-radius: 0 12px 12px 0; max-width: 62ch; }
+.wc__note b { font-weight: 500; }
+.ws { display: grid; gap: var(--sp-3); align-items: center; }
+.ws__t { display: grid; gap: 14px; }
+.ws__t .prose { max-width: none; }
+.ws__pic { display: grid; place-items: center; padding: 20px; border-radius: var(--r-card); background: var(--c-bg); border: 1px solid var(--c-line); }
+.nail { width: 100%; max-width: 320px; height: auto; }
+.ws__cap { font-size: 12px; color: var(--c-muted); text-align: center; margin-top: 6px; }
+.wt { display: grid; gap: var(--sp-3); }
+.wt__t { display: grid; gap: 14px; }
+.wt__t .prose { max-width: none; }
+.pull { display: grid; gap: 12px; align-content: start; padding-left: 20px; border-left: 2px solid var(--c-accent); }
+.pull b { font-family: var(--f-display); font-weight: 500; font-size: 28px; line-height: 1.1; text-wrap: balance; }
+.pull span { font-size: var(--fs-small); color: var(--c-muted); }
+.tags2 { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags2 span { padding: 6px 12px; border: 1px solid var(--c-line); border-radius: var(--r-pill); font-size: 13px; background: var(--c-bg); }
+@media (min-width: 768px) {
+  .causes { grid-template-columns: repeat(2, 1fr); }
+  .ws { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--sp-5); }
+  .wt { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--sp-5); align-items: start; }
+}
+@media (min-width: 1200px) {
+  .causes { grid-template-columns: repeat(4, 1fr); }
+  .ws { column-gap: var(--sp-7); }
+  .wt { column-gap: var(--sp-7); }
+  .pull b { font-size: 32px; }
+}
+
 /* Блок проблем: три варианта */
 .pv[hidden] { display: none; }
 

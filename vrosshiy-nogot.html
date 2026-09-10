@@ -79,9 +79,53 @@
 
 <section class="section section--alt" id="what">
   <div class="container">
-    <div class="section__head"><h2>Что это и отчего возникает</h2></div>
-    <p class="prose">Ноготь врастает, когда его край начинает давить на кожу сбоку. Чаще всего причина в тесной обуви, слишком коротком или закруглённом подстригании, травме или наследственной форме ногтя. Кожа отвечает воспалением, и с каждым днём наступать на палец всё больнее.</p>
-    <p class="prose">Сам по себе вросший ноготь не проходит. Чем раньше начать, тем меньше визитов понадобится и тем проще обойтись без корректирующих систем.</p>
+  <div class="proto-switch" role="group" aria-label="Вариант блока (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="cards" aria-pressed="true">Причины плитками</button>
+    <button type="button" class="proto-switch__btn" data-variant="scheme" aria-pressed="false">Схема</button>
+    <button type="button" class="proto-switch__btn" data-variant="pull" aria-pressed="false">Текст с выносом</button>
+  </div>
+  <div class="wv" data-variant="cards">
+    <div class="wc">
+      <div class="section__head"><h2>Что это и отчего возникает</h2><p class="hint wc__lead">Край ногтя начинает давить на кожу сбоку. Кожа отвечает воспалением, и с каждым днём наступать на палец всё больнее.</p></div>
+      <ul class="causes"><!-- расшифровки причин написаны исполнителем по общей практике, подтвердить у заказчика -->
+        <li><b>Тесная обувь</b><span>Узкий носок и каблук сжимают пальцы, ноготь упирается в валик</span></li>
+        <li><b>Подстригли уголком</b><span>Слишком коротко или полукругом, край уходит под кожу</span></li>
+        <li><b>Травма</b><span>Удар, тяжёлый предмет на палец, долгая нагрузка в спорте</span></li>
+        <li><b>Форма ногтя</b><span>Пластина от природы изогнутая, врастает без внешних причин</span></li>
+      </ul>
+      <p class="wc__note"><b>Сам по себе вросший ноготь не проходит.</b> Чем раньше начать, тем меньше визитов понадобится и тем проще обойтись без корректирующих систем.</p>
+    </div>
+  </div>
+  <div class="wv" data-variant="scheme" hidden>
+    <div class="ws">
+      <div class="ws__t"><div class="section__head"><h2>Что это и отчего возникает</h2></div><p class="prose">Ноготь врастает, когда его край начинает давить на кожу сбоку. Чаще всего причина в тесной обуви, слишком коротком или закруглённом подстригании, травме или наследственной форме ногтя. Кожа отвечает воспалением, и с каждым днём наступать на палец всё больнее.</p><p class="prose">Сам по себе вросший ноготь не проходит. Чем раньше начать, тем меньше визитов понадобится и тем проще обойтись без корректирующих систем.</p></div>
+      <div>
+        <div class="ws__pic"><svg class="nail" viewBox="0 0 320 300" role="img" aria-label="Схема: край ногтя давит на боковой валик">
+          <path d="M60 290 C40 200 40 120 90 60 C120 25 200 25 230 60 C280 120 280 200 260 290 Z" fill="#f1e4dc"/>
+          <path d="M118 70 C118 50 202 50 202 70 L206 190 C206 215 114 215 114 190 Z" fill="#fbf4ee" stroke="#d9c6bb" stroke-width="2"/>
+          <path d="M118 70 C130 62 190 62 202 70" fill="none" stroke="#e8d7cc" stroke-width="6" stroke-linecap="round"/>
+          <path d="M100 78 C92 120 92 170 104 205" fill="none" stroke="#e4b8ad" stroke-width="10" stroke-linecap="round"/>
+          <path d="M220 78 C228 120 228 170 216 205" fill="none" stroke="#e4b8ad" stroke-width="10" stroke-linecap="round"/>
+          <path d="M114 190 C110 200 104 205 98 206" fill="none" stroke="#1e6fa8" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="106" cy="200" r="16" fill="none" stroke="#1e6fa8" stroke-width="2" stroke-dasharray="3 4"/>
+          <line x1="106" y1="200" x2="40" y2="250" stroke="#1e6fa8" stroke-width="1.5"/>
+          <text x="16" y="270" font-size="12" fill="#1e6fa8" font-family="Golos Text, Arial, sans-serif">край давит на валик</text>
+          <line x1="220" y1="140" x2="286" y2="120" stroke="#5b5a58" stroke-width="1.5"/>
+          <text x="238" y="112" font-size="12" fill="#5b5a58" font-family="Golos Text, Arial, sans-serif">валик</text>
+          <line x1="160" y1="120" x2="160" y2="30" stroke="#5b5a58" stroke-width="1.5"/>
+          <text x="148" y="22" font-size="12" fill="#5b5a58" font-family="Golos Text, Arial, sans-serif">ноготь</text>
+        </svg></div>
+        <p class="ws__cap">Схема, вид сверху. Не медицинская иллюстрация</p>
+      </div>
+    </div>
+  </div>
+  <div class="wv" data-variant="pull" hidden>
+    <div class="wt">
+      <div class="wt__t"><div class="section__head"><h2>Что это и отчего возникает</h2></div><p class="prose">Ноготь врастает, когда его край начинает давить на кожу сбоку. Чаще всего причина в тесной обуви, слишком коротком или закруглённом подстригании, травме или наследственной форме ногтя. Кожа отвечает воспалением, и с каждым днём наступать на палец всё больнее.</p><div class="tags2"><span>Тесная обувь</span><span>Подстригли уголком</span><span>Травма</span><span>Форма ногтя от природы</span></div></div>
+      <div class="pull"><b>Сам по себе вросший ноготь не проходит</b><span>Чем раньше начать, тем меньше визитов понадобится и тем проще обойтись без корректирующих систем.</span></div>
+    </div>
+  </div>
   </div>
 </section>
 

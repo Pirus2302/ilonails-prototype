@@ -80,21 +80,21 @@
 .foot-glow { fill: none; stroke: var(--c-neon); stroke-width: 7; opacity: .18; stroke-linecap: round; stroke-linejoin: round; }
 .zone { fill: var(--c-accent); fill-opacity: .06; stroke: var(--c-accent); stroke-width: 1; stroke-dasharray: 3 4; transition: fill-opacity var(--dur) var(--ease), stroke-width var(--dur) var(--ease); }
 .zone.on { fill-opacity: .22; stroke-dasharray: none; stroke-width: 1.6; }
-.map__label { min-height: 24px; font-size: var(--fs-small); color: var(--c-muted); text-align: left; }
+.map__label { display: none; min-height: 24px; font-size: var(--fs-small); color: var(--c-muted); text-align: left; }
 .map__label b { color: var(--c-ink); font-weight: 600; }
 .sym { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--c-ink); }
 .sym a { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--c-line); transition: padding-left var(--dur) var(--ease); }
 .sym .q { font-family: var(--f-display); font-style: italic; font-size: 22px; line-height: 1.15; padding-bottom: 2px; display: block; }
-.sym .a { display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; font-size: var(--fs-small); color: var(--c-muted); }
+.sym .a { display: block; position: relative; padding-left: 26px; margin-top: 6px; font-size: var(--fs-small); color: var(--c-muted); }
 .sym .a b { font-weight: 500; color: var(--c-ink); }
-.sym .a::before { content: ""; width: 18px; height: 1px; background: var(--c-accent); }
+.sym .a::before { content: ""; position: absolute; left: 0; top: .75em; width: 18px; height: 1px; background: var(--c-accent); }
 .sym .arr { width: 34px; height: 34px; border: 1px solid var(--c-line); border-radius: 50%; display: grid; place-items: center; font-size: 14px; transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
 .sym a:hover, .sym a:focus-visible { padding-left: 12px; }
 .sym a:hover .arr, .sym a:focus-visible .arr { background: var(--c-ink); border-color: var(--c-ink); color: #fff; }
 .sym a:hover .q { color: var(--c-accent); }
 @media (min-width: 768px) {
   .map { grid-template-columns: minmax(240px, 340px) 1fr; column-gap: 40px; row-gap: 0; }
-  .map__label { text-align: center; }
+  .map__label { display: block; text-align: center; }
   .sym .q { font-size: 26px; }
 }
 @media (min-width: 1200px) {

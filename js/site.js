@@ -97,6 +97,7 @@
   setupSwitcher(document.getElementById("courses"), { param: "courses", storageKey: "coursesVariant", itemSelector: ".kv", known: ["simple", "masters"] });
   setupSwitcher(document.getElementById("phero"), { param: "phero", storageKey: "pheroVariant", itemSelector: ".hv", known: ["symptoms", "answer"] });
   setupSwitcher(document.getElementById("what"), { param: "what", storageKey: "whatVariant", itemSelector: ".wv", known: ["cards", "scheme", "pull"] });
+  setupSwitcher(document.getElementById("how"), { param: "how", storageKey: "howVariant", itemSelector: ".hov", known: ["cases", "prep"] });
   setupSwitcher(document.getElementById("contacts"), { param: "contacts", storageKey: "contactsVariant", itemSelector: ".cv", known: ["map", "table", "form"] });
   setupSwitcher(document.getElementById("safety"), { param: "safety", storageKey: "safetyVariant", itemSelector: ".sv", known: ["steps", "photos", "qa"] });
 

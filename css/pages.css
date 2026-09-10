@@ -434,6 +434,30 @@
   .pull b { font-size: 32px; }
 }
 
+/* Страница проблемы, блок «Как проходит приём»: варианты «Зависит от случая» и «До, на приёме, после» (переключатель только для прототипа) */
+.cases { display: grid; gap: 12px; }
+.case { display: grid; gap: 12px; padding: 20px; border: 1px solid var(--c-line); border-radius: var(--r-card); background: var(--c-bg); align-content: start; }
+.case h3 { font-family: var(--f-display); font-weight: 500; font-size: 24px; line-height: 1.1; }
+.case p { font-size: var(--fs-small); color: var(--c-muted); }
+.case__arrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--c-accent); }
+.case ul { list-style: none; margin: 0; padding: 12px 0 0; border-top: 1px solid var(--c-line); display: grid; gap: 6px; }
+.case li { font-size: 13px; display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.case li a { color: var(--c-ink); display: inline-block; padding-block: 4px; }
+.case li span { color: var(--c-muted); white-space: nowrap; }
+.cases__note { font-size: 12px; color: var(--c-muted); max-width: 60ch; margin-top: 14px; }
+.dna { display: grid; gap: 14px; }
+.dna__col { display: grid; gap: 12px; align-content: start; padding: 20px; border-radius: var(--r-card); background: var(--c-bg-alt); }
+.dna__col h3 { font-size: 22px; line-height: 1.1; }
+.dna__col h3 small { display: block; font-family: var(--f-body); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--c-accent); margin-bottom: 6px; }
+.dna__col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.dna__col li { position: relative; padding-left: 18px; font-size: var(--fs-small); color: var(--c-muted); }
+.dna__col li::before { content: ""; position: absolute; left: 0; top: .7em; width: 8px; height: 1px; background: var(--c-accent); }
+.dna__col li b { color: var(--c-ink); font-weight: 500; }
+@media (min-width: 768px) {
+  .cases { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .dna { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+}
+
 /* Блок проблем: три варианта */
 .pv[hidden] { display: none; }
 

@@ -199,22 +199,92 @@
 </section>
 
 <section class="section section--alt" id="prices">
-  <div class="container">
-    <div class="section__head"><h2>Цены</h2><p class="hint">Цена «от» зависит от того, сколько углов затронуто и есть ли воспаление. Пришлите фото, назовём точную стоимость до визита.</p></div>
-    <div class="prices"><!-- цены из концепта, сверить с YCLIENTS -->
-      <div class="price"><h3>Обработка вросшего ногтя, 1 угол</h3><p>Аккуратно обрабатываем уголок ногтя и защищаем кожу вокруг, чтобы ходить было комфортно. Рассказываем, как ухаживать дома.</p><div class="price__foot"><span class="price__sum">25 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: обработка вросшего ногтя</span></a></div></div>
-      <div class="price"><h3>Тампонада, 1 угол</h3><p>Устанавливаем тампонаду в область ногтевого валика, чтобы уменьшить давление ногтя на ткани. Снижает дискомфорт, защищает кожу и помогает ногтю расти правильно.</p><div class="price__foot"><span class="price__sum">20 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: тампонада, 1 угол</span></a></div></div>
-      <div class="price"><h3>Жидкая тампонада, 1 угол</h3><p>Защищает и разгружает проблемный участок валика. Держится дольше обычной тампонады и не мешает в обуви.</p><div class="price__foot"><span class="price__sum">30 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: жидкая тампонада, 1 угол</span></a></div></div>
-      <div class="price"><h3>Тейпирование боковых валиков</h3><p>Специальный тейп отводит кожу от ногтя и снижает давление боковых валиков на пластину. Простая процедура на один визит.</p><div class="price__foot"><span class="price__sum">15 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: тейпирование боковых валиков</span></a></div></div>
-      <div class="price"><h3>Корректирующая система «Титановая нить»</h3><p>Бережно меняет форму ногтя и снижает давление на боковые валики. Носится незаметно, помогает ногтю расти правильно и предотвращает врастание.</p><div class="price__foot"><span class="price__sum">60 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: титановая нить</span></a></div></div>
-      <div class="price"><h3>Корректирующая скоба ЗТО</h3><p>Выравнивает форму вросшего или деформированного ногтя, снижает давление на валики и помогает правильному росту пластины.</p><div class="price__foot"><span class="price__sum">65 BYN</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: скоба ЗТО</span></a></div></div>
-      <div class="price"><h3>Перевязка при вросшем ногте</h3><p>Обрабатываем и перевязываем проблемную зону, чтобы защитить ткани и создать условия для заживления. Даём рекомендации по уходу.</p><div class="price__foot"><span class="price__sum">цена уточняется</span><a class="btn btn--ghost btn--sm" href="#book">Записаться<span class="visually-hidden">: перевязка при вросшем ногте</span></a></div></div>
+  <div class="container pr"><!-- цены из концепта, сверить с YCLIENTS -->
+    <div class="proto-switch" role="group" aria-label="Вариант блока цен (только для выбора)">
+      <span class="proto-switch__label">Вариант блока</span>
+      <button type="button" class="proto-switch__btn" data-variant="menu" aria-pressed="true">Меню по группам</button>
+      <button type="button" class="proto-switch__btn" data-variant="factors" aria-pressed="false">Из чего складывается</button>
+      <button type="button" class="proto-switch__btn" data-variant="table" aria-pressed="false">Таблица</button>
     </div>
-    <div class="messengers" style="margin-top:var(--sp-3)">
-      <a class="btn btn--ghost btn--sm" href="https://t.me/ilonails_studio">Telegram</a>
-      <a class="btn btn--ghost btn--sm" href="viber://chat?number=%2B375445555152">Viber</a>
-      <a class="btn btn--ghost btn--sm" href="https://wa.me/375445555152?text=Здравствуйте!%20Вросший%20ноготь,%20прикрепляю%20фото">WhatsApp</a>
-    </div><!-- аккаунты мессенджеров и номер уточнить у заказчика -->
+
+    <div class="prv" data-variant="menu">
+      <div class="section__head"><h2>Цены</h2><p class="hint">Цены за один угол. Если затронуты оба угла или несколько пальцев, считаем каждый отдельно.</p></div>
+      <div class="pm">
+        <div class="pm__list">
+        <div class="pm__grp"><h3>Обработка</h3><p>Освобождаем край ногтя и снимаем давление</p><ul>
+          <li><span>Обработка вросшего ногтя, 1 угол</span><span class="sum">25 BYN</span><small>аппаратом, без боли</small></li>
+          <li><span>Перевязка при вросшем ногте</span><span class="sum"><span class="ph">уточняем</span></span><small>при воспалении, до установки системы</small></li>
+        </ul></div>
+        <div class="pm__grp"><h3>Защита валика</h3><p>Ставим между ногтем и кожей, чтобы край не давил</p><ul>
+          <li><span>Тампонада, 1 угол</span><span class="sum">20 BYN</span><small>мягкая прокладка под край ногтя</small></li>
+          <li><span>Жидкая тампонада, 1 угол</span><span class="sum">30 BYN</span><small>держится дольше, не мешает в обуви</small></li>
+          <li><span>Тейпирование боковых валиков</span><span class="sum">15 BYN</span><small>тейп отводит кожу от ногтя</small></li>
+        </ul></div>
+        <div class="pm__grp"><h3>Коррекция формы</h3><p>Меняет форму ногтя, пока он отрастает</p><ul>
+          <li><span>Титановая нить</span><span class="sum">60 BYN</span><small>незаметна, носится несколько недель</small></li>
+          <li><span>Скоба ЗТО</span><span class="sum">65 BYN</span><small>для сильной деформации</small></li>
+        </ul></div>
+        </div>
+        <aside class="pm__side"><h3>Точная цена до визита</h3><p>Пришлите фото пальца в мессенджер. Посмотрим, сколько углов затронуто и есть ли воспаление, и назовём сумму за весь визит.</p><div class="messengers"><!-- аккаунты мессенджеров уточнить у заказчика -->
+          <a class="btn btn--ghost btn--sm" href="https://t.me/ilonails_studio">Telegram</a>
+          <a class="btn btn--ghost btn--sm" href="viber://chat?number=%2B375445555152">Viber</a>
+          <a class="btn btn--ghost btn--sm" href="https://wa.me/375445555152?text=Здравствуйте!%20Вросший%20ноготь,%20прикрепляю%20фото">WhatsApp</a>
+        </div><p><a class="pr__lnk" href="index.html#prices">Полный прайс студии <span aria-hidden="true">→</span></a></p></aside>
+      </div>
+    </div>
+
+    <div class="prv" data-variant="factors" hidden>
+      <div class="section__head"><h2>Цены</h2><p class="hint">Сумма за визит зависит от трёх вещей. Ниже все позиции для вросшего ногтя.</p></div>
+      <div class="pf">
+        <div class="pf__top">
+          <ul class="pf__fac">
+            <li><i>1</i><div><b>Сколько углов затронуто</b><span>Цены указаны за один угол. Два угла или несколько пальцев считаем отдельно.</span></div></li>
+            <li><i>2</i><div><b>Есть ли воспаление</b><span>Если валик воспалён, сначала перевязка, система ставится позже.</span></div></li>
+            <li><i>3</i><div><b>Нужна ли коррекция формы</b><span>Титановая нить или скоба, когда ноготь врастает повторно.</span></div></li>
+          </ul>
+          <div class="pf__ex"><!-- пример считает, что позиции суммируются; подтвердить у заказчика -->
+            <h3>Пример: первый визит</h3>
+            <dl><div><dt>Обработка, 1 угол</dt><dd>25 BYN</dd></div><div><dt>Тампонада, 1 угол</dt><dd>20 BYN</dd></div><div class="t"><dt>Итого за визит</dt><dd>45 BYN</dd></div></dl>
+            <p>Один угол, без воспаления. Точную сумму назовём по фото до визита.</p>
+          </div>
+        </div>
+        <ul class="pf__list">
+        <li><span>Обработка вросшего ногтя, 1 угол</span><span class="sum">25 BYN</span></li>
+        <li><span>Перевязка при вросшем ногте</span><span class="sum"><span class="ph">уточняем</span></span></li>
+        <li><span>Тампонада, 1 угол</span><span class="sum">20 BYN</span></li>
+        <li><span>Жидкая тампонада, 1 угол</span><span class="sum">30 BYN</span></li>
+        <li><span>Тейпирование боковых валиков</span><span class="sum">15 BYN</span></li>
+        <li><span>Титановая нить</span><span class="sum">60 BYN</span></li>
+        <li><span>Скоба ЗТО</span><span class="sum">65 BYN</span></li>
+        </ul>
+        <div class="pr__foot"><span>Фото для расчёта:</span><div class="messengers"><!-- аккаунты мессенджеров уточнить у заказчика -->
+          <a class="btn btn--ghost btn--sm" href="https://t.me/ilonails_studio">Telegram</a>
+          <a class="btn btn--ghost btn--sm" href="viber://chat?number=%2B375445555152">Viber</a>
+          <a class="btn btn--ghost btn--sm" href="https://wa.me/375445555152?text=Здравствуйте!%20Вросший%20ноготь,%20прикрепляю%20фото">WhatsApp</a>
+        </div><a class="pr__lnk" href="index.html#prices">Полный прайс студии <span aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+
+    <div class="prv" data-variant="table" hidden>
+      <div class="section__head"><h2>Цены</h2><p class="hint">Цены за один угол, каждый угол и палец считаем отдельно.</p></div>
+      <table class="pt"><thead><tr><th>Услуга</th><th>Для чего</th><th>Цена</th></tr></thead><tbody>
+        <tr class="g"><td colspan="3">Обработка<span>Освобождаем край ногтя и снимаем давление</span></td></tr>
+        <tr><td>Обработка вросшего ногтя, 1 угол</td><td class="d">аппаратом, без боли</td><td><span class="sum">25 BYN</span></td></tr>
+        <tr><td>Перевязка при вросшем ногте</td><td class="d">при воспалении, до установки системы</td><td><span class="sum"><span class="ph">уточняем</span></span></td></tr>
+        <tr class="g"><td colspan="3">Защита валика<span>Ставим между ногтем и кожей, чтобы край не давил</span></td></tr>
+        <tr><td>Тампонада, 1 угол</td><td class="d">мягкая прокладка под край ногтя</td><td><span class="sum">20 BYN</span></td></tr>
+        <tr><td>Жидкая тампонада, 1 угол</td><td class="d">держится дольше, не мешает в обуви</td><td><span class="sum">30 BYN</span></td></tr>
+        <tr><td>Тейпирование боковых валиков</td><td class="d">тейп отводит кожу от ногтя</td><td><span class="sum">15 BYN</span></td></tr>
+        <tr class="g"><td colspan="3">Коррекция формы<span>Меняет форму ногтя, пока он отрастает</span></td></tr>
+        <tr><td>Титановая нить</td><td class="d">незаметна, носится несколько недель</td><td><span class="sum">60 BYN</span></td></tr>
+        <tr><td>Скоба ЗТО</td><td class="d">для сильной деформации</td><td><span class="sum">65 BYN</span></td></tr>
+      </tbody></table>
+      <div class="pr__foot"><span>Точная сумма по фото до визита:</span><div class="messengers"><!-- аккаунты мессенджеров уточнить у заказчика -->
+          <a class="btn btn--ghost btn--sm" href="https://t.me/ilonails_studio">Telegram</a>
+          <a class="btn btn--ghost btn--sm" href="viber://chat?number=%2B375445555152">Viber</a>
+          <a class="btn btn--ghost btn--sm" href="https://wa.me/375445555152?text=Здравствуйте!%20Вросший%20ноготь,%20прикрепляю%20фото">WhatsApp</a>
+        </div><a class="pr__lnk" href="index.html#prices">Полный прайс студии <span aria-hidden="true">→</span></a></div>
+    </div>
   </div>
 </section>
 

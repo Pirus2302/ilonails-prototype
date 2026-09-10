@@ -66,6 +66,31 @@
     v.muted = true; v.play().catch(function () {});
   });
 
+  // Первый экран: переключатель «круг / арка» (только для прототипа)
+  var hero = document.getElementById("hero");
+  if (hero) {
+    var heroBtns = hero.querySelectorAll("[data-hero]");
+    var HERO_VARIANTS = ["circle", "arch"];
+    function applyHero(name) {
+      hero.setAttribute("data-variant", name);
+      heroBtns.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-hero") === name ? "true" : "false"); });
+    }
+    var heroRequested = new URLSearchParams(location.search).get("hero");
+    if (!heroRequested) { try { heroRequested = localStorage.getItem("heroVariant"); } catch (e) {} }
+    if (HERO_VARIANTS.indexOf(heroRequested) === -1) heroRequested = "circle";
+    applyHero(heroRequested);
+    heroBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var v = btn.getAttribute("data-hero");
+        applyHero(v);
+        try { localStorage.setItem("heroVariant", v); } catch (e) {}
+        var params = new URLSearchParams(location.search);
+        params.set("hero", v);
+        history.replaceState(null, "", location.pathname + "?" + params.toString() + location.hash);
+      });
+    });
+  }
+
   // Блок «Найдите свою проблему»: переключатель вариантов (только для прототипа)
   var problemsSection = document.getElementById("problems");
   if (problemsSection) {

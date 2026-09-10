@@ -2,7 +2,7 @@
 
 Статический HTML-прототип студии подологии Ilonails (Минск). Этап 1: главная и страница «Вросший ноготь».
 
-Прототип: https://pirus2302.github.io/ilonails-prototype/ (варианты главной: / и /index-a.html, страница проблемы: /vrosshiy-nogot.html)
+Прототип: https://pirus2302.github.io/ilonails-prototype/ (главная: / с переключателями первого экрана `?hero=circle|arch` и блока проблем `?problems=map|ask|tiles`, старый вариант A: /index-a.html, страница проблемы: /vrosshiy-nogot.html)
 
 Спека: docs/superpowers/specs/2026-09-09-ilonails-design-stage1-design.md
 

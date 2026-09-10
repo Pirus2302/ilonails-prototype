@@ -458,6 +458,29 @@
   .dna { grid-template-columns: repeat(3, 1fr); gap: 16px; }
 }
 
+/* Страница проблемы, блок «Сколько визитов»: таблица по случаям, на телефоне строки карточками; .ph – заглушка данных заказчика */
+.ph { display: inline-block; padding: 2px 10px; border: 1px dashed var(--c-accent); border-radius: 8px; color: var(--c-accent); font-family: var(--f-body); font-size: 13px; font-style: normal; font-weight: 400; vertical-align: middle; }
+.vt { width: 100%; border-collapse: collapse; font-size: 14px; }
+.vt thead { display: none; }
+.vt tbody, .vt tr, .vt td { display: block; }
+.vt tr { padding: 14px 0; border-top: 1px solid var(--c-line); display: grid; gap: 8px; }
+.vt tr:first-child { border-top-color: var(--c-ink); }
+.vt td:first-child { font-family: var(--f-display); font-size: 22px; line-height: 1.1; }
+.vt td .d { display: block; font-family: var(--f-body); font-size: 12px; color: var(--c-muted); margin-top: 4px; }
+.vt td[data-label] { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.vt td[data-label]::before { content: attr(data-label); font-size: 12px; color: var(--c-muted); }
+.vt__note { font-size: 12px; color: var(--c-muted); margin-top: 12px; max-width: 60ch; }
+@media (min-width: 768px) {
+  .vt thead { display: table-header-group; }
+  .vt tbody { display: table-row-group; }
+  .vt tr { display: table-row; }
+  .vt td, .vt th { display: table-cell; text-align: left; padding: 14px 12px 14px 0; border-bottom: 1px solid var(--c-line); vertical-align: top; }
+  .vt th { font-weight: 500; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--c-muted); border-bottom-color: var(--c-ink); }
+  .vt td:first-child { font-size: 20px; }
+  .vt td[data-label] { display: table-cell; }
+  .vt td[data-label]::before { content: none; }
+}
+
 /* Блок проблем: три варианта */
 .pv[hidden] { display: none; }
 

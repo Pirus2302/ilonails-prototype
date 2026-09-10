@@ -85,7 +85,7 @@
 .ba img { aspect-ratio: 1; object-fit: cover; width: 100%; border-radius: 10px; }
 .ba figcaption { position: absolute; left: 8px; bottom: 8px; background: rgba(25, 27, 30, .78); color: #fff; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; padding: 4px 8px; border-radius: 999px; }
 .ba--grid { grid-template-columns: 1fr; }
-.ba--grid img { aspect-ratio: auto; }
+.ba--grid img { aspect-ratio: 3 / 4; }
 @media (min-width: 768px) { .ba { grid-template-columns: repeat(4, 1fr); gap: 10px; } .ba--grid { grid-template-columns: 1fr; } }
 
 /* Факты безопасности */

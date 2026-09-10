@@ -481,6 +481,14 @@
   .vt td[data-label]::before { content: none; }
 }
 
+/* Страница проблемы, блок «До и после»: два ползунка сравнения */
+.cmp2 { display: grid; gap: 18px; }
+.cmp2 .cmp { aspect-ratio: 1; }
+.cmp2__cap { font-size: 13px; color: var(--c-muted); margin-top: 8px; }
+.cmp2__cap b { color: var(--c-ink); font-weight: 500; }
+.ba__note { font-size: 12px; color: var(--c-muted); max-width: 60ch; margin-top: 14px; }
+@media (min-width: 768px) { .cmp2 { grid-template-columns: 1fr 1fr; gap: 24px; } }
+
 /* Блок проблем: три варианта */
 .pv[hidden] { display: none; }
 

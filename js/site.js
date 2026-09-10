@@ -151,17 +151,21 @@
       });
     }
   }
-  // Блок «до и после»: переключатель вариантов (только для прототипа) и ползунок сравнения
+  // Ползунки сравнения «до и после»: на главной и на странице проблемы
+  document.querySelectorAll(".cmp").forEach(function (c) {
+    var r = c.querySelector("input[type=range]");
+    if (r) r.addEventListener("input", function () { c.style.setProperty("--x", r.value + "%"); });
+  });
+
+  // Блок «до и после» на главной: переключатель вариантов (только для прототипа) и список случаев
   var dynSection = document.getElementById("dynamics");
   if (dynSection) {
     setupSwitcher(dynSection, { param: "dynamics", storageKey: "dynamicsVariant", itemSelector: ".dv", known: ["compare", "strip"] });
 
     var cmp = dynSection.querySelector(".cmp");
     if (cmp) {
-      var range = cmp.querySelector("input[type=range]");
       var beforeImg = cmp.querySelector(".cmp__before");
       var afterImg = cmp.querySelector(".cmp__after");
-      if (range) range.addEventListener("input", function () { cmp.style.setProperty("--x", range.value + "%"); });
       var caseBtns = dynSection.querySelectorAll(".clist button");
       caseBtns.forEach(function (b) {
         b.addEventListener("click", function () {

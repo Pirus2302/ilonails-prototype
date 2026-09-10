@@ -45,17 +45,83 @@
   </div>
 </section>
 <section class="section container" id="problems">
-  <div class="section__head"><h2>Найдите свою проблему</h2><p class="hint">Каждая ведёт на страницу: как проходит приём, сколько визитов, цены</p></div>
-  <ul class="problems">
-    <li><a href="vrosshiy-nogot.html"><span><span class="t">Вросший ноготь</span><span class="d">уголок давит, больно в обуви</span></span><span class="arr" aria-hidden="true">→</span></a></li>
-    <li><a href="#"><span><span class="t">Грибок ногтей и стоп</span><span class="d">обработка и сбор материала на анализ</span></span><span class="arr" aria-hidden="true">→</span></a></li>
-    <li><a href="#"><span><span class="t">Мозоли и натоптыши</span><span class="d">в том числе стержневые</span></span><span class="arr" aria-hidden="true">→</span></a></li>
-    <li><a href="#"><span><span class="t">Трещины и сухость стоп</span><span class="d">пятки, огрубевшая кожа</span></span><span class="arr" aria-hidden="true">→</span></a></li>
-    <li><a href="#"><span><span class="t">Дефор&shy;мация и травмы ногтя</span><span class="d">утолщение, гематома, отслоение</span></span><span class="arr" aria-hidden="true">→</span></a></li>
-    <li><a href="#"><span><span class="t">Индивиду&shy;альные стельки</span><span class="d">консультация и изготовление</span></span><span class="arr" aria-hidden="true">→</span></a></li>
-    <li><a href="#"><span><span class="t">Гигиени&shy;ческий педикюр</span><span class="d">плановый уход, покрытия</span></span><span class="arr" aria-hidden="true">→</span></a></li>
-    <li><a href="#"><span><span class="t">Маникюр</span><span class="d">аппаратный, долго&shy;временное покрытие</span></span><span class="arr" aria-hidden="true">→</span></a></li>
-  </ul>
+  <div class="proto-switch" role="group" aria-label="Вариант блока (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="map" aria-pressed="true">Карта стопы</button>
+    <button type="button" class="proto-switch__btn" data-variant="ask" aria-pressed="false">Где беспокоит?</button>
+    <button type="button" class="proto-switch__btn" data-variant="tiles" aria-pressed="false">Плитки</button>
+  </div>
+  <div class="pv" data-variant="map">
+    <div class="section__head"><h2>Найдите свою проблему</h2><p class="hint">Наведите на строку: покажем, где на стопе это находится. Каждая ведёт на страницу: как проходит приём, сколько визитов, цены.</p></div>
+    <div class="map">
+      <div class="map__foot" aria-hidden="true">
+        <svg viewBox="0 0 260 500">
+          <g class="foot-glow">
+            <path d="M56 142 C54 98 100 76 146 80 C196 85 214 132 206 184 C198 236 184 286 182 342 C180 398 170 452 126 462 C84 470 64 428 68 380 C72 328 88 288 80 238 C74 200 58 176 56 142 Z"/>
+            <circle cx="54" cy="58" r="28"/><circle cx="110" cy="38" r="16"/><circle cx="146" cy="36" r="14"/><circle cx="178" cy="46" r="12"/><circle cx="206" cy="66" r="10"/>
+          </g>
+          <g class="foot-line">
+            <path d="M56 142 C54 98 100 76 146 80 C196 85 214 132 206 184 C198 236 184 286 182 342 C180 398 170 452 126 462 C84 470 64 428 68 380 C72 328 88 288 80 238 C74 200 58 176 56 142 Z"/>
+            <circle cx="54" cy="58" r="28"/><circle cx="110" cy="38" r="16"/><circle cx="146" cy="36" r="14"/><circle cx="178" cy="46" r="12"/><circle cx="206" cy="66" r="10"/>
+          </g>
+          <g class="zones">
+            <circle class="zone" data-zone="corner" cx="74" cy="42" r="22"/>
+            <ellipse class="zone" data-zone="nails" cx="146" cy="46" rx="86" ry="28"/>
+            <circle class="zone" data-zone="toe" cx="54" cy="58" r="34"/>
+            <ellipse class="zone" data-zone="ball" cx="132" cy="140" rx="66" ry="40"/>
+            <ellipse class="zone" data-zone="arch" cx="112" cy="290" rx="52" ry="64"/>
+            <circle class="zone" data-zone="heel" cx="124" cy="420" r="46"/>
+            <path class="zone" data-zone="whole" d="M56 142 C54 98 100 76 146 80 C196 85 214 132 206 184 C198 236 184 286 182 342 C180 398 170 452 126 462 C84 470 64 428 68 380 C72 328 88 288 80 238 C74 200 58 176 56 142 Z"/>
+          </g>
+        </svg>
+        <div class="map__label">Наведите на строку справа</div>
+      </div>
+      <ul class="sym">
+        <li><a href="vrosshiy-nogot.html" data-zone="corner"><span><span class="q">Уголок ногтя врезается в кожу, больно в обуви</span><span class="a"><b>Вросший ноготь</b></span></span><span class="arr" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-zone="nails"><span><span class="q">Ноготь пожелтел, утолщился или крошится</span><span class="a"><b>Грибок ногтей и стоп</b> · обработка и сбор материала на анализ</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-zone="ball"><span><span class="q">Твёрдое пятно на подошве, больно наступать</span><span class="a"><b>Мозоли и натоптыши</b> · в том числе стержневые</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-zone="heel"><span><span class="q">Пятки сухие и шершавые, кожа трескается</span><span class="a"><b>Трещины и сухость стоп</b></span></span><span class="arr" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-zone="toe"><span><span class="q">Ноготь потемнел после удара или отходит</span><span class="a"><b>Деформация и травмы ногтя</b></span></span><span class="arr" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-zone="arch"><span><span class="q">Ноги устают, обувь стаптывается набок</span><span class="a"><b>Индивидуальные стельки</b> · консультация и изготовление</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-zone="whole"><span><span class="q">Ничего не болит, нужен регулярный уход</span><span class="a"><b>Гигиенический педикюр</b> · покрытия</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+        <li><a href="#" data-zone="hands"><span><span class="q">Руки: аппаратный маникюр и покрытие</span><span class="a"><b>Маникюр</b></span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pv" data-variant="ask" hidden>
+    <div class="section__head"><h2>Где беспокоит?</h2><p class="hint">Выберите место. Покажем, что это может быть и как проходит приём.</p></div>
+    <div class="tabs" role="tablist" aria-label="Место">
+      <button type="button" class="tab" role="tab" aria-selected="true" data-cat="all">Не знаю, покажите всё</button>
+      <button type="button" class="tab" role="tab" aria-selected="false" data-cat="nails">Ногти</button>
+      <button type="button" class="tab" role="tab" aria-selected="false" data-cat="sole">Подошва</button>
+      <button type="button" class="tab" role="tab" aria-selected="false" data-cat="heel">Пятки</button>
+      <button type="button" class="tab" role="tab" aria-selected="false" data-cat="foot">Вся стопа</button>
+      <button type="button" class="tab" role="tab" aria-selected="false" data-cat="hands">Руки</button>
+    </div>
+    <ul class="ans">
+      <li data-cat="nails"><a href="vrosshiy-nogot.html"><span><span class="q">Вросший ноготь</span><span class="a">уголок врезается в кожу, больно в обуви</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li data-cat="nails"><a href="#"><span><span class="q">Грибок ногтей и стоп</span><span class="a">ноготь пожелтел, утолщился, крошится</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li data-cat="nails"><a href="#"><span><span class="q">Деформация и травмы ногтя</span><span class="a">потемнел после удара, отходит, утолщился</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li data-cat="sole"><a href="#"><span><span class="q">Мозоли и натоптыши</span><span class="a">твёрдое пятно, больно наступать, стержень</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li data-cat="heel"><a href="#"><span><span class="q">Трещины и сухость стоп</span><span class="a">пятки шершавые, кожа трескается</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li data-cat="foot"><a href="#"><span><span class="q">Индивидуальные стельки</span><span class="a">ноги устают, обувь стаптывается набок</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li data-cat="foot"><a href="#"><span><span class="q">Гигиенический педикюр</span><span class="a">ничего не болит, нужен регулярный уход</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li data-cat="hands"><a href="#"><span><span class="q">Маникюр</span><span class="a">аппаратный, долговременное покрытие</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+    </ul>
+  </div>
+  <div class="pv" data-variant="tiles" hidden>
+    <div class="section__head"><h2>Найдите свою проблему</h2><p class="hint">Каждая ведёт на страницу: как проходит приём, сколько визитов, цены</p></div>
+    <ul class="problems problems--4">
+      <li><a href="vrosshiy-nogot.html"><span><span class="t">Вросший ноготь</span><span class="d">уголок давит, больно в обуви</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li><a href="#"><span><span class="t">Грибок ногтей и стоп</span><span class="d">обработка и сбор материала на анализ</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li><a href="#"><span><span class="t">Мозоли и натоптыши</span><span class="d">в том числе стержневые</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li><a href="#"><span><span class="t">Трещины и сухость стоп</span><span class="d">пятки, огрубевшая кожа</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li><a href="#"><span><span class="t">Дефор&shy;мация и травмы ногтя</span><span class="d">утолщение, гематома, отслоение</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li><a href="#"><span><span class="t">Индивиду&shy;альные стельки</span><span class="d">консультация и изготовление</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li><a href="#"><span><span class="t">Гигиени&shy;ческий педикюр</span><span class="d">плановый уход, покрытия</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+      <li><a href="#"><span><span class="t">Маникюр</span><span class="d">аппаратный, долго&shy;временное покрытие</span></span><span class="arr" aria-hidden="true">→</span></a></li>
+    </ul>
+  </div>
 </section>
 <section class="section section--alt" id="dynamics">
   <div class="container dynamics">

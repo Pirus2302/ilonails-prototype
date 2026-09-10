@@ -65,4 +65,87 @@
     if (reduce) { v.removeAttribute("autoplay"); v.pause(); return; }
     v.muted = true; v.play().catch(function () {});
   });
+
+  // Блок «Найдите свою проблему»: переключатель вариантов (только для прототипа)
+  var problemsSection = document.getElementById("problems");
+  if (problemsSection) {
+    var switcher = problemsSection.querySelector(".proto-switch");
+    var variants = problemsSection.querySelectorAll(".pv");
+    var switchBtns = switcher ? switcher.querySelectorAll(".proto-switch__btn") : [];
+    var KNOWN_VARIANTS = ["map", "ask", "tiles"];
+
+    function readStoredVariant() {
+      try { return localStorage.getItem("problemsVariant"); } catch (e) { return null; }
+    }
+    function writeStoredVariant(v) {
+      try { localStorage.setItem("problemsVariant", v); } catch (e) {}
+    }
+    function applyVariant(name) {
+      variants.forEach(function (el) { el.hidden = el.getAttribute("data-variant") !== name; });
+      switchBtns.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-variant") === name ? "true" : "false"); });
+    }
+
+    if (variants.length) {
+      var requested = new URLSearchParams(location.search).get("problems") || readStoredVariant() || "map";
+      if (KNOWN_VARIANTS.indexOf(requested) === -1) requested = "map";
+      applyVariant(requested);
+    }
+
+    switchBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var v = btn.getAttribute("data-variant");
+        applyVariant(v);
+        writeStoredVariant(v);
+        var params = new URLSearchParams(location.search);
+        params.set("problems", v);
+        var newUrl = location.pathname + "?" + params.toString() + location.hash;
+        history.replaceState(null, "", newUrl);
+      });
+    });
+
+    // Вариант «Карта стопы»: подсветка зоны при наведении/фокусе на строку
+    var mapVariant = problemsSection.querySelector('.pv[data-variant="map"]');
+    if (mapVariant) {
+      var zones = mapVariant.querySelectorAll(".zones .zone");
+      var mapLabel = mapVariant.querySelector(".map__label");
+      var symList = mapVariant.querySelector(".sym");
+      var MAP_DEFAULT = "Наведите на строку справа";
+      function setZone(name, title, plain) {
+        zones.forEach(function (z) { z.classList.toggle("on", z.getAttribute("data-zone") === name); });
+        if (!mapLabel) return;
+        mapLabel.textContent = "";
+        if (!title) { mapLabel.textContent = MAP_DEFAULT; return; }
+        if (plain) { mapLabel.textContent = title; return; }
+        var b = document.createElement("b");
+        b.textContent = title;
+        mapLabel.appendChild(b);
+      }
+      if (symList && mapLabel && zones.length) {
+        symList.querySelectorAll("a[data-zone]").forEach(function (a) {
+          var name = a.getAttribute("data-zone");
+          var titleEl = a.querySelector(".a b");
+          var title = titleEl ? titleEl.textContent : "";
+          var plain = name === "hands";
+          var text = plain ? "Руки, не на карте стопы" : title;
+          a.addEventListener("mouseenter", function () { setZone(name, text, plain); });
+          a.addEventListener("focus", function () { setZone(name, text, plain); });
+        });
+        symList.addEventListener("mouseleave", function () { setZone(null); });
+      }
+    }
+
+    // Вариант «Где беспокоит?»: фильтр списка по вкладкам
+    var askVariant = problemsSection.querySelector('.pv[data-variant="ask"]');
+    if (askVariant) {
+      var tabs = askVariant.querySelectorAll(".tabs .tab");
+      var items = askVariant.querySelectorAll(".ans li");
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          var cat = tab.getAttribute("data-cat");
+          tabs.forEach(function (t) { t.setAttribute("aria-selected", t === tab ? "true" : "false"); });
+          items.forEach(function (li) { li.hidden = !(cat === "all" || li.getAttribute("data-cat") === cat); });
+        });
+      });
+    }
+  }
 })();

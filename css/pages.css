@@ -61,3 +61,70 @@
 @media (min-width: 768px) { .related { grid-template-columns: repeat(3, 1fr); } }
 .breadcrumbs { font-size: 12px; color: var(--c-muted); padding-top: var(--sp-2); }
 .breadcrumbs a { color: var(--c-muted); display: inline-block; padding-block: 4px; }
+
+/* Блок проблем: три варианта */
+.pv[hidden] { display: none; }
+
+/* Переключатель вариантов (виден только в прототипе) */
+.proto-switch { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: var(--sp-4); padding: 6px 6px 6px 12px; border: 1px dashed var(--c-line); border-radius: 999px; width: fit-content; max-width: 100%; font-size: 12px; color: var(--c-muted); }
+.proto-switch__label { margin-right: 4px; }
+.proto-switch__btn { min-height: 32px; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 500; color: var(--c-ink); border: 1px solid transparent; }
+.proto-switch__btn:hover { border-color: var(--c-line); }
+.proto-switch__btn[aria-pressed="true"] { background: var(--c-ink); color: #fff; }
+
+/* Вариант «Карта стопы» */
+.map { display: grid; grid-template-columns: 1fr; row-gap: 32px; align-items: start; }
+.map__foot { position: static; display: grid; gap: 14px; justify-items: start; }
+.map__foot svg { width: 100%; max-width: 200px; height: auto; overflow: visible; }
+.foot-line { fill: none; stroke: var(--c-accent); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.foot-glow { fill: none; stroke: var(--c-neon); stroke-width: 7; opacity: .18; stroke-linecap: round; stroke-linejoin: round; }
+.zone { fill: var(--c-accent); fill-opacity: .06; stroke: var(--c-accent); stroke-width: 1; stroke-dasharray: 3 4; transition: fill-opacity var(--dur) var(--ease), stroke-width var(--dur) var(--ease); }
+.zone.on { fill-opacity: .22; stroke-dasharray: none; stroke-width: 1.6; }
+.map__label { min-height: 24px; font-size: var(--fs-small); color: var(--c-muted); text-align: left; }
+.map__label b { color: var(--c-ink); font-weight: 600; }
+.sym { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--c-ink); }
+.sym a { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--c-line); transition: padding-left var(--dur) var(--ease); }
+.sym .q { font-family: var(--f-display); font-style: italic; font-size: 22px; line-height: 1.15; padding-bottom: 2px; display: block; }
+.sym .a { display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; font-size: var(--fs-small); color: var(--c-muted); }
+.sym .a b { font-weight: 500; color: var(--c-ink); }
+.sym .a::before { content: ""; width: 18px; height: 1px; background: var(--c-accent); }
+.sym .arr { width: 34px; height: 34px; border: 1px solid var(--c-line); border-radius: 50%; display: grid; place-items: center; font-size: 14px; transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.sym a:hover, .sym a:focus-visible { padding-left: 12px; }
+.sym a:hover .arr, .sym a:focus-visible .arr { background: var(--c-ink); border-color: var(--c-ink); color: #fff; }
+.sym a:hover .q { color: var(--c-accent); }
+@media (min-width: 768px) {
+  .map { grid-template-columns: minmax(240px, 340px) 1fr; column-gap: 40px; row-gap: 0; }
+  .map__label { text-align: center; }
+  .sym .q { font-size: 26px; }
+}
+@media (min-width: 1200px) {
+  .map { grid-template-columns: minmax(300px, 420px) 1fr; column-gap: 72px; }
+  .map__foot { position: sticky; top: 96px; justify-items: center; }
+  .sym .q { font-size: 28px; }
+}
+
+/* Вариант «Где беспокоит?» */
+.ask h2 { font-size: 40px; line-height: 1; }
+.ask .hint { margin-top: 8px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 36px; }
+.tab { min-height: 44px; padding: 8px 18px; border: 1px solid var(--c-line); border-radius: 999px; font-size: 15px; font-weight: 500; transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), color var(--dur) var(--ease); }
+.tab:hover { border-color: var(--c-ink); }
+.tab[aria-selected="true"] { background: var(--c-ink); border-color: var(--c-ink); color: #fff; }
+.ans { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--c-ink); }
+.ans li[hidden] { display: none; }
+.ans a { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--c-line); }
+.ans .q { font-family: var(--f-display); font-size: 27px; line-height: 1.1; display: block; }
+.ans .a { display: block; margin-top: 4px; font-size: var(--fs-small); color: var(--c-muted); }
+.ans .arr { width: 34px; height: 34px; border: 1px solid var(--c-line); border-radius: 50%; display: grid; place-items: center; font-size: 14px; transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.ans a:hover .arr { background: var(--c-ink); border-color: var(--c-ink); color: #fff; }
+.ans a:hover .q { color: var(--c-accent); }
+@media (min-width: 768px) { .ans { grid-template-columns: 1fr 1fr; column-gap: 64px; } }
+@media (min-width: 1200px) { .ask h2 { font-size: 56px; } }
+
+/* Вариант «Плитки»: существующий список проблем, 4 в ряд на десктопе */
+@media (min-width: 1200px) {
+  .problems--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .problems--4 a { min-height: 200px; padding: 24px 24px 20px; }
+  .problems--4 .t { font-size: 26px; }
+  .problems--4 .d { font-size: 14px; }
+}

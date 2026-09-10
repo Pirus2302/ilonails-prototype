@@ -23,7 +23,7 @@
       <a href="#problems">Проблемы</a><a href="#prices">Цены</a><a href="#safety">О центре</a><a href="#team">Специалисты</a><a href="#courses">Курсы</a><a href="#contacts">Контакты</a>
     </nav>
     <div class="header__right">
-      <a class="header__phone tnum" href="tel:+375290000000">+375 (29) 000-00-00</a><!-- публичный номер студии уточнить у заказчика -->
+      <a class="header__phone tnum" href="tel:+375445555152">+375 (44) 555-51-52</a><!-- публичный номер студии уточнить у заказчика -->
       <a class="btn btn--dark btn--sm" href="#book">Записаться</a>
       <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="menu"><span><i></i></span></button>
     </div>
@@ -31,7 +31,7 @@
 </header>
 <nav class="menu" id="menu" aria-label="Меню" data-open="false">
   <a href="#problems">Проблемы</a><a href="#prices">Цены</a><a href="#safety">О центре</a><a href="#team">Специалисты</a><a href="#courses">Курсы</a><a href="#contacts">Контакты</a>
-  <div class="menu__contacts"><span>Минск, ул. Максима Танка, 20</span><a href="tel:+375290000000">+375 (29) 000-00-00</a></div>
+  <div class="menu__contacts"><span>Минск, ул. Максима Танка, 20</span><a href="tel:+375445555152">+375 (44) 555-51-52</a></div>
 </nav>
 <main>
 <section class="container hero" id="hero">
@@ -279,8 +279,8 @@
         </ol>
         <div class="messengers"><!-- аккаунты мессенджеров и номер уточнить у заказчика -->
           <a class="btn btn--ghost btn--sm" href="https://t.me/ilonails_studio">Telegram</a>
-          <a class="btn btn--ghost btn--sm" href="viber://chat?number=%2B375290000000">Viber</a>
-          <a class="btn btn--ghost btn--sm" href="https://wa.me/375290000000?text=Здравствуйте!%20Хочу%20узнать%20стоимость,%20прикрепляю%20фото">WhatsApp</a>
+          <a class="btn btn--ghost btn--sm" href="viber://chat?number=%2B375445555152">Viber</a>
+          <a class="btn btn--ghost btn--sm" href="https://wa.me/375445555152?text=Здравствуйте!%20Хочу%20узнать%20стоимость,%20прикрепляю%20фото">WhatsApp</a>
         </div>
       </div>
       <div>
@@ -328,11 +328,35 @@
   </div>
 </section>
 <section class="section container" id="reviews">
-  <div class="section__head"><h2>Что говорят те, кто уже был</h2><p class="hint">Отзывы подтягиваются с Яндекс.Карт и из YCLIENTS. Ничего не редактируем и не придумываем.</p></div>
-  <div class="reviews">
-    <div class="review"><blockquote>«Прекрасный мастер и идеальный маникюр. Спасибо огромное!»</blockquote><span class="src">Яндекс.Карты · клиентка студии</span></div>
-    <div class="review review--stub"><blockquote>Отзыв подгрузится автоматически после подключения Яндекс.Карт</blockquote><span class="src">Яндекс.Карты</span></div>
-    <div class="review review--stub"><blockquote>Отзыв подгрузится автоматически после подключения YCLIENTS</blockquote><span class="src">YCLIENTS</span></div>
+  <div class="section__head"><h2>Что говорят те, кто уже был</h2><p class="hint">Слева живые отзывы с Яндекс Карт, они обновляются сами. Справа отзывы, которые клиенты оставляют после визита в YCLIENTS.</p></div>
+  <div class="rv">
+    <div class="rv__ya">
+      <div class="rv__label"><span class="eyebrow">Яндекс Карты</span><span class="rv__live">обновляется само</span></div>
+      <div class="rv__frame"><!-- официальный виджет Яндекс Карт, карточка студии id 3776358101; стили менять нельзя, только размер -->
+        <iframe src="https://yandex.ru/maps-reviews-widget/3776358101?comments" title="Отзывы о студии IloNails на Яндекс Картах" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="rv__yc">
+      <div class="rv__label"><span class="eyebrow">После визита, из YCLIENTS</span><span class="rv__demo">примеры, заменим на реальные</span></div>
+      <ul class="rlist"><!-- тексты ниже написаны исполнителем как образец вёрстки; реальные отзывы Илона выбирает в YCLIENTS «Обзор → Отзывы» -->
+      <li class="rc">
+        <div class="rc__top"><span class="rc__stars" aria-label="Оценка 5 из 5">★★★★★</span><span class="rc__date">28 августа</span></div>
+        <p class="rc__text">Пришла с вросшим ногтем, боялась, что будет больно. Обработали аккуратно, всё объяснили, дали рекомендации по уходу дома. Через две недели пришла на контроль – всё спокойно</p>
+        <div class="rc__who"><b>Ольга М.</b><span>Илона · обработка вросшего ногтя</span></div>
+      </li>
+      <li class="rc">
+        <div class="rc__top"><span class="rc__stars" aria-label="Оценка 5 из 5">★★★★★</span><span class="rc__date">15 августа</span></div>
+        <p class="rc__text">Трещины на пятках мучили несколько лет. После двух визитов кожа мягкая, хожу без дискомфорта. Понравилось, что всё стерильно и инструменты открывают при мне</p>
+        <div class="rc__who"><b>Наталья К.</b><span>Татьяна · обработка трещин</span></div>
+      </li>
+      <li class="rc">
+        <div class="rc__top"><span class="rc__stars" aria-label="Оценка 5 из 5">★★★★★</span><span class="rc__date">3 августа</span></div>
+        <p class="rc__text">Очень уютная студия, никакого стыда за состояние ног. Мастер спокойно всё сделала, подсказала, какую обувь выбирать. Записалась на регулярный уход</p>
+        <div class="rc__who"><b>Анна В.</b><span>Дарья · гигиенический педикюр</span></div>
+      </li>
+      </ul>
+      <p class="rv__note small muted">Отзывы из YCLIENTS оставляют только клиенты, которые были на приёме, по ссылке из сообщения после визита.</p>
+    </div>
   </div>
 </section>
 <section class="section section--alt" id="courses">
@@ -371,7 +395,7 @@
   <div id="book">
   <div class="cv" data-variant="map">
     <div class="cm"><img src="img/map.jpg" alt="Карта: улица Максима Танка, 20, Минск" loading="lazy" width="1200" height="600">
-      <div class="cm__card"><h2>Как добраться и записаться</h2><p><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</p><p class="muted">Ежедневно до 20:00</p><p class="muted">Напишите нам: <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375290000000">Viber</a> · <a href="https://wa.me/375290000000">WhatsApp</a></p><p><a class="tnum" href="tel:+375290000000">+375 (29) 000-00-00</a> · <a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></p>
+      <div class="cm__card"><h2>Как добраться и записаться</h2><p><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</p><p class="muted">Ежедневно до 20:00</p><p class="muted">Напишите нам: <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375445555152">Viber</a> · <a href="https://wa.me/375445555152">WhatsApp</a></p><p><a class="tnum" href="tel:+375445555152">+375 (44) 555-51-52</a> · <a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></p>
         <div class="cm__cta"><a class="btn btn--dark" href="#">Записаться онлайн</a></div><span class="small muted">откроется виджет YCLIENTS</span></div>
     </div><!-- часы, номер, мессенджеры и станция метро уточнить у заказчика; карта: OpenStreetMap, на сайте будет виджет Яндекс.Карт -->
   </div>
@@ -382,8 +406,8 @@
         <dl class="dl">
           <div><dt>Адрес</dt><dd><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</dd></div>
           <div><dt>Часы</dt><dd>Ежедневно до 20:00</dd></div>
-          <div><dt>Телефон</dt><dd><a class="tnum" href="tel:+375290000000">+375 (29) 000-00-00</a></dd></div>
-          <div><dt>Мессенджеры</dt><dd><a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375290000000">Viber</a> · <a href="https://wa.me/375290000000">WhatsApp</a></dd></div>
+          <div><dt>Телефон</dt><dd><a class="tnum" href="tel:+375445555152">+375 (44) 555-51-52</a></dd></div>
+          <div><dt>Мессенджеры</dt><dd><a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375445555152">Viber</a> · <a href="https://wa.me/375445555152">WhatsApp</a></dd></div>
           <div><dt>Instagram</dt><dd><a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></dd></div>
         </dl>
         <div class="ct__cta"><a class="btn btn--dark" href="#">Записаться онлайн</a><span class="muted small">откроется виджет YCLIENTS</span></div>
@@ -402,7 +426,7 @@
         <button class="btn btn--dark" type="button">Отправить</button>
         <span class="form__or">Или сразу выберите время: <a href="#">запись онлайн в YCLIENTS</a></span>
       </form>
-      <div class="cf__side"><img src="img/map.jpg" alt="Карта: улица Максима Танка, 20, Минск" loading="lazy" width="1200" height="600"><p><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</p><p class="muted small">Ежедневно до 20:00 · <a class="tnum" href="tel:+375290000000">+375 (29) 000-00-00</a> · <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375290000000">Viber</a> · <a href="https://wa.me/375290000000">WhatsApp</a></p></div>
+      <div class="cf__side"><img src="img/map.jpg" alt="Карта: улица Максима Танка, 20, Минск" loading="lazy" width="1200" height="600"><p><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</p><p class="muted small">Ежедневно до 20:00 · <a class="tnum" href="tel:+375445555152">+375 (44) 555-51-52</a> · <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375445555152">Viber</a> · <a href="https://wa.me/375445555152">WhatsApp</a></p></div>
     </div><!-- часы, номер, мессенджеры и станция метро уточнить у заказчика; карта: OpenStreetMap, на сайте будет виджет Яндекс.Карт -->
   </div>
   </div>
@@ -412,7 +436,7 @@
   <div class="container footer__in">
     <div><a class="logo" href="index.html">ilonails.studio</a><p style="margin-top:8px">Подологический центр, педикюр и маникюр<br>Минск, ул. Максима Танка, 20</p></div>
     <nav aria-label="Разделы сайта"><ul><li><a href="#problems">Проблемы</a></li><li><a href="#prices">Цены</a></li><li><a href="#safety">О центре</a></li><li><a href="#team">Специалисты</a></li><li><a href="#courses">Курсы</a></li><li><a href="#contacts">Контакты</a></li></ul></nav>
-    <nav aria-label="Контакты"><ul><li><a href="tel:+375290000000">+375 (29) 000-00-00</a></li><li><a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></li><li><a href="#book">Запись онлайн</a></li></ul></nav>
+    <nav aria-label="Контакты"><ul><li><a href="tel:+375445555152">+375 (44) 555-51-52</a></li><li><a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></li><li><a href="#book">Запись онлайн</a></li></ul></nav>
   </div>
   <div class="container footer__bottom"><span>ИП Жданович И. · УНП 000000000 · Минск, ул. Максима Танка, 20</span><span style="display:flex;gap:16px;flex-wrap:wrap"><a href="#">Политика обработки персональных данных</a> <a href="index-a.html">Вариант A</a></span></div>
 </footer>

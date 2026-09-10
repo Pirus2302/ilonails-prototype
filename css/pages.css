@@ -8,6 +8,7 @@
 .hero__text { display: grid; gap: 12px; }
 .hero .hero__pill, .hero .stats, .hero .hero__media { display: none; }
 .hero h1 { font-size: 36px; line-height: 1.02; text-shadow: 0 1px 2px rgba(0, 0, 0, .25); }
+.hero__em { font-style: italic; color: var(--c-neon); }
 .hero__lead { color: rgba(255, 255, 255, .9); font-size: var(--fs-body); max-width: 42ch; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 8px; }
 .hero__cta .btn--dark { background: #fff; color: var(--c-ink); }
@@ -35,6 +36,7 @@
   .hero .stats { display: grid; }
   .hero__text { gap: 20px; }
   .hero h1 { font-size: 48px; text-shadow: none; max-width: 18ch; }
+  .hero__em { color: var(--c-accent); }
   .hero__lead { color: var(--c-muted); font-size: 17px; }
   .hero__cta .btn--dark { background: var(--c-ink); color: #fff; }
   .hero__cta .btn--ghost { border-color: var(--c-line); color: var(--c-ink); }

@@ -148,4 +148,51 @@
       });
     }
   }
+  // Блок «до и после»: переключатель вариантов (только для прототипа) и ползунок сравнения
+  var dynSection = document.getElementById("dynamics");
+  if (dynSection) {
+    var dynSwitcher = dynSection.querySelector(".proto-switch");
+    var dynVariants = dynSection.querySelectorAll(".dv");
+    var dynBtns = dynSwitcher ? dynSwitcher.querySelectorAll(".proto-switch__btn") : [];
+    var DYN_KNOWN = ["compare", "strip"];
+    function readDyn() { try { return localStorage.getItem("dynamicsVariant"); } catch (e) { return null; } }
+    function writeDyn(v) { try { localStorage.setItem("dynamicsVariant", v); } catch (e) {} }
+    function applyDyn(name) {
+      dynVariants.forEach(function (el) { el.hidden = el.getAttribute("data-variant") !== name; });
+      dynBtns.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-variant") === name ? "true" : "false"); });
+    }
+    if (dynVariants.length) {
+      var dynRequested = new URLSearchParams(location.search).get("dynamics") || readDyn() || "compare";
+      if (DYN_KNOWN.indexOf(dynRequested) === -1) dynRequested = "compare";
+      applyDyn(dynRequested);
+    }
+    dynBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var v = btn.getAttribute("data-variant");
+        applyDyn(v); writeDyn(v);
+        var params = new URLSearchParams(location.search);
+        params.set("dynamics", v);
+        history.replaceState(null, "", location.pathname + "?" + params.toString() + location.hash);
+      });
+    });
+
+    var cmp = dynSection.querySelector(".cmp");
+    if (cmp) {
+      var range = cmp.querySelector("input[type=range]");
+      var beforeImg = cmp.querySelector(".cmp__before");
+      var afterImg = cmp.querySelector(".cmp__after");
+      if (range) range.addEventListener("input", function () { cmp.style.setProperty("--x", range.value + "%"); });
+      var caseBtns = dynSection.querySelectorAll(".clist button");
+      caseBtns.forEach(function (b) {
+        b.addEventListener("click", function () {
+          caseBtns.forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+          b.setAttribute("aria-pressed", "true");
+          var title = b.getAttribute("data-title") || "";
+          if (beforeImg) { beforeImg.src = b.getAttribute("data-before"); beforeImg.alt = title + ", до"; }
+          if (afterImg) { afterImg.src = b.getAttribute("data-after"); afterImg.alt = title + ", после"; }
+        });
+      });
+    }
+  }
+
 })();

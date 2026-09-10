@@ -139,11 +139,46 @@
   </div>
 </section>
 <section class="section section--alt" id="dynamics">
-  <div class="container dynamics">
-    <div class="section__head" style="margin:0"><h2>Так выглядит динамика одного случая</h2><p class="hint">Один клиент, один ноготь: два ракурса до курса и два после. Фотографии публикуем открыто, без размытия. Даты визитов предоставляет заказчик.</p></div>
-    <div class="ba ba--grid">
-      <figure><img src="img/ba-ingrown-grid.jpg" alt="Серия из четырёх фотографий: вросший ноготь до и после курса" width="1000" height="1333" loading="lazy"><figcaption>Верхний ряд до, нижний после</figcaption></figure>
+  <div class="container">
+  <div class="proto-switch" role="group" aria-label="Вариант блока (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="compare" aria-pressed="true">Ползунок</button>
+    <button type="button" class="proto-switch__btn" data-variant="strip" aria-pressed="false">Лента</button>
+  </div>
+  <div class="dv" data-variant="compare">
+    <div class="section__head"><h2>Потяните, чтобы сравнить до и после</h2><p class="hint">Фотографии клиентов центра, без ретуши и размытия. Число визитов и даты по каждому случаю уточняем у студии.</p></div>
+    <div class="cmpwrap">
+      <div>
+        <div class="cmp" style="--x:55%">
+          <img class="cmp__after" src="img/ba-ingrown-a-after.jpg" alt="Вросший ноготь, большой палец, после" width="362" height="435" loading="lazy">
+          <img class="cmp__before" src="img/ba-ingrown-a-before.jpg" alt="Вросший ноготь, большой палец, до" width="362" height="432" loading="lazy">
+          <span class="cmp__l cmp__l--a">до</span><span class="cmp__l cmp__l--b">после</span>
+          <span class="cmp__bar"></span><span class="cmp__knob">&lsaquo;&nbsp;&rsaquo;</span>
+          <input type="range" min="0" max="100" value="55" aria-label="Граница между снимками до и после">
+        </div>
+        <p class="cmp__hint">Слева до, справа после. Двигайте границу пальцем или мышью</p>
+      </div>
+      <div>
+        <ul class="clist">
+        <li><button type="button" aria-pressed="true" data-before="img/ba-ingrown-a-before.jpg" data-after="img/ba-ingrown-a-after.jpg" data-title="Вросший ноготь, большой палец"><img src="img/ba-ingrown-a-after.jpg" alt="Вросший ноготь, большой палец, после" width="362" height="432" loading="lazy"><span><b>Вросший ноготь, большой палец</b><small>Ракурс сверху. Один клиент, один ноготь: до курса и после</small></span></button></li>
+        <li><button type="button" aria-pressed="false" data-before="img/ba-ingrown-b-before.jpg" data-after="img/ba-ingrown-b-after.jpg" data-title="Тот же ноготь, ракурс сбоку"><img src="img/ba-ingrown-b-after.jpg" alt="Тот же ноготь, ракурс сбоку, после" width="361" height="432" loading="lazy"><span><b>Тот же ноготь, ракурс сбоку</b><small>Видно, как край ногтя выведен из-под валика</small></span></button></li>
+        <li><button type="button" aria-pressed="false" data-before="img/ba-heel-1-before.jpg" data-after="img/ba-heel-1-after.jpg" data-title="Трещины и огрубевшая кожа пятки"><img src="img/ba-heel-1-after.jpg" alt="Трещины и огрубевшая кожа пятки, после" width="500" height="666" loading="lazy"><span><b>Трещины и огрубевшая кожа пятки</b><small>Аппаратная обработка стопы, дальше уход дома по рекомендации</small></span></button></li>
+        <li><button type="button" aria-pressed="false" data-before="img/ba-heel-2-before.jpg" data-after="img/ba-heel-2-after.jpg" data-title="Пятка, второй случай"><img src="img/ba-heel-2-after.jpg" alt="Пятка, второй случай, после" width="500" height="666" loading="lazy"><span><b>Пятка, второй случай</b><small>Сухая потрескавшаяся кожа до обработки и после</small></span></button></li>
+        </ul>
+        <p class="note">Число визитов и сроки по каждому случаю подставим после ответа студии</p>
+      </div>
     </div>
+  </div>
+  <div class="dv" data-variant="strip" hidden>
+    <div class="section__head"><h2>Так выглядит динамика</h2><p class="hint">Фотографии клиентов центра, без ретуши и размытия. Число визитов и даты по каждому случаю уточняем у студии.</p></div>
+    <div class="strip">
+      <div class="tile"><div class="fuse"><figure><img src="img/ba-ingrown-a-before.jpg" alt="Вросший ноготь, большой палец, до" width="362" height="432" loading="lazy"><figcaption class="tag">до</figcaption></figure><figure><img src="img/ba-ingrown-a-after.jpg" alt="Вросший ноготь, большой палец, после" width="362" height="432" loading="lazy"><figcaption class="tag">после</figcaption></figure></div><h3>Вросший ноготь, большой палец</h3><div class="meta"><span>Визитов: уточняем</span><span>Между снимками: уточняем</span></div><!-- числа подставить после ответа заказчика --></div>
+      <div class="tile"><div class="fuse"><figure><img src="img/ba-ingrown-b-before.jpg" alt="Тот же ноготь, ракурс сбоку, до" width="361" height="432" loading="lazy"><figcaption class="tag">до</figcaption></figure><figure><img src="img/ba-ingrown-b-after.jpg" alt="Тот же ноготь, ракурс сбоку, после" width="361" height="432" loading="lazy"><figcaption class="tag">после</figcaption></figure></div><h3>Тот же ноготь, ракурс сбоку</h3><div class="meta"><span>Визитов: уточняем</span><span>Между снимками: уточняем</span></div><!-- числа подставить после ответа заказчика --></div>
+      <div class="tile"><div class="fuse"><figure><img src="img/ba-heel-1-before.jpg" alt="Трещины и огрубевшая кожа пятки, до" width="500" height="666" loading="lazy"><figcaption class="tag">до</figcaption></figure><figure><img src="img/ba-heel-1-after.jpg" alt="Трещины и огрубевшая кожа пятки, после" width="500" height="666" loading="lazy"><figcaption class="tag">после</figcaption></figure></div><h3>Трещины и огрубевшая кожа пятки</h3><div class="meta"><span>Визитов: уточняем</span><span>Между снимками: уточняем</span></div><!-- числа подставить после ответа заказчика --></div>
+      <div class="tile"><div class="fuse"><figure><img src="img/ba-heel-2-before.jpg" alt="Пятка, второй случай, до" width="500" height="666" loading="lazy"><figcaption class="tag">до</figcaption></figure><figure><img src="img/ba-heel-2-after.jpg" alt="Пятка, второй случай, после" width="500" height="666" loading="lazy"><figcaption class="tag">после</figcaption></figure></div><h3>Пятка, второй случай</h3><div class="meta"><span>Визитов: уточняем</span><span>Между снимками: уточняем</span></div><!-- числа подставить после ответа заказчика --></div>
+    </div>
+    <div class="strip__foot"><span>Точную стоимость и число визитов для вашего случая назовём по фото</span><a class="btn btn--dark" href="#prices">Отправить фото на расчёт</a></div>
+  </div>
   </div>
 </section>
 <section class="section container" id="safety">

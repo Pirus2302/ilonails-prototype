@@ -299,14 +299,32 @@
   </div>
 </section>
 <section class="section section--alt" id="ilona">
-  <div class="container about-ilona">
-    <img src="img/ilona.jpg" alt="Илона Жданович в студии" loading="lazy" width="1000" height="1000">
-    <div>
-      <span class="eyebrow">Кто за этим стоит</span>
-      <h2 style="margin-top:8px">Десять лет назад у меня был маленький стол на съёмной квартире и большое желание помогать людям</h2>
-      <p class="prose muted" style="margin-top:16px">Сегодня Ilonails – подологический центр в центре Минска, команда специалистов и оборудование, в которое вложено больше, чем в собственное жильё. Мы не обещаем невозможного. Зато честно говорим, что можем сделать, сколько это стоит и как ухаживать за стопами дома.</p>
-      <a class="btn btn--ghost" href="#" style="margin-top:20px">Об Илоне и курсах <span aria-hidden="true">→</span></a>
+  <div class="container">
+  <div class="proto-switch" role="group" aria-label="Вариант блока (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="photo" aria-pressed="true">Фото и текст</button>
+    <button type="button" class="proto-switch__btn" data-variant="quote" aria-pressed="false">Цитата</button>
+  </div>
+  <div class="iv" data-variant="photo">
+    <div class="about-ilona">
+      <img src="img/ilona.jpg" alt="Илона Жданович в студии" loading="lazy" width="1000" height="1000">
+      <div>
+        <span class="eyebrow">Кто за этим стоит</span>
+        <h2 class="about-ilona__h">Десять лет назад у меня был маленький стол на съёмной квартире и большое желание помогать людям</h2><!-- «десять лет»: в ТЗ опыт с 2015 года, уточнить у заказчика -->
+        <p class="prose muted about-ilona__p">Сегодня Ilonails – подологический центр в центре Минска, команда специалистов и оборудование, в которое вложено больше, чем в собственное жильё. Мы не обещаем невозможного. Зато честно говорим, что можем сделать, сколько это стоит и как ухаживать за стопами дома.</p>
+        <a class="btn btn--ghost about-ilona__btn" href="#">Об Илоне и курсах <span aria-hidden="true">→</span></a>
+      </div>
     </div>
+  </div>
+  <div class="iv" data-variant="quote" hidden>
+    <span class="eyebrow">Кто за этим стоит</span>
+    <div class="iq">
+      <blockquote>«Десять лет назад у меня был маленький стол на съёмной квартире и большое желание помогать людям»</blockquote>
+      <div class="iq__who"><img src="img/ilona.jpg" alt="Илона Жданович" width="1000" height="1000" loading="lazy"><div><b>Илона Жданович</b><span>руководитель центра, подолог, инструктор курсов</span></div></div>
+      <p>Сегодня Ilonails – подологический центр в центре Минска, команда специалистов и оборудование, в которое вложено больше, чем в собственное жильё. Мы не обещаем невозможного. Зато честно говорим, что можем сделать, сколько это стоит и как ухаживать за стопами дома.</p>
+      <a class="btn btn--ghost" href="#">Об Илоне и курсах <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
   </div>
 </section>
 <section class="section container" id="reviews">
@@ -318,24 +336,75 @@
   </div>
 </section>
 <section class="section section--alt" id="courses">
-  <div class="container book__in">
-    <div class="book__info"><span class="eyebrow">Обучение</span><h2>Курс «Педикюр с элементами подологии»</h2><p class="muted prose">Практика в студии на реальных клиентах, малые группы до четырёх человек. Разрешение на обучение получено одними из первых в городе.</p></div>
-    <a class="btn btn--ghost" href="#" style="justify-self:start">О курсе <span aria-hidden="true">→</span></a>
+  <div class="container">
+  <div class="proto-switch" role="group" aria-label="Вариант блока (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="simple" aria-pressed="true">Переход</button>
+    <button type="button" class="proto-switch__btn" data-variant="masters" aria-pressed="false">Для мастеров</button>
+  </div>
+  <div class="kv" data-variant="simple">
+    <div class="book__in">
+      <div class="book__info"><span class="eyebrow">Обучение</span><h2>Курс «Педикюр с элементами подологии»</h2><p class="muted prose">Практика в студии на реальных клиентах, малые группы до четырёх человек. Разрешение на обучение получено одними из первых в городе.</p></div>
+      <a class="btn btn--ghost" href="#" style="justify-self:start">О курсе <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <div class="kv" data-variant="masters" hidden>
+    <div class="km">
+      <div><span class="eyebrow">Мастерам педикюра</span><h2 class="km__h">Научиться работать со стопой можно у нас</h2><p class="km__p">Курс «Педикюр с элементами подологии»: практика в студии на реальных клиентах под присмотром Илоны. Стоимость, программу и ближайший набор смотрите на странице курса.</p><a class="btn btn--dark km__btn" href="#">О курсе <span aria-hidden="true">→</span></a></div>
+      <div class="kn"><!-- «предоплата онлайн» зависит от эквайринга (ТЗ 13.2) -->
+        <div><b>до <i>4</i></b><span>человек в группе</span></div>
+        <div><b>1 <i>из первых</i></b><span>разрешений на обучение в городе</span></div>
+        <div><b>Практика</b><span>на реальных клиентах в студии</span></div>
+        <div><b>Предоплата</b><span>онлайн на сайте</span></div>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 <section class="section container" id="contacts">
-  <div class="contacts">
-    <div>
-      <div class="section__head"><h2>Как добраться и записаться</h2></div>
-      <div class="book__info">
-        <p><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</p>
-        <p class="muted">Ежедневно до 20:00 <!-- часы уточнить у заказчика --></p>
-        <p class="muted">Напишите нам: <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375290000000">Viber</a> · <a href="https://wa.me/375290000000">WhatsApp</a></p>
-        <p><a class="tnum" href="tel:+375290000000">+375 (29) 000-00-00</a> · <a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></p>
+  <div class="proto-switch" role="group" aria-label="Вариант блока (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="map" aria-pressed="true">Карта во всю ширину</button>
+    <button type="button" class="proto-switch__btn" data-variant="table" aria-pressed="false">Табличка</button>
+    <button type="button" class="proto-switch__btn" data-variant="form" aria-pressed="false">Заявка</button>
+  </div>
+  <div id="book">
+  <div class="cv" data-variant="map">
+    <div class="cm"><img src="img/map.jpg" alt="Карта: улица Максима Танка, 20, Минск" loading="lazy" width="1200" height="600">
+      <div class="cm__card"><h2>Как добраться и записаться</h2><p><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</p><p class="muted">Ежедневно до 20:00</p><p class="muted">Напишите нам: <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375290000000">Viber</a> · <a href="https://wa.me/375290000000">WhatsApp</a></p><p><a class="tnum" href="tel:+375290000000">+375 (29) 000-00-00</a> · <a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></p>
+        <div class="cm__cta"><a class="btn btn--dark" href="#">Записаться онлайн</a></div><span class="small muted">откроется виджет YCLIENTS</span></div>
+    </div><!-- часы, номер, мессенджеры и станция метро уточнить у заказчика; карта: OpenStreetMap, на сайте будет виджет Яндекс.Карт -->
+  </div>
+  <div class="cv" data-variant="table" hidden>
+    <div class="section__head"><h2>Как добраться и записаться</h2></div>
+    <div class="ct">
+      <div>
+        <dl class="dl">
+          <div><dt>Адрес</dt><dd><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</dd></div>
+          <div><dt>Часы</dt><dd>Ежедневно до 20:00</dd></div>
+          <div><dt>Телефон</dt><dd><a class="tnum" href="tel:+375290000000">+375 (29) 000-00-00</a></dd></div>
+          <div><dt>Мессенджеры</dt><dd><a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375290000000">Viber</a> · <a href="https://wa.me/375290000000">WhatsApp</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></dd></div>
+        </dl>
+        <div class="ct__cta"><a class="btn btn--dark" href="#">Записаться онлайн</a><span class="muted small">откроется виджет YCLIENTS</span></div>
       </div>
-      <div id="book" style="margin-top:var(--sp-3);display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn--dark" href="#">Записаться онлайн</a><span class="muted small" style="align-self:center">откроется виджет YCLIENTS</span></div>
-    </div>
-    <div class="contacts__map"><img src="img/map.jpg" alt="Карта: улица Максима Танка, 20, Минск" loading="lazy" width="1200" height="600"><p class="small muted" style="margin-top:6px">Карта: © участники OpenStreetMap. На сайте будет виджет Яндекс.Карт.</p></div>
+      <div class="ct__map"><img src="img/map.jpg" alt="Карта: улица Максима Танка, 20, Минск" loading="lazy" width="1200" height="600"></div>
+    </div><!-- часы, номер, мессенджеры и станция метро уточнить у заказчика; карта: OpenStreetMap, на сайте будет виджет Яндекс.Карт -->
+  </div>
+  <div class="cv" data-variant="form" hidden>
+    <div class="section__head"><h2>Как добраться и записаться</h2></div>
+    <div class="cf">
+      <form class="form" action="#" method="post">
+        <h3>Оставьте контакт, перезвоним</h3>
+        <label>Имя<input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться"></label>
+        <label>Телефон или мессенджер<input type="text" name="contact" autocomplete="tel" placeholder="+375 29 …"></label>
+        <label class="chk"><input type="checkbox" name="consent"><span>Согласен на обработку персональных данных</span></label>
+        <button class="btn btn--dark" type="button">Отправить</button>
+        <span class="form__or">Или сразу выберите время: <a href="#">запись онлайн в YCLIENTS</a></span>
+      </form>
+      <div class="cf__side"><img src="img/map.jpg" alt="Карта: улица Максима Танка, 20, Минск" loading="lazy" width="1200" height="600"><p><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</p><p class="muted small">Ежедневно до 20:00 · <a class="tnum" href="tel:+375290000000">+375 (29) 000-00-00</a> · <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375290000000">Viber</a> · <a href="https://wa.me/375290000000">WhatsApp</a></p></div>
+    </div><!-- часы, номер, мессенджеры и станция метро уточнить у заказчика; карта: OpenStreetMap, на сайте будет виджет Яндекс.Карт -->
+  </div>
   </div>
 </section>
 </main>

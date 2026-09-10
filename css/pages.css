@@ -237,6 +237,77 @@
 .about-ilona img { aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-card); width: 100%; }
 @media (min-width: 768px) { .about-ilona { grid-template-columns: 1fr 2fr; align-items: center; } }
 
+/* Об Илоне: варианты «Фото и текст» и «Цитата» */
+.about-ilona__h { margin-top: 8px; }
+.about-ilona__p { margin-top: 16px; }
+.about-ilona__btn { margin-top: 20px; }
+.iq { display: grid; gap: 22px; max-width: 60ch; margin-top: 12px; justify-items: start; }
+.iq blockquote { margin: 0; font-family: var(--f-display); font-style: italic; font-size: 30px; line-height: 1.15; text-wrap: balance; }
+.iq__who { display: flex; align-items: center; gap: 12px; }
+.iq__who img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; }
+.iq__who b { display: block; font-weight: 500; }
+.iq__who span { font-size: 12px; color: var(--c-muted); }
+.iq p { color: var(--c-muted); }
+/* Курсы: вариант «Для мастеров» */
+.km { display: grid; gap: var(--sp-3); padding: 28px 24px; border-radius: var(--r-card); background: var(--c-bg); border: 1px solid var(--c-line); }
+.km__h { font-size: 28px; line-height: 1.1; margin-top: 8px; }
+.km__p { color: var(--c-muted); max-width: 48ch; margin-top: 10px; }
+.km__btn { margin-top: 18px; }
+.kn { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; }
+.kn b { display: block; font-family: var(--f-display); font-weight: 500; font-size: 32px; line-height: 1; }
+.kn b i { font-style: normal; color: var(--c-accent); }
+.kn span { display: block; font-size: 12px; color: var(--c-muted); margin-top: 4px; }
+/* Контакты: варианты «Карта во всю ширину», «Табличка», «Заявка» */
+.cm { position: relative; border-radius: var(--r-card); overflow: hidden; background: #e7e5df; }
+.cm img { width: 100%; height: auto; object-fit: cover; display: block; aspect-ratio: 4 / 3; }
+.cm__card { display: grid; gap: 12px; padding: 22px; background: #fff; border-top: 1px solid var(--c-line); }
+.cm__card h2 { font-size: 26px; line-height: 1.1; }
+.cm__card p { font-size: 15px; }
+.cm__card .muted { font-size: var(--fs-small); }
+.cm__card a { display: inline-block; padding-block: 4px; }
+.cm__cta { margin-top: 6px; }
+.ct { display: grid; gap: var(--sp-3); }
+.dl { display: grid; border-top: 1px solid var(--c-line); margin: 0; }
+.dl > div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--c-line); font-size: 15px; }
+.dl dt { color: var(--c-muted); font-size: 13px; padding-top: 2px; }
+.dl dd { margin: 0; }
+.dl a { display: inline-block; padding-block: 4px; }
+.ct__cta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; align-items: center; }
+.ct__map img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-card); }
+.cf { display: grid; gap: var(--sp-3); }
+.form { display: grid; gap: 12px; padding: 24px; border: 1px solid var(--c-line); border-radius: var(--r-card); background: var(--c-bg-alt); }
+.form h3 { font-size: 24px; line-height: 1.1; }
+.form label { display: grid; gap: 6px; font-size: 13px; color: var(--c-muted); }
+.form input { min-height: 48px; padding: 10px 14px; border: 1px solid var(--c-line); border-radius: 12px; font: inherit; color: var(--c-ink); background: #fff; }
+.form input:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 1px; }
+.form .chk { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; font-size: 12px; color: var(--c-muted); }
+.form .chk input { width: 24px; height: 24px; min-height: 0; margin: 0; accent-color: var(--c-accent); }
+.form__or { font-size: 13px; color: var(--c-muted); }
+.form__or a { display: inline-block; padding-block: 4px; }
+.cf__side { display: grid; gap: 14px; align-content: start; }
+.cf__side img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--r-card); }
+.cf__side a { display: inline-block; padding-block: 5px; }
+@media (min-width: 768px) {
+  .km { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--sp-5); padding: 36px 40px; align-items: center; }
+  .kn b { font-size: 36px; }
+  .cm img { aspect-ratio: 16 / 8; }
+  .cm__card { position: absolute; left: 24px; top: 24px; bottom: 24px; width: 380px; border: 1px solid var(--c-line); border-radius: 16px; box-shadow: var(--shadow-float); align-content: start; }
+  .ct { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--sp-5); align-items: start; }
+  .dl > div { grid-template-columns: 130px 1fr; }
+  .cf { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--sp-5); align-items: start; }
+}
+@media (min-width: 1200px) {
+  .iq blockquote { font-size: 40px; }
+  .iq { max-width: 64ch; }
+  .km__h { font-size: 32px; }
+  .cm img { aspect-ratio: 16 / 7; }
+  .cm__card { left: 32px; top: 32px; bottom: auto; width: 420px; padding: 28px; }
+  .ct { column-gap: var(--sp-7); }
+  .ct__map img { aspect-ratio: 5 / 4; }
+  .cf { column-gap: var(--sp-7); }
+  .form { padding: 32px; }
+}
+
 /* Контакты */
 .contacts { display: grid; gap: var(--sp-3); }
 .contacts__map img { border-radius: var(--r-card); aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
@@ -278,7 +349,8 @@
 .map__label { display: none; min-height: 24px; font-size: var(--fs-small); color: var(--c-muted); text-align: left; }
 .map__label b { color: var(--c-ink); font-weight: 600; }
 .sym { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--c-ink); }
-.sym a { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--c-line); transition: padding-left var(--dur) var(--ease); }
+.sym a { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--c-line); transition: padding-left var(--dur) var(--ease); }
+.sym a > .arr { order: -1; }
 .sym .q { font-family: var(--f-display); font-style: italic; font-size: 22px; line-height: 1.15; padding-bottom: 2px; display: block; }
 .sym .a { display: block; position: relative; padding-left: 26px; margin-top: 6px; font-size: var(--fs-small); color: var(--c-muted); }
 .sym .a b { font-weight: 500; color: var(--c-ink); }

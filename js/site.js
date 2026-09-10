@@ -93,6 +93,9 @@
       });
     });
   }
+  setupSwitcher(document.getElementById("ilona"), { param: "ilona", storageKey: "ilonaVariant", itemSelector: ".iv", known: ["photo", "quote"] });
+  setupSwitcher(document.getElementById("courses"), { param: "courses", storageKey: "coursesVariant", itemSelector: ".kv", known: ["simple", "masters"] });
+  setupSwitcher(document.getElementById("contacts"), { param: "contacts", storageKey: "contactsVariant", itemSelector: ".cv", known: ["map", "table", "form"] });
   setupSwitcher(document.getElementById("safety"), { param: "safety", storageKey: "safetyVariant", itemSelector: ".sv", known: ["steps", "photos", "qa"] });
 
   // Блок «Найдите свою проблему»: переключатель вариантов (только для прототипа)

@@ -206,6 +206,31 @@
   .tcard h3 { font-size: 28px; }
 }
 
+/* Блок цен: расчёт по фото слева, ориентиры по прайсу справа */
+.photo { display: grid; gap: var(--sp-4); }
+.photo__lead { display: grid; gap: 18px; align-content: start; justify-items: start; }
+.photo__lead h3 { font-size: 28px; line-height: 1.08; max-width: 26ch; }
+.steps3 { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; counter-reset: s; }
+.steps3 li { counter-increment: s; display: grid; grid-template-columns: 36px 1fr; gap: 12px; align-items: baseline; font-size: 15px; color: var(--c-muted); }
+.steps3 li::before { content: counter(s); display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--c-ink); color: #fff; font-size: 13px; font-weight: 500; align-self: start; }
+.steps3 b { color: var(--c-ink); font-weight: 500; }
+.photo__eyebrow { margin-bottom: 10px; }
+.plist2 { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--c-line); }
+.plist2 li { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--c-line); font-size: 15px; }
+.plist2 a { color: var(--c-ink); display: inline-block; padding: 3px 0; }
+.sum { font-family: var(--f-display); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.plist2 .sum { font-size: 18px; }
+.plist2 .sum--fr { color: var(--c-muted); }
+.photo__full { margin-top: 16px; }
+@media (min-width: 768px) {
+  .photo { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); column-gap: var(--sp-5); align-items: start; }
+  .photo__lead h3 { font-size: 32px; }
+}
+@media (min-width: 1200px) {
+  .photo { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); column-gap: var(--sp-7); }
+  .photo__lead h3 { font-size: 36px; max-width: none; }
+}
+
 /* Об Илоне */
 .about-ilona { display: grid; gap: var(--sp-3); }
 .about-ilona img { aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-card); width: 100%; }

@@ -169,4 +169,51 @@
     }
   }
 
+  // Блок команды: переключатель, вариант «Выбор» (смена фото по имени) и вариант «Слайдер» (стрелки)
+  var teamSection = document.getElementById("team");
+  if (teamSection) {
+    setupSwitcher(teamSection, { param: "team", storageKey: "teamVariant", itemSelector: ".tv", known: ["pick", "slider"] });
+
+    var pickPh = teamSection.querySelector(".pick__ph img");
+    var pickCap = teamSection.querySelector(".pick__cap");
+    var pickMore = teamSection.querySelector(".pick__more");
+    var pickBtns = teamSection.querySelectorAll(".plist button");
+    if (pickPh && pickCap && pickMore) {
+      pickBtns.forEach(function (b) {
+        b.addEventListener("click", function () {
+          pickBtns.forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+          b.setAttribute("aria-pressed", "true");
+          pickPh.src = b.getAttribute("data-img"); pickPh.alt = b.getAttribute("data-alt") || "";
+          pickCap.querySelector("b").textContent = b.getAttribute("data-name");
+          pickCap.querySelector("span").textContent = b.getAttribute("data-role");
+          var ul = pickMore.querySelector(".tags"); ul.textContent = "";
+          (b.getAttribute("data-tags") || "").split("|").forEach(function (t) { var li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+          pickMore.querySelector(".quote").textContent = b.getAttribute("data-q");
+        });
+      });
+    }
+
+    var track = teamSection.querySelector(".tslider__track");
+    var navBtns = teamSection.querySelectorAll(".tslider__btn");
+    if (track && navBtns.length) {
+      function cardStep() { var c = track.querySelector(".tcard"); return c ? c.getBoundingClientRect().width + 20 : 300; }
+      function updateNav() {
+        var max = track.scrollWidth - track.clientWidth - 2;
+        navBtns.forEach(function (b) {
+          var dir = parseInt(b.getAttribute("data-dir"), 10);
+          b.disabled = dir < 0 ? track.scrollLeft <= 2 : track.scrollLeft >= max;
+        });
+      }
+      navBtns.forEach(function (b) {
+        b.addEventListener("click", function () {
+          track.scrollBy({ left: parseInt(b.getAttribute("data-dir"), 10) * cardStep(), behavior: reduce ? "auto" : "smooth" });
+        });
+      });
+      track.addEventListener("scroll", updateNav, { passive: true });
+      window.addEventListener("resize", updateNav);
+      updateNav();
+      teamSection.querySelectorAll(".proto-switch__btn").forEach(function (b) { b.addEventListener("click", function () { setTimeout(updateNav, 0); }); });
+    }
+  }
+
 })();

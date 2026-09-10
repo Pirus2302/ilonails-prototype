@@ -235,12 +235,36 @@
 </section>
 <section class="section section--alt" id="team">
   <div class="container">
-    <div class="section__head"><h2>Кто будет работать с вами</h2></div>
-    <div class="people">
-      <div class="person"><img src="img/ilona.jpg" alt="Илона Жданович, руководитель центра и подолог" loading="lazy"><h3>Илона</h3><p>Руководитель центра, подолог, инструктор курсов для мастеров.</p><p class="italic">[что больше всего любит в работе, текст от заказчика]</p></div>
-      <div class="person"><img src="img/tatiana.jpg" alt="Татьяна, подолог" loading="lazy"><h3>Татьяна</h3><p>Подолог. Работает со сложными стопами и корректирующими системами.</p><p class="italic">[что больше всего любит в работе, текст от заказчика]</p></div>
-      <div class="person"><img src="img/master.jpg" alt="Мастер студии" loading="lazy"><h3>Мастер студии</h3><p>Педикюр и маникюр, долговременное покрытие.</p><p class="italic">[имя и текст от заказчика]</p></div>
+  <div class="proto-switch" role="group" aria-label="Вариант блока (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="pick" aria-pressed="true">Выбор</button>
+    <button type="button" class="proto-switch__btn" data-variant="slider" aria-pressed="false">Слайдер</button>
+  </div>
+  <div class="tv" data-variant="pick">
+    <div class="section__head"><h2>Кто будет работать с вами</h2><p class="hint">Два подолога и мастер студии. Нажмите на имя, чтобы посмотреть, кто это.</p></div>
+    <div class="pick">
+      <div><div class="pick__ph"><img src="img/ilona.jpg" alt="Илона Жданович, руководитель центра и подолог" width="1000" height="1000" loading="lazy"><div class="pick__cap"><b>Илона Жданович</b><span>Руководитель центра, подолог, инструктор курсов для мастеров</span></div></div></div>
+      <div>
+        <ul class="plist">
+          <li><button type="button" aria-pressed="true" data-img="img/ilona.jpg" data-alt="Илона Жданович, руководитель центра и подолог" data-name="Илона Жданович" data-role="Руководитель центра, подолог, инструктор курсов для мастеров" data-q="[что больше всего любит в работе, текст от заказчика]" data-tags="Подолог|Руководитель|Курсы для мастеров"><img src="img/ilona.jpg" alt="Илона Жданович, руководитель центра и подолог" width="1000" height="1000" loading="lazy"><span><b>Илона Жданович</b><small>Руководитель центра, подолог, инструктор курсов для мастеров</small></span></button></li>
+          <li><button type="button" aria-pressed="false" data-img="img/tatiana.jpg" data-alt="Татьяна, подолог" data-name="Татьяна" data-role="Подолог. Работает со сложными стопами и корректирующими системами" data-q="[что больше всего любит в работе, текст от заказчика]" data-tags="Подолог|Сложные стопы|Корректирующие системы"><img src="img/tatiana.jpg" alt="Татьяна, подолог" width="1000" height="1250" loading="lazy"><span><b>Татьяна</b><small>Подолог. Работает со сложными стопами и корректирующими системами</small></span></button></li>
+          <li><button type="button" aria-pressed="false" data-img="img/master.jpg" data-alt="Мастер студии" data-name="Мастер студии" data-role="Педикюр и маникюр, долговременное покрытие" data-q="[имя и текст от заказчика]" data-tags="Педикюр|Маникюр|Покрытие"><img src="img/master.jpg" alt="Мастер студии" width="1000" height="1250" loading="lazy"><span><b>Мастер студии</b><small>Педикюр и маникюр, долговременное покрытие</small></span></button></li>
+        </ul>
+        <div class="pick__more"><ul class="tags"><li>Подолог</li><li>Руководитель</li><li>Курсы для мастеров</li></ul><p class="quote">[что больше всего любит в работе, текст от заказчика]</p><a class="btn btn--dark" href="#book">Записаться</a></div><!-- анкеты специалистов и согласие на публикацию от заказчика -->
+      </div>
     </div>
+  </div>
+  <div class="tv" data-variant="slider" hidden>
+    <div class="section__head tslider__head"><div><h2>Кто будет работать с вами</h2><p class="hint">Два подолога и мастер студии. Листайте карточки.</p></div>
+      <div class="tslider__nav"><button type="button" class="tslider__btn" data-dir="-1" aria-label="Предыдущий специалист">&larr;</button><button type="button" class="tslider__btn" data-dir="1" aria-label="Следующий специалист">&rarr;</button></div></div>
+    <div class="tslider">
+      <ul class="tslider__track">
+        <li class="tcard"><img src="img/ilona.jpg" alt="Илона Жданович, руководитель центра и подолог" width="1000" height="1000" loading="lazy"><div class="tcard__t"><h3>Илона Жданович</h3><p class="role">Руководитель центра, подолог, инструктор курсов для мастеров</p><ul class="tags"><li>Подолог</li><li>Руководитель</li><li>Курсы для мастеров</li></ul><p class="quote">[что больше всего любит в работе, текст от заказчика]</p><a class="btn btn--ghost" href="#book">Записаться</a></div></li>
+        <li class="tcard"><img src="img/tatiana.jpg" alt="Татьяна, подолог" width="1000" height="1250" loading="lazy"><div class="tcard__t"><h3>Татьяна</h3><p class="role">Подолог. Работает со сложными стопами и корректирующими системами</p><ul class="tags"><li>Подолог</li><li>Сложные стопы</li><li>Корректирующие системы</li></ul><p class="quote">[что больше всего любит в работе, текст от заказчика]</p><a class="btn btn--ghost" href="#book">Записаться</a></div></li>
+        <li class="tcard"><img src="img/master.jpg" alt="Мастер студии" width="1000" height="1250" loading="lazy"><div class="tcard__t"><h3>Мастер студии</h3><p class="role">Педикюр и маникюр, долговременное покрытие</p><ul class="tags"><li>Педикюр</li><li>Маникюр</li><li>Покрытие</li></ul><p class="quote">[имя и текст от заказчика]</p><a class="btn btn--ghost" href="#book">Записаться</a></div></li>
+      </ul>
+    </div><!-- анкеты специалистов и согласие на публикацию от заказчика -->
+  </div>
   </div>
 </section>
 <section class="section container" id="prices">

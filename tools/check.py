@@ -6,7 +6,10 @@ from playwright.sync_api import sync_playwright
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
 TOKENS_ONLY = "--tokens" in sys.argv
-PAGES = ARGS or ["index.html", "index-a.html", "vrosshiy-nogot.html"]
+PAGES = ARGS or ["index.html", "index-a.html", "vrosshiy-nogot.html",
+                 "ceny.html", "o-tsentre.html", "kontakty.html",
+                 "specialisty.html", "ilona.html", "kursy.html", "blog.html",
+                 "statya.html"]
 FORBIDDEN = re.compile(r"\b(пациент\w*|удаля\w*|удалени\w*|лечени\w*|гост(ь|я|ю|е|ем|и|ей|ям|ями|ях|ья))\b", re.I)
 
 def lum(hexc):

@@ -117,6 +117,7 @@
     });
   });
 
+  setupSwitcher(document.getElementById("ahead"), { param: "ahero", storageKey: "aheroVariant", itemSelector: ".ahv", known: ["nums", "cover"] });
   setupSwitcher(document.getElementById("contacts"), { param: "contacts", storageKey: "contactsVariant", itemSelector: ".cv", known: ["map", "table", "form"] });
   setupSwitcher(document.getElementById("safety"), { param: "safety", storageKey: "safetyVariant", itemSelector: ".sv", known: ["steps", "photos", "qa"] });
 

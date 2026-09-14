@@ -33,22 +33,51 @@
 </nav>
 <main>
 <nav class="container breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a> <span aria-hidden="true">&rarr;</span> О центре</nav>
-<div class="container abt">
-  <div>
-    <h1>О центре</h1>
-    <div class="abt__cols">
-      <p class="prose">Подологический центр в Центральном районе Минска. Работаем с проблемами ногтей и стоп, изготавливаем индивидуальные стельки, делаем педикюр и маникюр. Обучаем мастеров педикюра.</p>
-      <p class="prose muted">Приём ведут подологи, отдельно работает мастер маникюра. Инструмент проходит полный цикл обработки между визитами, автоклав стоит в отдельной стерилизационной.</p>
+<div id="ahead">
+  <div class="container aswitch">
+    <div class="proto-switch" role="group" aria-label="Вариант шапки страницы (только для выбора)">
+      <span class="proto-switch__label">Вариант блока</span>
+      <button type="button" class="proto-switch__btn" data-variant="nums" aria-pressed="true">Цифры</button>
+      <button type="button" class="proto-switch__btn" data-variant="cover" aria-pressed="false">Обложка</button>
     </div>
   </div>
-  <ul class="nums"><!-- год открытия уточнить у заказчика -->
-    <li><b>8</b><span>направлений работы</span></li>
-    <li><b>46</b><span>позиций в прайсе</span></li>
-    <li><b>2</b><span>кабинета подолога</span></li>
-    <li><b><span class="ph">год</span></b><span>работаем с этого года</span></li>
-  </ul>
-</div>
 
+  <div class="ahv" data-variant="nums">
+    <div class="container abt">
+      <div>
+        <h1>О центре</h1>
+        <div class="abt__cols">
+          <p class="prose">Подологический центр в Центральном районе Минска. Работаем с проблемами ногтей и стоп, изготавливаем индивидуальные стельки, делаем педикюр и маникюр. Обучаем мастеров педикюра.</p>
+          <p class="prose muted">Приём ведут подологи, отдельно работает мастер маникюра. Инструмент проходит полный цикл обработки между визитами, автоклав стоит в отдельной стерилизационной.</p>
+        </div>
+      </div>
+      <ul class="nums"><!-- год открытия уточнить у заказчика -->
+      <li><b>8</b><span>направлений работы</span></li>
+      <li><b>46</b><span>позиций в прайсе</span></li>
+      <li><b>2</b><span>кабинета подолога</span></li>
+      <li><b><span class="ph">год</span></b><span>работаем с этого года</span></li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="ahv" data-variant="cover" hidden>
+    <div class="container abt">
+      <div>
+        <div class="cv4">
+          <img src="img/reception-1600.jpg" width="1600" height="1200" alt="Ресепшен студии Ilonails">
+          <div class="cv4__t"><h1>О центре</h1><p class="prose">Подологический центр в Центральном районе Минска. Работаем с проблемами ногтей и стоп, изготавливаем индивидуальные стельки, делаем педикюр и маникюр. Обучаем мастеров педикюра.</p></div>
+        </div>
+        <p class="prose muted">Приём ведут подологи, отдельно работает мастер маникюра. Инструмент проходит полный цикл обработки между визитами, автоклав стоит в отдельной стерилизационной.</p>
+      </div>
+      <ul class="nums"><!-- год открытия уточнить у заказчика -->
+      <li><b>8</b><span>направлений работы</span></li>
+      <li><b>46</b><span>позиций в прайсе</span></li>
+      <li><b>2</b><span>кабинета подолога</span></li>
+      <li><b><span class="ph">год</span></b><span>работаем с этого года</span></li>
+    </ul>
+    </div>
+  </div>
+</div>
 <section class="section container">
   <div class="section__head"><h2>Документы, а не обещания</h2><p class="hint">То, что можно открыть и прочитать целиком.</p></div>
   <div class="docs"><!-- сканы предоставляет заказчик -->

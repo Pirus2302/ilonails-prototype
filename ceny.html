@@ -33,10 +33,45 @@
 </nav>
 <main>
 <nav class="container breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a> <span aria-hidden="true">&rarr;</span> Цены</nav>
-<div class="container page-head">
-  <h1>Цены</h1>
-  <p class="prose">В прайсе студии 46 позиций. У большинства цена «от»: сколько работы на самом деле, видно только на стопе. Точную сумму называем по фотографии до визита.</p>
-</div>
+<div class="ctop" id="ctop">
+  <div class="container cswitch">
+    <div class="proto-switch" role="group" aria-label="Вариант шапки страницы цен (только для выбора)">
+      <span class="proto-switch__label">Вариант блока</span>
+      <button type="button" class="proto-switch__btn" data-variant="pick" aria-pressed="true">Подбор</button>
+      <button type="button" class="proto-switch__btn" data-variant="table" aria-pressed="false">Прайс сразу</button>
+    </div>
+  </div>
+
+  <div class="chv" data-variant="pick">
+    <div class="container page-head">
+      <h1>Цены</h1>
+      <p class="prose">В прайсе студии 46 позиций. У большинства цена «от»: сколько работы на самом деле, видно только на стопе. Ниже прайс целиком, а сначала – прикидка по вашей ситуации.</p>
+      <div class="pk">
+        <div><p class="pk__q">С чем собираетесь прийти?</p><div class="pk__chips"><button type="button" data-k="ingrown" aria-pressed="true">Ноготь врос, больно в обуви</button><button type="button" data-k="fungus" aria-pressed="false">Ноготь пожелтел и утолщился</button><button type="button" data-k="corn" aria-pressed="false">Твёрдое пятно, больно наступать</button><button type="button" data-k="cracks" aria-pressed="false">Пятки трескаются</button><button type="button" data-k="care" aria-pressed="false">Ничего не болит, нужен уход</button></div></div>
+        <div class="pk__box"><!-- суммы сложены из позиций прайса, сверить с YCLIENTS -->
+        <div class="pk__panel" data-k="ingrown"><ul><li><span>Обработка вросшего ногтя, 1 угол</span><span class="sum">25 BYN</span></li><li><span>Тампонада, 1 угол</span><span class="sum">20 BYN</span></li></ul><p class="pk__sum">Первый визит <b>45 BYN</b></p><p class="pk__note">Если нужна корректирующая система, визит выходит дороже. Точную сумму назовём по фото до визита</p></div>
+        <div class="pk__panel" data-k="fungus" hidden><ul><li><span>Обработка ногтей с поражением</span><span class="sum">от 40 BYN</span></li></ul><p class="pk__sum">Первый визит <b>от 40 BYN</b></p><p class="pk__note">Считаем каждый затронутый ноготь отдельно. Точную сумму назовём по фото до визита</p></div>
+        <div class="pk__panel" data-k="corn" hidden><ul><li><span>Обработка стержневой мозоли</span><span class="sum">от 30 BYN</span></li></ul><p class="pk__sum">Первый визит <b>от 30 BYN</b></p><p class="pk__note">Если мозолей несколько, считаем каждую. Точную сумму назовём по фото до визита</p></div>
+        <div class="pk__panel" data-k="cracks" hidden><ul><li><span>Обработка трещин и кожи стоп</span><span class="sum">от 50 BYN</span></li></ul><p class="pk__sum">Первый визит <b>от 50 BYN</b></p><p class="pk__note">Цена за обе стопы. Точную сумму назовём по фото до визита</p></div>
+        <div class="pk__panel" data-k="care" hidden><ul><li><span>Педикюр гигиенический, полная обработка</span><span class="sum">65 BYN</span></li></ul><p class="pk__sum">Первый визит <b>65 BYN</b></p><p class="pk__note">Покрытие и снятие считаются отдельно. Точную сумму назовём по фото до визита</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chv" data-variant="table" hidden>
+    <div class="container chead">
+      <h1>Цены</h1>
+      <span>46 позиций, суммы сверяем с YCLIENTS на дату запуска</span>
+    </div>
+  </div>
+
+  <div class="chv cbar" data-variant="table" hidden>
+    <div class="container cbar__in">
+      <p class="cbar__t"><b>Почему «от».</b> Объём работы виден только на стопе: сколько углов, есть ли воспаление, нужна ли система</p>
+      <a class="btn btn--dark btn--sm" href="#photo">Расчёт по фото</a>
+    </div>
+  </div>
 
 <section class="section section--alt" id="photo">
   <div class="container">
@@ -103,6 +138,7 @@
   </tbody></table>
   <p class="pt__note">Цена за один угол, один ноготь или одну стопу, если в названии не сказано иное. Если затронуто несколько пальцев, считаем каждый отдельно.</p>
 </section>
+</div><!-- /ctop -->
 
 <section class="section section--alt">
   <div class="container">

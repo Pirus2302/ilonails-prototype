@@ -102,6 +102,21 @@
   setupSwitcher(document.querySelector("#team .ptv") ? document.getElementById("team") : null, { param: "pteam", storageKey: "pteamVariant", itemSelector: ".ptv", known: ["cards", "rows"] });
   setupSwitcher(document.querySelector("#book .bkv") ? document.getElementById("book") : null, { param: "book", storageKey: "bookVariant", itemSelector: ".bkv", known: ["bar", "widget"] });
   setupSwitcher(document.getElementById("related"), { param: "related", storageKey: "relatedVariant", itemSelector: ".rlv", known: ["list", "tiles"] });
+  setupSwitcher(document.getElementById("ctop"), { param: "chero", storageKey: "cheroVariant", itemSelector: ".chv", known: ["pick", "table"] });
+
+  // Страница цен, вариант «Подбор»: переключение ситуации
+  document.querySelectorAll(".pk").forEach(function (pk) {
+    var btns = pk.querySelectorAll(".pk__chips button");
+    var panels = pk.querySelectorAll(".pk__panel");
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var k = b.getAttribute("data-k");
+        btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        panels.forEach(function (p) { p.hidden = p.getAttribute("data-k") !== k; });
+      });
+    });
+  });
+
   setupSwitcher(document.getElementById("contacts"), { param: "contacts", storageKey: "contactsVariant", itemSelector: ".cv", known: ["map", "table", "form"] });
   setupSwitcher(document.getElementById("safety"), { param: "safety", storageKey: "safetyVariant", itemSelector: ".sv", known: ["steps", "photos", "qa"] });
 

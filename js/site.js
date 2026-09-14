@@ -100,6 +100,8 @@
   setupSwitcher(document.getElementById("how"), { param: "how", storageKey: "howVariant", itemSelector: ".hov", known: ["cases", "prep"] });
   setupSwitcher(document.getElementById("prices"), { param: "prices", storageKey: "pricesVariant", itemSelector: ".prv", known: ["menu", "factors", "table"] });
   setupSwitcher(document.querySelector("#team .ptv") ? document.getElementById("team") : null, { param: "pteam", storageKey: "pteamVariant", itemSelector: ".ptv", known: ["cards", "rows"] });
+  setupSwitcher(document.querySelector("#book .bkv") ? document.getElementById("book") : null, { param: "book", storageKey: "bookVariant", itemSelector: ".bkv", known: ["bar", "widget"] });
+  setupSwitcher(document.getElementById("related"), { param: "related", storageKey: "relatedVariant", itemSelector: ".rlv", known: ["list", "tiles"] });
   setupSwitcher(document.getElementById("contacts"), { param: "contacts", storageKey: "contactsVariant", itemSelector: ".cv", known: ["map", "table", "form"] });
   setupSwitcher(document.getElementById("safety"), { param: "safety", storageKey: "safetyVariant", itemSelector: ".sv", known: ["steps", "photos", "qa"] });
 

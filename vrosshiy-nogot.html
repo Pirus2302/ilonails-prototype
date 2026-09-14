@@ -313,16 +313,62 @@
   </div>
 </section>
 
-<section class="section book" id="book">
-  <div class="container book__in">
-    <div class="book__info"><h2>Записаться в студию</h2><p>Минск, ул. Максима Танка, 20 · ежедневно до 20:00 <!-- часы уточнить у заказчика --></p><p class="muted">Напишите нам: <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375445555152">Viber</a> · <a href="https://wa.me/375445555152">WhatsApp</a></p></div>
-    <div style="display:grid;gap:8px;justify-items:start"><a class="btn btn--dark" href="#">Записаться онлайн</a><a class="tnum" href="tel:+375445555152" style="display:inline-block;padding-block:4px">+375 (44) 555-51-52</a></div>
+<section class="section" id="book">
+  <div class="container">
+    <div class="proto-switch" role="group" aria-label="Вариант блока записи (только для выбора)">
+      <span class="proto-switch__label">Вариант блока</span>
+      <button type="button" class="proto-switch__btn" data-variant="bar" aria-pressed="true">Полоса</button>
+      <button type="button" class="proto-switch__btn" data-variant="widget" aria-pressed="false">Виджет</button>
+    </div>
+
+    <div class="bkv" data-variant="bar">
+      <div class="book__in bkv__bar"><!-- часы уточнить у заказчика -->
+        <div class="book__info"><h2>Записаться в студию</h2><p>Минск, ул. Максима Танка, 20 · ежедневно до 20:00</p><p class="muted">Напишите нам: <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375445555152">Viber</a> · <a href="https://wa.me/375445555152">WhatsApp</a></p></div>
+        <div class="bkv__act"><a class="btn btn--dark" href="#">Записаться онлайн</a><a class="tnum" href="tel:+375445555152">+375 (44) 555-51-52</a></div>
+      </div>
+    </div>
+
+    <div class="bkv" data-variant="widget" hidden>
+      <div class="bw"><!-- макет окна YCLIENTS: на сайте будет настоящий виджет с предвыбранной услугой, слоты и длительность условные -->
+        <div class="bw__l">
+          <h2>Записаться на обработку</h2>
+          <p>Выберите подолога и время прямо здесь. Или напишите, если удобнее договориться в мессенджере.</p>
+          <div class="messengers"><a class="btn btn--ghost btn--sm" href="https://t.me/ilonails_studio">Telegram</a><a class="btn btn--ghost btn--sm" href="viber://chat?number=%2B375445555152">Viber</a><a class="btn btn--ghost btn--sm" href="https://wa.me/375445555152">WhatsApp</a></div>
+          <a class="tnum" href="tel:+375445555152">+375 (44) 555-51-52</a>
+          <p class="bw__note">Минск, ул. Максима Танка, 20 · ежедневно до 20:00</p>
+        </div>
+        <div class="bw__w">
+          <h3>Онлайн-запись</h3>
+          <div><p class="lab">Услуга</p><div class="svc"><b>Обработка вросшего ногтя, 1 угол</b><span>≈ 1 час</span></div></div>
+          <div><p class="lab">Подолог</p><div class="who"><span class="on"><img src="img/ilona.jpg" width="1000" height="1000" alt="Илона Жданович" loading="lazy">Илона</span><span><img src="img/tatiana.jpg" width="1000" height="774" alt="Татьяна" loading="lazy">Татьяна</span><span>Любой</span></div></div>
+          <div><p class="lab">Ближайшее время</p><div class="slots"><span>10:00</span><span class="on">11:30</span><span>14:00</span><span>16:30</span></div></div>
+          <a class="btn btn--dark" href="#">Продолжить в YCLIENTS</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section container">
-  <div class="section__head"><h2>Смежные проблемы</h2></div>
-  <div class="related"><a href="#">Деформация и травмы ногтя <span aria-hidden="true">→</span></a><a href="#">Грибок ногтей и стоп <span aria-hidden="true">→</span></a><a href="#">Гигиенический педикюр <span aria-hidden="true">→</span></a></div>
+<section class="section container" id="related">
+  <div class="proto-switch" role="group" aria-label="Вариант блока смежных проблем (только для выбора)">
+    <span class="proto-switch__label">Вариант блока</span>
+    <button type="button" class="proto-switch__btn" data-variant="list" aria-pressed="true">Список</button>
+    <button type="button" class="proto-switch__btn" data-variant="tiles" aria-pressed="false">Плитки</button>
+  </div>
+
+  <div class="rlv" data-variant="list">
+    <div class="section__head"><h2>Смежные проблемы</h2></div>
+    <div class="related"><a href="#">Деформация и травмы ногтя <span aria-hidden="true">&rarr;</span></a><a href="#">Грибок ногтей и стоп <span aria-hidden="true">&rarr;</span></a><a href="#">Гигиенический педикюр <span aria-hidden="true">&rarr;</span></a></div>
+  </div>
+
+  <div class="rlv" data-variant="tiles" hidden>
+    <div class="section__head"><h2>Смежные проблемы</h2></div>
+    <div class="rt">
+      <a href="#"><b>Грибок ногтей и стоп</b><small>Утолщённый, жёлтый, крошащийся ноготь</small><span class="arr" aria-hidden="true">&rarr;</span></a>
+      <a href="#"><b>Деформация и травмы ногтя</b><small>Ноготь изменил форму после удара или обуви</small><span class="arr" aria-hidden="true">&rarr;</span></a>
+      <a href="#"><b>Гигиенический педикюр</b><small>Регулярный уход, когда ничего не болит</small><span class="arr" aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
 </section>
 </main>
 <footer class="footer">

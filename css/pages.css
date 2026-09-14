@@ -580,6 +580,45 @@
   .tl .btn { grid-column: auto; margin-top: 0; }
 }
 
+/* Страница проблемы, блок «Записаться»: два варианта */
+#book { background: var(--c-bg-alt); }
+.bkv__bar { display: grid; gap: var(--sp-3); }
+.bkv__act { display: grid; gap: 8px; justify-items: start; }
+.bkv__act .tnum { display: inline-block; padding-block: 4px; }
+.bw { background: var(--c-ink); color: #fff; border-radius: var(--r-card); padding: 28px 22px; display: grid; gap: var(--sp-4); }
+.bw h2 { color: #fff; }
+.bw__l { display: grid; gap: 14px; align-content: start; justify-items: start; }
+.bw__l p { opacity: .75; font-size: var(--fs-small); max-width: 40ch; }
+.bw__l .messengers .btn { color: #fff; border-color: rgba(255, 255, 255, .35); }
+.bw__l .tnum { color: #fff; font-size: 20px; display: inline-block; padding-block: 4px; }
+.bw__note { font-size: 12px; opacity: .6; }
+.bw__w { background: #fff; color: var(--c-ink); border-radius: 16px; padding: 18px; display: grid; gap: 14px; font-size: var(--fs-small); }
+.bw__w h3 { font-size: 16px; font-weight: 500; }
+.bw__w .lab { font-size: 12px; color: var(--c-muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+.bw__w .svc { display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1px solid var(--c-line); border-radius: 12px; }
+.bw__w .svc b { font-weight: 500; }
+.bw__w .who { display: flex; flex-wrap: wrap; gap: 8px; }
+.bw__w .who span { display: flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border: 1px solid var(--c-line); border-radius: 999px; }
+.bw__w .who span.on { border-color: var(--c-ink); }
+.bw__w .who img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; }
+.bw__w .slots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.bw__w .slots span { text-align: center; padding: 8px 0; border: 1px solid var(--c-line); border-radius: 8px; font-variant-numeric: tabular-nums; }
+.bw__w .slots span.on { background: var(--c-ink); color: #fff; border-color: var(--c-ink); }
+.bw__w .btn { justify-self: start; }
+/* Страница проблемы, «Смежные проблемы»: вариант «Плитки» */
+.rt { display: grid; gap: var(--sp-2); }
+.rt a { display: grid; gap: 8px; padding: 20px; border: 1px solid var(--c-line); border-radius: var(--r-card); color: var(--c-ink); background: var(--c-bg-alt); }
+.rt a:hover { text-decoration: none; border-color: var(--c-ink); }
+.rt b { font-family: var(--f-display); font-weight: 500; font-size: 22px; line-height: 1.1; }
+.rt small { font-size: var(--fs-small); color: var(--c-muted); }
+.rt .arr { color: var(--c-muted); font-size: 20px; margin-top: 4px; }
+@media (min-width: 768px) {
+  .bkv__bar { grid-template-columns: 1fr auto; align-items: center; }
+  .bw { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); column-gap: var(--sp-6); padding: 40px; }
+  .rt { grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); }
+}
+@media (min-width: 1200px) { .bw { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); } }
+
 /* Блок проблем: три варианта */
 .pv[hidden] { display: none; }
 

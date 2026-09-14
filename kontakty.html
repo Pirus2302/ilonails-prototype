@@ -33,12 +33,43 @@
 </nav>
 <main>
 <nav class="container breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a> <span aria-hidden="true">&rarr;</span> Контакты</nav>
-<div class="container page-head">
-  <h1>Контакты</h1>
-  <p class="prose">Минск, ул. Максима Танка, 20, Центральный район. Ближайшее метро Фрунзенская, около 520 метров пешком.</p>
+<div id="chead">
+  <div class="container aswitch">
+    <div class="proto-switch" role="group" aria-label="Вариант шапки страницы (только для выбора)">
+      <span class="proto-switch__label">Вариант блока</span>
+      <button type="button" class="proto-switch__btn" data-variant="act" aria-pressed="true">Связь сразу</button>
+      <button type="button" class="proto-switch__btn" data-variant="ways" aria-pressed="false">Три способа</button>
+    </div>
+  </div>
+
+  <div class="khv" data-variant="act">
+    <div class="container kh">
+      <div class="kh__t">
+        <h1>Контакты</h1>
+        <p class="kh__addr">Минск, ул. Максима Танка, 20</p>
+        <p class="kh__meta">Центральный район · метро Фрунзенская, около 520 метров пешком · ежедневно до 20:00 <span class="ph">точные часы</span></p>
+      </div>
+      <div class="kh__act">
+        <a class="btn btn--dark" href="tel:+375445555152">Позвонить</a>
+        <a class="btn btn--ghost" href="https://t.me/ilonails_studio">Написать в Telegram</a>
+        <a class="btn btn--ghost" href="#map">Проложить маршрут</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="khv" data-variant="ways" hidden>
+    <div class="container k2">
+      <div><h1>Контакты</h1><p class="prose">Три способа добраться до нас. Выберите тот, который сейчас удобнее.</p></div>
+      <ul class="k2__cols">
+        <li><span class="lab">Приехать</span><b>Минск, ул. Максима Танка, 20</b><span>Метро Фрунзенская, около 520 метров пешком</span><a class="go" href="#map">Проложить маршрут <span aria-hidden="true">&rarr;</span></a></li>
+        <li><span class="lab">Позвонить</span><b><a class="tnum" href="tel:+375445555152">+375 (44) 555-51-52</a></b><span>Ежедневно до 20:00 <span class="ph">точные часы</span></span></li>
+        <li><span class="lab">Написать</span><b>Telegram, Viber, WhatsApp</b><span>Быстрее звонка: можно сразу прислать фото и узнать сумму</span><a class="go" href="https://t.me/ilonails_studio">Открыть Telegram <span aria-hidden="true">&rarr;</span></a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<section class="section container">
+<section class="section container" id="map">
   <div class="cm"><img src="img/map.jpg" alt="Карта: улица Максима Танка, 20, Минск" loading="lazy" width="1200" height="600">
     <div class="cm__card"><h2>Как добраться</h2><p><b>Минск, ул. Максима Танка, 20</b><br>Центральный район · метро Фрунзенская</p><p class="muted">Ежедневно до 20:00</p><p class="muted">Напишите нам: <a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375445555152">Viber</a> · <a href="https://wa.me/375445555152">WhatsApp</a></p><p><a class="tnum" href="tel:+375445555152">+375 (44) 555-51-52</a> · <a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></p>
       <div class="cm__cta"><a class="btn btn--dark" href="#book">Записаться онлайн</a></div><span class="small muted">откроется виджет YCLIENTS</span></div>
@@ -61,25 +92,20 @@
 </section>
 
 <section class="section container" id="book">
-  <div class="section__head"><h2>Записаться</h2><p class="hint">Выберите время сами или оставьте контакт, перезвоним.</p></div>
-  <div class="cf">
-    <form class="form" action="#" method="post">
-      <h3>Оставьте контакт, перезвоним</h3>
-      <label>Имя<input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться"></label>
-      <label>Телефон или мессенджер<input type="text" name="contact" autocomplete="tel" placeholder="+375 29 …"></label>
-      <label class="chk"><input type="checkbox" name="consent"><span>Согласен на обработку персональных данных</span></label>
-      <button class="btn btn--dark" type="button">Отправить</button>
-      <span class="form__or">Или сразу выберите время: <a href="#">запись онлайн в YCLIENTS</a></span>
-    </form>
-    <div class="cf__side">
-      <dl class="dl">
-        <div><dt>Часы</dt><dd>Ежедневно до 20:00 <span class="ph">точные часы</span></dd></div>
-        <div><dt>Телефон</dt><dd><a class="tnum" href="tel:+375445555152">+375 (44) 555-51-52</a></dd></div>
-        <div><dt>Мессенджеры</dt><dd><a href="https://t.me/ilonails_studio">Telegram</a> · <a href="viber://chat?number=%2B375445555152">Viber</a> · <a href="https://wa.me/375445555152">WhatsApp</a></dd></div>
-        <div><dt>Instagram</dt><dd><a href="https://instagram.com/ilonails_studio">@ilonails_studio</a></dd></div>
-        <div><dt>Реквизиты</dt><dd>ИП Жданович И. · УНП <span class="ph">уточняем</span></dd></div>
-      </dl>
-      <p class="muted small">Цену по фотографии называем в мессенджере до визита, это быстрее звонка.</p>
+  <div class="bw"><!-- макет окна YCLIENTS: на сайте будет настоящий виджет, слоты условные -->
+    <div class="bw__l">
+      <h2>Записаться в студию</h2>
+      <p>Выберите услугу, подолога и время прямо здесь. Или напишите, если удобнее договориться в мессенджере: цену по фотографии называем до визита, это быстрее звонка.</p>
+      <div class="messengers"><a class="btn btn--ghost btn--sm" href="https://t.me/ilonails_studio">Telegram</a><a class="btn btn--ghost btn--sm" href="viber://chat?number=%2B375445555152">Viber</a><a class="btn btn--ghost btn--sm" href="https://wa.me/375445555152">WhatsApp</a></div>
+      <a class="tnum" href="tel:+375445555152">+375 (44) 555-51-52</a>
+      <p class="bw__note">Минск, ул. Максима Танка, 20 · ежедневно до 20:00 <span class="ph">точные часы</span><br><a href="https://instagram.com/ilonails_studio">@ilonails_studio</a> · ИП Жданович И., УНП <span class="ph">уточняем</span></p>
+    </div>
+    <div class="bw__w">
+      <h3>Онлайн-запись</h3>
+      <div><p class="lab">Услуга</p><div class="svc"><b>Выберите услугу</b><span>46 позиций</span></div></div>
+      <div><p class="lab">Подолог</p><div class="who"><span class="on"><img src="img/ilona.jpg" width="1000" height="1000" alt="Илона Жданович" loading="lazy">Илона</span><span><img src="img/tatiana.jpg" width="1000" height="774" alt="Татьяна" loading="lazy">Татьяна</span><span>Любой</span></div></div>
+      <div><p class="lab">Ближайшее время</p><div class="slots"><span>10:00</span><span class="on">11:30</span><span>14:00</span><span>16:30</span></div></div>
+      <a class="btn btn--dark" href="#">Продолжить в YCLIENTS</a>
     </div>
   </div>
 </section>

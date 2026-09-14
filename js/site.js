@@ -123,6 +123,7 @@
   setupSwitcher(document.getElementById("chain"), { param: "chain", storageKey: "chainVariant", itemSelector: ".cnv", known: ["skip", "check"] });
   setupSwitcher(document.getElementById("gal"), { param: "gal", storageKey: "galVariant", itemSelector: ".galv", known: ["big", "strip"] });
   setupSwitcher(document.getElementById("lim"), { param: "lim", storageKey: "limVariant", itemSelector: ".limv", known: ["cols", "qa"] });
+  setupSwitcher(document.getElementById("chead"), { param: "chead", storageKey: "cheadVariant", itemSelector: ".khv", known: ["act", "ways"] });
   setupSwitcher(document.getElementById("contacts"), { param: "contacts", storageKey: "contactsVariant", itemSelector: ".cv", known: ["map", "table", "form"] });
   setupSwitcher(document.getElementById("safety"), { param: "safety", storageKey: "safetyVariant", itemSelector: ".sv", known: ["steps", "photos", "qa"] });
 

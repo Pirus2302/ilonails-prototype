@@ -8,7 +8,7 @@ ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
 TOKENS_ONLY = "--tokens" in sys.argv
 PAGES = ARGS or ["index.html", "index-a.html", "vrosshiy-nogot.html",
                  "ceny.html", "o-tsentre.html", "kontakty.html",
-                 "specialisty.html", "ilona.html", "kursy.html", "blog.html",
+                 "ilona.html", "kursy.html", "blog.html",
                  "statya.html", "gribok-nogtey.html", "mozoli.html",
                  "treshchiny.html", "deformaciya-nogtya.html", "stelki.html",
                  "gigienicheskiy-pedikyur.html", "manikyur.html"]

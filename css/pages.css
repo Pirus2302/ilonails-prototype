@@ -943,6 +943,25 @@
   .photo--wide .steps3 li { align-content: start; }
 }
 
+/* О центре, шапка: текст и показатели */
+.abt { padding-top: var(--sp-3); display: grid; gap: var(--sp-4); }
+.abt__cols { display: grid; gap: var(--sp-2); margin-top: var(--sp-2); }
+.abt__cols p { margin: 0; }
+.nums { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px;
+  background: var(--c-line); border-block: 1px solid var(--c-line); }
+.nums li { background: var(--c-bg); padding: 20px 0; display: grid; gap: 4px; }
+.nums b { font-family: var(--f-display); font-size: 40px; line-height: 1; font-weight: 500;
+  font-variant-numeric: tabular-nums; }
+.nums span { font-size: var(--fs-small); color: var(--c-muted); }
+.nums b .ph { font-family: var(--f-text); font-size: 13px; }
+@media (min-width: 768px) {
+  .abt { padding-top: var(--sp-4); }
+  .abt__cols { grid-template-columns: 1fr 1fr; column-gap: var(--sp-5); }
+  .nums { grid-template-columns: repeat(4, 1fr); }
+  .nums li { padding: 22px; }
+  .nums li:first-child { padding-left: 0; }
+}
+
 /* Блок проблем: три варианта */
 .pv[hidden] { display: none; }
 

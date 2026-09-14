@@ -915,6 +915,7 @@
 .ctop > #price-list { order: 5; }
 .ctop:has(.chv[data-variant="table"]:not([hidden])) > #photo { order: 6; }
 .ctop > .cswitch + .chv .page-head { padding-top: var(--sp-2); }
+.ctop > .chv[data-variant="pick"] { padding-bottom: var(--sp-5); }
 
 .pk { display: grid; gap: var(--sp-3); margin-top: var(--sp-2); }
 .pk__q { font-family: var(--f-display); font-size: 26px; line-height: 1.15; }

@@ -117,6 +117,21 @@
     });
   });
 
+  setupSwitcher(document.getElementById("price-list"), { param: "plist", storageKey: "plistVariant", itemSelector: ".plv", known: ["table", "list", "tabs", "acc"] });
+
+  // Полный прайс, вариант «Вкладки»: переключение раздела
+  document.querySelectorAll(".prtabs").forEach(function (g) {
+    var btns = g.querySelectorAll("button[data-tab]");
+    var tables = g.parentNode.querySelectorAll("table.prt[data-tab]");
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var k = b.getAttribute("data-tab");
+        btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        tables.forEach(function (t) { t.hidden = t.getAttribute("data-tab") !== k; });
+      });
+    });
+  });
+
   setupSwitcher(document.getElementById("ahead"), { param: "ahero", storageKey: "aheroVariant", itemSelector: ".ahv", known: ["nums", "cover"] });
   setupSwitcher(document.getElementById("docs"), { param: "docs", storageKey: "docsVariant", itemSelector: ".docv", known: ["rows", "meaning"] });
   setupSwitcher(document.getElementById("eq"), { param: "eq", storageKey: "eqVariant", itemSelector: ".eqv", known: ["photos", "rows"] });

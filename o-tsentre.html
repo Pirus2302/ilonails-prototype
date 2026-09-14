@@ -78,55 +78,162 @@
     </div>
   </div>
 </div>
-<section class="section container">
-  <div class="section__head"><h2>Документы, а не обещания</h2><p class="hint">То, что можно открыть и прочитать целиком.</p></div>
-  <div class="docs"><!-- сканы предоставляет заказчик -->
-    <div class="doc"><h3>Заключение санитарной станции</h3><p>Проверка прошла без единого замечания.</p><a class="doc__lnk" href="#">Открыть скан <span aria-hidden="true">&rarr;</span></a><p class="doc__ph"><span class="ph">скан от заказчика</span></p></div>
-    <div class="doc"><h3>Разрешение на обучение</h3><p>Даёт право проводить курсы для мастеров педикюра.</p><a class="doc__lnk" href="#">Открыть скан <span aria-hidden="true">&rarr;</span></a><p class="doc__ph"><span class="ph">скан от заказчика</span></p></div>
+<section class="section container" id="docs">
+  <div class="proto-switch" role="group" aria-label="Вариант блока «Документы» (только для выбора)">
+      <span class="proto-switch__label">Вариант блока</span>
+      <button type="button" class="proto-switch__btn" data-variant="rows" aria-pressed="true">Строки</button>
+      <button type="button" class="proto-switch__btn" data-variant="meaning" aria-pressed="false">Что это значит</button>
+    </div>
+
+  <div class="docv" data-variant="rows">
+    <div class="section__head"><h2>Документы, а не обещания</h2><p class="hint">То, что можно открыть и прочитать целиком.</p></div>
+    <ul class="dc2"><!-- сканы предоставляет заказчик -->
+      <li><span class="who">Санитарная станция</span><b>Заключение выдано без единого замечания</b><a href="#">Открыть скан <span aria-hidden="true">&rarr;</span></a></li>
+      <li><span class="who">Разрешение на обучение</span><b>Право проводить курсы для мастеров педикюра</b><a href="#">Открыть скан <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+  </div>
+
+  <div class="docv" data-variant="meaning" hidden>
+    <div class="section__head"><h2>Документы, а не обещания</h2><p class="hint">И что каждый из них означает для вас.</p></div>
+    <div class="dc3"><!-- расшифровки написаны исполнителем, подтвердить у заказчика -->
+      <article>
+        <h3>Заключение санитарной станции</h3>
+        <dl><dt>Что проверяли</dt><dd>Помещение, обработку инструмента и условия хранения</dd><dt>Что это значит для вас</dt><dd>Порядок работы со стерильностью проверен не нами, а проверяющим органом. Заключение выдано без замечаний</dd></dl>
+        <a href="#">Открыть скан <span aria-hidden="true">&rarr;</span></a>
+      </article>
+      <article>
+        <h3>Разрешение на обучение</h3>
+        <dl><dt>Что оно даёт</dt><dd>Право проводить курсы для мастеров педикюра</dd><dt>Что это значит для вас</dt><dd>К нам едут учиться другие мастера. Значит, порядок работы выдерживает взгляд со стороны</dd></dl>
+        <a href="#">Открыть скан <span aria-hidden="true">&rarr;</span></a>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="section section--alt">
+<section class="section section--alt" id="eq">
   <div class="container">
-    <div class="section__head"><h2>Во что вложились</h2><p class="hint">Оборудование видно на приёме, спрашивайте о нём прямо.</p></div>
-    <div class="eq">
-      <figure class="eq__ph"><img src="img/autoclave.jpg" width="960" height="1280" alt="Автоклав в стерилизационной студии" loading="lazy"><figcaption>Автоклав, стерилизационная центра</figcaption></figure>
-      <ul class="eq__list">
-        <li><b>Автоклав</b><span>Стерилизует инструмент паром под давлением. Стоит в отдельной стерилизационной, не в кабинете</span></li>
-        <li><b>Немецкое оборудование</b><span>Аппараты для обработки ногтей и кожи стоп <span class="ph">марки и модели</span></span></li>
-        <li><b>Кресла на пяти моторах</b><span>Позволяют уложить стопу так, чтобы подолог видел проблему, а вам было удобно</span></li>
+    <div class="proto-switch" role="group" aria-label="Вариант блока «Во что вложились» (только для выбора)">
+      <span class="proto-switch__label">Вариант блока</span>
+      <button type="button" class="proto-switch__btn" data-variant="photos" aria-pressed="true">Кадры</button>
+      <button type="button" class="proto-switch__btn" data-variant="rows" aria-pressed="false">Строки</button>
+    </div>
+
+    <div class="eqv" data-variant="photos">
+      <div class="section__head"><h2>Во что вложились</h2><p class="hint">Всё это стоит в кабинете и в стерилизационной, спрашивайте о нём прямо на приёме.</p></div>
+      <div class="eq1">
+        <figure><div class="ph3"><img src="img/autoclave.jpg" width="960" height="1280" alt="Автоклав в стерилизационной студии" loading="lazy"></div><figcaption><b>Автоклав</b><span>Стерилизует инструмент паром под давлением, стоит в отдельной стерилизационной</span></figcaption></figure>
+        <figure><div class="ph3"><img src="img/device.jpg" width="1280" height="960" alt="Аппарат для обработки ногтей и кожи стоп" loading="lazy"></div><figcaption><b>Аппарат для обработки</b><span>Снимает поражённую ткань ногтя и кожу без размачивания, <span class="ph">марка и модель</span></span></figcaption></figure>
+        <figure><div class="ph3"><img src="img/cabinet-1600.jpg" width="1600" height="1200" alt="Кресло подолога в кабинете" loading="lazy"></div><figcaption><b>Кресло на пяти моторах</b><span>Стопа укладывается так, чтобы подолог видел проблему, а вам было удобно</span></figcaption></figure>
+      </div>
+    </div>
+
+    <div class="eqv" data-variant="rows" hidden>
+      <div class="section__head"><h2>Во что вложились</h2><p class="hint">Слева оборудование, справа то, что оно меняет для вас.</p></div>
+      <ul class="eq2">
+        <li><b>Автоклав</b><span>Инструмент стерилизуется паром под давлением, а не протирается. Автоклав стоит в отдельной стерилизационной, поэтому грязный инструмент не оказывается рядом с чистым</span></li>
+        <li><b>Аппарат для обработки</b><span>Работаем без размачивания и без ванночек: сухая обработка не размягчает кожу и позволяет точнее видеть границу поражённой ткани. <span class="ph">Марка и модель</span></span></li>
+        <li><b>Кресло на пяти моторах</b><span>Стопу можно уложить под нужным углом. Подолог видит проблему целиком, а вам не приходится держать ногу на весу</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section container">
-  <div class="section__head"><h2>Путь каждого инструмента</h2><p class="hint">Пять шагов между двумя визитами, одинаково для всех.</p></div>
-  <ol class="chain chain--wide"><!-- расшифровки шагов подтвердить у заказчика -->
-    <li><div><b>Дезинфекция</b><span>Сразу после работы инструмент уходит в раствор</span></div></li>
-    <li><div><b>Очистка</b><span>Убираем всё, что могло остаться после дезинфекции</span></div></li>
-    <li><div><b>Стерилизация в автоклаве</b><span>Паром под давлением, в стерилизационной центра</span></div></li>
-    <li><div><b>Упаковка</b><span>Каждый набор в отдельном пакете</span></div></li>
-    <li><div><b>Хранение до визита</b><span>Пакет закрыт, пока вы не сядете в кресло</span></div></li>
-  </ol>
-</section>
+<section class="section container" id="chain">
+  <div class="proto-switch" role="group" aria-label="Вариант блока «Путь инструмента» (только для выбора)">
+      <span class="proto-switch__label">Вариант блока</span>
+      <button type="button" class="proto-switch__btn" data-variant="skip" aria-pressed="true">Зачем шаг</button>
+      <button type="button" class="proto-switch__btn" data-variant="check" aria-pressed="false">Проверить самому</button>
+    </div>
 
-<section class="section section--alt">
-  <div class="container">
-    <div class="section__head"><h2>Как выглядит студия</h2></div>
-    <div class="gal">
-      <figure><img src="img/reception-800.jpg" width="800" height="600" alt="Ресепшен студии Ilonails" loading="lazy"><figcaption>Ресепшен</figcaption></figure>
-      <figure><img src="img/cabinet-800.jpg" width="800" height="600" alt="Кабинет подолога с креслом и аппаратом" loading="lazy"><figcaption>Кабинет подолога</figcaption></figure>
-      <figure><img src="img/cabinet2-800.jpg" width="800" height="600" alt="Второй кабинет студии" loading="lazy"><figcaption>Второй кабинет</figcaption></figure>
-      <figure><img src="img/manicure-800.jpg" width="800" height="600" alt="Место мастера маникюра" loading="lazy"><figcaption>Зона маникюра</figcaption></figure>
+  <div class="cnv" data-variant="skip">
+    <div class="section__head"><h2>Путь каждого инструмента</h2><p class="hint">Пять шагов между двумя визитами, одинаково для всех. Пропустить нельзя ни один.</p></div>
+    <ol class="ch1"><!-- расшифровки подтвердить у заказчика -->
+      <li><span class="n"></span><b>Дезинфекция</b><span>Сразу после работы инструмент уходит в раствор. Если тянуть, остатки подсыхают и их уже не убрать</span></li>
+      <li><span class="n"></span><b>Очистка</b><span>Убираем всё, что осталось после раствора. Стерилизация не работает поверх загрязнения</span></li>
+      <li><span class="n"></span><b>Стерилизация в автоклаве</b><span>Пар под давлением. Протирание и ультрафиолет этого не заменяют</span></li>
+      <li><span class="n"></span><b>Упаковка</b><span>Каждый набор в отдельном пакете. Без упаковки стерильность держится до первого касания воздуха</span></li>
+      <li><span class="n"></span><b>Хранение до визита</b><span>Пакет закрыт, пока вы не сядете в кресло. Вскрываем при вас</span></li>
+    </ol>
+  </div>
+
+  <div class="cnv" data-variant="check" hidden>
+    <div class="section__head"><h2>Путь каждого инструмента</h2><p class="hint">Пять шагов между двумя визитами, одинаково для всех.</p></div>
+    <div class="ch2">
+      <ol class="ch2__steps">
+        <li><span><b>Дезинфекция.</b> Сразу после работы инструмент уходит в раствор</span></li>
+        <li><span><b>Очистка.</b> Убираем всё, что осталось после раствора</span></li>
+        <li><span><b>Стерилизация в автоклаве.</b> Паром под давлением, в стерилизационной центра</span></li>
+        <li><span><b>Упаковка.</b> Каждый набор в отдельном пакете</span></li>
+        <li><span><b>Хранение до визита.</b> Пакет закрыт, пока вы не сядете в кресло</span></li>
+      </ol>
+      <aside class="ch2__you"><!-- список подтвердить у заказчика: студия должна быть готова это выполнять -->
+        <h3>Что вы можете проверить сами</h3>
+        <ul>
+          <li><span>Попросить вскрыть пакет при вас, а не заранее</span></li>
+          <li><span>Посмотреть индикатор на пакете: он меняет цвет только после автоклава</span></li>
+          <li><span>Спросить, где стоит автоклав, и заглянуть в стерилизационную</span></li>
+        </ul>
+        <p>Ни одна из этих просьб не считается странной. Если мастер отказывает, это повод задуматься в любой студии</p>
+      </aside>
     </div>
   </div>
 </section>
 
-<section class="section container">
-  <div class="lim">
-    <div><h2>Чего мы не делаем</h2><p class="prose">Не проводим хирургических вмешательств и не назначаем препараты. Если случай требует врача, говорим об этом прямо и объясняем, к кому идти. Подолог работает с ногтем и кожей, врач – с тем, что глубже.</p></div>
-    <div class="lim__cta"><a class="btn btn--ghost" href="specialisty.html">Кто работает в центре <span aria-hidden="true">&rarr;</span></a><a class="btn btn--ghost" href="ceny.html">Цены и расчёт по фото <span aria-hidden="true">&rarr;</span></a></div>
+<section class="section section--alt" id="gal">
+  <div class="container">
+    <div class="proto-switch" role="group" aria-label="Вариант блока «Как выглядит студия» (только для выбора)">
+      <span class="proto-switch__label">Вариант блока</span>
+      <button type="button" class="proto-switch__btn" data-variant="big" aria-pressed="true">Крупный кадр</button>
+      <button type="button" class="proto-switch__btn" data-variant="strip" aria-pressed="false">Лента</button>
+    </div>
+
+    <div class="galv" data-variant="big">
+      <div class="section__head"><h2>Как выглядит студия</h2><p class="hint">Два кабинета подолога, зона маникюра и ресепшен.</p></div>
+      <div class="g1">
+        <figure><img src="img/reception-1600.jpg" width="1600" height="1200" alt="Ресепшен студии Ilonails" loading="lazy"><figcaption>Ресепшен</figcaption></figure>
+        <figure><img src="img/cabinet-1600.jpg" width="1600" height="1200" alt="Кабинет подолога с креслом и аппаратом" loading="lazy"><figcaption>Кабинет подолога</figcaption></figure>
+        <figure><img src="img/cabinet2-1600.jpg" width="1600" height="1200" alt="Второй кабинет студии" loading="lazy"><figcaption>Второй кабинет</figcaption></figure>
+        <figure><img src="img/manicure-1600.jpg" width="1600" height="1200" alt="Место мастера маникюра" loading="lazy"><figcaption>Зона маникюра</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="galv" data-variant="strip" hidden>
+      <div class="section__head"><h2>Как выглядит студия</h2><p class="hint">И что происходит в каждой зоне.</p></div>
+      <div class="g2"><div class="g2__row">
+        <figure><div class="ph4"><img src="img/reception-1600.jpg" width="1600" height="1200" alt="Ресепшен студии Ilonails" loading="lazy"></div><figcaption><b>Ресепшен</b><span>Здесь встречают и здесь же оплата после визита</span></figcaption></figure>
+        <figure><div class="ph4"><img src="img/cabinet-1600.jpg" width="1600" height="1200" alt="Кабинет подолога с креслом и аппаратом" loading="lazy"></div><figcaption><b>Кабинет подолога</b><span>Обработка ногтей и кожи стоп, установка систем</span></figcaption></figure>
+        <figure><div class="ph4"><img src="img/cabinet2-1600.jpg" width="1600" height="1200" alt="Второй кабинет студии" loading="lazy"></div><figcaption><b>Второй кабинет</b><span>Работает параллельно, чтобы не ждать очереди</span></figcaption></figure>
+        <figure><div class="ph4"><img src="img/manicure-1600.jpg" width="1600" height="1200" alt="Место мастера маникюра" loading="lazy"></div><figcaption><b>Зона маникюра</b><span>Отдельное место мастера, отдельный инструмент</span></figcaption></figure>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section container" id="lim">
+  <div class="proto-switch" role="group" aria-label="Вариант блока «Чего мы не делаем» (только для выбора)">
+      <span class="proto-switch__label">Вариант блока</span>
+      <button type="button" class="proto-switch__btn" data-variant="cols" aria-pressed="true">Две колонки</button>
+      <button type="button" class="proto-switch__btn" data-variant="qa" aria-pressed="false">Вопрос и ответ</button>
+    </div>
+
+  <div class="limv" data-variant="cols">
+    <div class="section__head"><h2>Чего мы не делаем</h2><p class="hint">Границу называем сразу, чтобы вы не тратили визит зря.</p></div>
+    <div class="lm1">
+      <div class="lm1__c"><h3>С этим к нам</h3>
+        <ul><li>Вросший ноготь и корректирующие системы</li><li>Ногти с грибковыми изменениями</li><li>Мозоли, натоптыши, трещины стоп</li><li>Деформация ногтя после травмы</li><li>Индивидуальные стельки</li></ul></div>
+      <div class="lm1__c lm1__c--no"><h3>С этим к врачу</h3>
+        <ul><li>Хирургические вмешательства</li><li>Назначение препаратов</li><li>Постановка диагноза</li></ul>
+        <p>Если случай требует врача, говорим об этом на приёме и объясняем, к кому идти</p></div>
+    </div>
+  </div>
+
+  <div class="limv" data-variant="qa" hidden>
+    <div class="section__head"><h2>Чего мы не делаем</h2><p class="hint">Три вопроса, которые задают чаще всего.</p></div>
+    <div class="lm2"><!-- формулировки ответов подтвердить у заказчика -->
+      <div class="qa"><b>А если мне нужен врач, вы скажете?</b><p>Скажем прямо на приёме и объясним, к какому специалисту идти. Подолог работает с ногтем и кожей, врач – с тем, что глубже</p></div>
+      <div class="qa"><b>Вы ставите диагноз?</b><p>Нет. Мы видим состояние ногтя и кожи и работаем с ним. Название болезни и препараты – это к врачу</p></div>
+      <div class="qa"><b>Будет больно?</b><p>Работаем аппаратом, без размачивания и без инструментов, которые режут живую ткань. Если на приёме больно, говорите сразу, мы меняем порядок работы</p></div>
+    </div>
   </div>
 </section>
 
